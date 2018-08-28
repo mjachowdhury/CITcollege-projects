@@ -1,0 +1,73 @@
+REPORT
+
+
+************
+Name	: dirmuaid
+Address	: Wilton
+------------
+	*****
+Patient#: 3
+Name	: Dirmuaid
+Address	: Wilton
+
+Invoice#	: 3
+Date		: 2018-04-30 17:32:05.259
+Amount		: 0.0
+Remaining	: 0.5
+Paid?		  false
+
+Procedure#	: 4
+Name		: Comprehensive Dental Exams
+Cost		: 205.5
+
+Payment#	: 3
+Amount		: 205.0
+Date		: Mon Apr 30 17:32:26 BST 2018
+
+
+************
+Name	: mohammed
+Address	: Cork
+------------
+	*****
+Patient#: 1
+Name	: Mohammed
+Address	: Cork
+
+Invoice#	: 1
+Date		: 2018-04-25 22:00:03.573
+Amount		: 0.0
+Remaining	: 40.0
+Paid?		  false
+
+Procedure#	: 1
+Name		: Cleaning & Polishing
+Cost		: 55.0
+
+Procedure#	: 2
+Name		: Fillings
+Cost		: 35.0
+
+Payment#	: 1
+Amount		: 50.0
+Date		: Wed Apr 25 22:01:15 BST 2018
+
+	*****
+Patient#: 2
+Name	: Jahangir
+Address	: Blarney
+
+Invoice#	: 2
+Date		: 2018-04-25 22:02:55.188
+Amount		: 0.0
+Remaining	: 0.0
+Paid?		  true
+
+Procedure#	: 3
+Name		: Crowns
+Cost		: 80.0
+
+Payment#	: 2
+Amount		: 80.0
+Date		: Wed Apr 25 22:03:13 BST 2018
+
