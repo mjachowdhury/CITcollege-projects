@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+/*Author : Mohammed Jahangir Alom. Student ID : R00144214 Email: mohammed.alom@mycit.ie */
+body {
+    background-color: black;
+}
+
+.jumbotron {
+    font-family: 'VT323';
+    text-align: center;
+    margin: 0 auto;
+    background-color: #292626;
+    border: 3px dotted #ffe730;
+}
+
+.jumbotron,
+h1,
+h2 {
+    color: #ffe730;
+    font-family: 'VT323';
+}
+
+#underline {
+    text-decoration: underline;
+}
+
+.jumbotron,
+p {
+    color: #79f400;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.winningTable {
+    margin: 0 auto;
+    padding: 2px;
+    background-color: #292626;
+    width: 500px;
+}
+
+.winningTable tr,
+th,
+td {
+    border: 1px dotted #79f400;
+    /*text-align: justify;*/
+	text-align: center;
+    padding: 2px;
+    color: #ffe730;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#ticketButton {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted #ffe730;
+    background-color: #373737;
+    color: #ffe730;
+    background-image: none;
+    font-family: 'VT323';
+    font-size: 20px;
+}
+ 
+#userNumber,
+input {
+    color: black;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.error {
+    font-size: 24px;
+    color: red;
+}
+
+button:focus {
+    outline: 0!important;
+}
+
+.win {
+    font-size: 30px;
+    color: #ff61ff;
+}
