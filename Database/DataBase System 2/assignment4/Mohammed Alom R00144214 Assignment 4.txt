@@ -1,0 +1,169 @@
+Assignment 4
+ Mohammed Alom
+ Student No - R00144214
+ --------------------------
+
+ 
+	create domain HotelNumber as varchar(4);
+	
+	create domain HotelNumbers as HotelNumber
+		check(value in (select hotelno from hotel));
+
+
+	create domain RoomType as char(1)
+		check(value in (‘s’, ‘f’, ‘d’));
+
+	
+	create domain RoomPrice as decimal(5, 2)
+		check(value between 10 and 100);
+
+
+	create domain RoomNumber as varchar(4)
+		check(value between ‘1’ and ‘100’);
+
+
+	create domain GuestNumber as char(4);
+	
+	
+	create domain Guestnumbers as guestNumber
+		check(value in (select guestNo from Guest));
+		
+		
+	create domain Bookingdate as datetime
+		check(value > current_date);
+
+
+
+CREATE TABLE IF NOT EXISTS HOTEL 
+
+	(hotel_No			HotelNumber 	not null, 
+	
+	hotelName			varchar (30), 	not null,
+	
+	city				varchar (15),	not null,
+	
+	primary key 		(hotel_No)) engine=innodb;
+
+
+
+
+CREATE TABLE IF NOT EXISTS ROOM 	
+	
+
+	(roomNo				RoomNumber 			not null, 
+
+	hotel_No			HotelNumber 		not null,
+
+	type				RoomType			not null, 
+
+	price				RoomPrice			not null,
+
+
+	primary key			(roomNo,hotelNo),
+	
+	foreign key			(hotel_No)references Hotel on delete cascade on update cascade) engine=innodb;
+		
+
+
+CREATE TABLE IF NOT EXISTS BOOKING
+	
+
+	(hotel_No			HotelNumber		not null, 
+
+	guestNo				GuestNumbers 	not null, 
+
+	dateFrom			BookingDate		not null, 
+
+	dateTo				BookingDate		not null,
+	 
+	roomNo				RoomNumber 		not null,
+	
+	primary key			(hotelNo,guestNo,dateFrom),
+
+	foreign key		(hotelNo) references Hotel on delete cascade on update cascade,
+	
+	foreign key		(guestNo) reference Gurest on delete cascade on update cascade,
+
+	CONSTRAINT RoomBooked
+	
+		CHECK (NOT EXISTS (	SELECT *
+		
+					FROM 	Booking b
+					
+					WHERE 	b.dateTo > Booking.dateFrom 
+					
+					AND		b.dateFrom < Booking.dateTo 
+					
+					AND		b.roomNo = Booking.roomNo 
+					
+					AND		b.hotelNo = Booking.hotelNo)),
+					
+
+		CONSTRAINT GuestBooked
+		
+		CHECK (NOT EXISTS (	SELECT *
+		
+					FROM 	Booking b
+					
+					WHERE	b.dateTo > Booking.dateFrom 
+					
+					AND		b.dateFrom < Booking.dateTo
+					
+					AND		b.guestNo = Booking.guestNo)))engine=innodb;
+
+
+CREATE TABLE IF NOT EXISTS GUEST 
+
+		(guestNo		GuestNumber		NOT NULL,
+		
+		guestName 		VARCHAR(25)		NOT NULL,
+		
+		guestAddress	VARCHAR(50)		NOT NULL),
+		
+		primary key		(guestNo))		engine=innodb;
+
+	
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***CREATE A VIEW CONTAINING THE HOTEL NAME AND THE NAMES OF THE GUESTS STAYING AT THE HOTEL.
+
+	CREATE VIEW HOTELNAMEANDGUEST
+	
+			(hotelName, guestName)
+			
+				AS 		SELECT h.hotelName, g.guestName
+			
+				FROM 	Hotel h, Guest g, Booking b
+			
+				WHERE 	h.hotelNo = b.hotelNo 
+			
+				AND 	g.guestNo = b.guestNo AND 
+			
+				b.dateFrom <= CURRENT_DATE AND 
+			
+				b.dateTo >= CURRENT_DATE;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***GIVE THE USERS MANAGER AND DEPUTY FULL ACCESS TO THESE VIEWS  WITH THE PRIVILEGE TO PASS THE ACCESS ON TO OTHER USERS.
+
+	grant all privileges on HOTELNAMEANDGUEST 
+	to Manager, Director with Grant option;
+
+	 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***GIVE THE USER ACCOUNTS SELECT ACCESS TO THESE VIEWS. NOW REVOKE THE ACCESS FROM THIS USER.
+
+	grant select on HOTELNAMEANDGUEST to Accounts;
+	grant select on Bookingouttoday to Accounts;
+
+	revoke select on HOTELNAMEANDGUEST from accounts;
+	revoke select on Bookingouttoday from accounts;
+
+
+
+
+		

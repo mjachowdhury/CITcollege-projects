@@ -1,0 +1,21 @@
+.thumbnail img {
+   max-height: 150px;
+}
+
+.thumbnail .description {
+   color: #7f7f7f;
+}
+
+.price .p{
+   font-weight: bold;
+   font-size: 16px;
+}
+
+h2{
+    background: url(/images/logo2.png) no-repeat center;
+    margin-bottom: 0;
+    text-indent: -10000px;
+}
+footer{
+   color: #7f7f7f;
+}
