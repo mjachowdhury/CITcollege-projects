@@ -1,0 +1,163 @@
+mysql> use class_schedule;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++--------------------------+
+| Tables_in_class_schedule |
++--------------------------+
+| Course                   |
+| Faculty                  |
+| Qualified                |
+| Registration             |
+| Section                  |
+| Student                  |
++--------------------------+
+6 rows in set (0.00 sec)
+
+mysql> desc Student;
++--------------+------------------+------+-----+---------+----------------+
+| Field        | Type             | Null | Key | Default | Extra          |
++--------------+------------------+------+-----+---------+----------------+
+| student_id   | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| student_name | char(25)         | YES  |     | NULL    |                |
++--------------+------------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Class_schedule/student.txt' into table Student;
+Query OK, 4 rows affected (0.10 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Student;
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|      38214 | Letersky     |
+|      54907 | Altvater     |
+|      66324 | Aiken        |
+|      70542 | Marra        |
++------------+--------------+
+4 rows in set (0.00 sec)
+
+
+mysql> desc Faculty;
++--------------+----------+------+-----+---------+-------+
+| Field        | Type     | Null | Key | Default | Extra |
++--------------+----------+------+-----+---------+-------+
+| faculty_id   | char(10) | YES  |     | NULL    |       |
+| faculty_name | char(15) | NO   | PRI | NULL    |       |
++--------------+----------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Class_schedule/faculty.txt' into table Faculty;
+Query OK, 3 rows affected (0.23 sec)
+Records: 3  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Faculty;
++------------+--------------+
+| faculty_id | faculty_name |
++------------+--------------+
+| 3467       | Berndt       |
+| 2143       | Birkin       |
+| 4756       | Collins      |
++------------+--------------+
+3 rows in set (0.00 sec)
+
+mysql> desc Course;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| course_id   | char(10) | NO   | MUL | NULL    |       |
+| course_name | char(15) | NO   | PRI | NULL    |       |
++-------------+----------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Class_schedule/course.txt' into table Course;
+Query OK, 4 rows affected (0.11 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Course;
++-----------+---------------+
+| course_id | course_name   |
++-----------+---------------+
+| ISM 3112  | Syst Design   |
+| ISM 3113  | Syst Analysis |
+| ISM 4212  | Database      |
+| ISM 4930  | Networking    |
++-----------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> desc Qualified;
++----------------+----------+------+-----+---------+-------+
+| Field          | Type     | Null | Key | Default | Extra |
++----------------+----------+------+-----+---------+-------+
+| faculty_id     | char(10) | NO   |     | NULL    |       |
+| course_id      | char(10) | NO   | PRI | NULL    |       |
+| date_qualified | date     | YES  |     | NULL    |       |
++----------------+----------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Class_schedule/qualified.txt' into table Qualified;
+Query OK, 4 rows affected, 2 warnings (0.10 sec)
+Records: 6  Deleted: 0  Skipped: 2  Warnings: 2
+
+mysql> select*from Qualified;
++------------+-----------+----------------+
+| faculty_id | course_id | date_qualified |
++------------+-----------+----------------+
+| 2143       | ISM 3112  | 1988-09-01     |
+| 2143       | ISM 3113  | 1988-09-01     |
+| 3467       | ISM 4212  | 1995-09-01     |
+| 3467       | ISM 4930  | 1996-09-01     |
++------------+-----------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> desc Section;
++------------+------------------+------+-----+---------+-------+
+| Field      | Type             | Null | Key | Default | Extra |
++------------+------------------+------+-----+---------+-------+
+| section_no | int(10) unsigned | NO   |     | NULL    |       |
+| semester   | char(10)         | YES  |     | NULL    |       |
+| course_id  | char(10)         | NO   | PRI | NULL    |       |
++------------+------------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Class_schedule/section.txt' into table Section;
+Query OK, 3 rows affected, 1 warning (0.14 sec)
+Records: 4  Deleted: 0  Skipped: 1  Warnings: 1
+
+mysql> select*from Section;
++------------+----------+-----------+
+| section_no | semester | course_id |
++------------+----------+-----------+
+|       2712 | I-2008   | ISM 3113  |
+|       2714 | I-2008   | ISM 4212  |
+|       2715 | I-2010   | ISM 4930  |
++------------+----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> desc Registration;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| student_id | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| section_no | int(10) unsigned | NO   |     | NULL    |                |
+| semester   | char(10)         | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Class_schedule/registration.txt' into table Registration;
+Query OK, 3 rows affected, 1 warning (0.08 sec)
+Records: 4  Deleted: 0  Skipped: 1  Warnings: 1
+
+mysql> select*from Registration;
++------------+------------+----------+
+| student_id | section_no | semester |
++------------+------------+----------+
+|      38214 |       2714 | I-2008   |
+|      54907 |       2714 | I-2009   |
+|      66324 |       2713 | I-2008   |
++------------+------------+----------+
+3 rows in set (0.00 sec)
+

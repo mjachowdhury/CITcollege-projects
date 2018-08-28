@@ -1,0 +1,97 @@
+mysql> show tables;
++------------------------+
+| Tables_in_bank_account |
++------------------------+
+| Account                |
+| Customer               |
+| Mail                   |
+| Product                |
+| Transactions           |
++------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select*from Customer;
++---------+--------+-------+
+| cust_id | fname  | lname |
++---------+--------+-------+
+|       1 | George | Blake |
+|       2 | Sue    | Smith |
++---------+--------+-------+
+2 rows in set (0.00 sec)
+
+
+mysql> load data local infile '/home/mohammed/Mysql/account.txt' into table Account;
+Query OK, 5 rows affected (0.08 sec)
+Records: 5  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Account;                                                     +------------+------------+---------+---------+
+| account_id | product_cd | cust_id | balance |
++------------+------------+---------+---------+
+|        103 | CHK        |       1 |      75 |
+|        104 | SAV        |       1 |     250 |
+|        105 | CHK        |       2 |  783.64 |
+|        106 | MM         |       2 |     500 |
+|        107 | LOC        |       2 |       0 |
++------------+------------+---------+---------+
+5 rows in set (0.00 sec)
+
+
+mysql> load data local infile '/home/mohammed/Mysql/product.txt' into table Product;
+Query OK, 4 rows affected (0.08 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Product;
++------------+----------------+
+| product_cd | name           |
++------------+----------------+
+| CHK        | Checking       |
+| LOC        | Line of Credit |
+| MM         | Money market   |
+| SAV        | Savings        |
++------------+----------------+
+4 rows in set (0.00 sec)
+
+
+mysql> load data local infile '/home/mohammed/Mysql/transaction.txt' into table Transactions;
+Query OK, 7 rows affected, 11 warnings (0.18 sec)
+Records: 7  Deleted: 0  Skipped: 0  Warnings: 11
+
+mysql> select*from Transactions;
++--------+-------------+------------+--------+------------+
+| txn_id | txn_type_cd | account_id | amount | TransDate  |
++--------+-------------+------------+--------+------------+
+|    978 | DBT         |        103 |    100 | 2004-01-22 |
+|    979 | CDT         |        103 |     25 | 0000-00-00 |
+|    980 | DBT         |        104 |    250 | 2004-03-09 |
+|    981 | DBT         |        105 |   1000 | 2004-03-25 |
+|    982 | CDT         |        105 |  138.5 | 2004-04-02 |
+|    983 | CDT         |        105 |  77.86 | 0000-00-00 |
+|    984 | DBT         |        106 |    500 | 2004-03-27 |
++--------+-------------+------------+--------+------------+
+7 rows in set (0.00 sec)
+
+mysql> load data local infile '/home/mohammed/Mysql/mail.txt' into table Mail; Query OK, 15 rows affected (0.10 sec)
+Records: 15  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Mail;
++----------------------+---------+---------+---------+---------+---------+
+| sentDateTime         | Srcuser | Srchost | dstuser | dsthost | sizes   |
++----------------------+---------+---------+---------+---------+---------+
+| 2006-05-11 10:15:08  | barb    | saturn  | tricia  | mars    |   58274 |
+| 2006-05-12 12:48:13  | tricia  | mars    | gene    | venus   |  194925 |
+| 2006-05-12 15:02:49  | phil    | mars    | phil    | saturn  |    1048 |
+| 2006-05-13 13:59:18  | barb    | saturn  | tricia  | venus   |     271 |
+| 2006-05-14 09:31:37  | ene     | venus   | barb    | mars    |    2291 |
+| 2006-05-14 11:52:17  | phil    | mars    | tricia  | saturn  |    5781 |
+| 2006-05-14 14:42:21  | barb    | venus   | barb    | venus   |   98151 |
+| 2006-05-14 17:03:01  | tricia  | saturn  | phil    | venus   | 2394482 |
+| 2006-05-15 07:17:48  | gene    | mars    | gene    | saturn  |    3824 |
+| 2006-05-15 08:50:57  | phil    | venus   | phil    | venus   |     978 |
+| 2006-05-15 10:25:52  | gene    | mars    | tricia  | saturn  |  998532 |
+| 2006-05-15 17:35:31  | gene    | saturn  | gene    | mars    |    3856 |
+| 2006-05-16 09:00:28  | gene    | venus   | barb    | mars    |     613 |
+| 2006-05-16 23:04:19  | phil    | venus   | barb    | venus   |   10294 |
+| 2006-05-17 12:49:23  | phil    | mars    | tricia  | saturn  |     873 |
++----------------------+---------+---------+---------+---------+---------+
+15 rows in set (0.00 sec)
+

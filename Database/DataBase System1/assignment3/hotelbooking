@@ -1,0 +1,38 @@
+For the hotelBooking database, write SQL statements to answer the following question:
+
+1. List full details of all hotels.
+2. List full details of all in London.
+3. List the bookings for which no dateTo has been specified.
+
+Q1.LIST FULL DETAILS OF ALL HOTELS.
+mysql> select*from Hotel;
++----------+----------------+------------+
+| hotel_no | hotel_name     | city       |
++----------+----------------+------------+
+| H001     | Meteor Garden  | Washington |
+| H002     | Hilton         | Texas      |
+| H003     | Grosvenor      | Boston     |
+| H004     | Imperical      | New York   |
++----------+----------------+------------+
+4 rows in set (0.00 sec)
+
+
+Q2.LIST FULL DETAILS OF ALL IN LONDON.
+
+mysql> select*from Hotel where city='London';
+Empty set (0.00 sec)
+
+
+ 
+Q3. LIST THE BOOKINGS FOR WHICH NO DATETO HAS BEEN SPECIFIED.
+
+mysql> select hotel_no, guest_no, date_from,date_to from Booking where date_to='0000-00-00';
++----------+----------+------------+------------+
+| hotel_no | guest_no | date_from  | date_to    |
++----------+----------+------------+------------+
+| H001     | G001     | 2012-08-02 | 0000-00-00 |
++----------+----------+------------+------------+
+1 row in set, 2 warnings (0.00 sec)
+
+
+

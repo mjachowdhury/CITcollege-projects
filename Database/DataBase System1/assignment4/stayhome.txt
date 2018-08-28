@@ -1,0 +1,47 @@
+Write SQL questions to answer the following questions based on the stayHome database.
+1. List all videos sorted in descending order of price.
+2. List the total number of staff with a salary greater than $4000 and the sum of their salaries.
+3. For each branch office with more than one member of staff, find the number of staff working in each branch and the sum of their salaries.
+
+Q.1. List all videos sorted in descending order of price.
+
+mysql> select Title, Category,dailyRental,price from video order by price desc;
++--------------------+----------+-------------+-------+
+| Title              | Category | dailyRental | price |
++--------------------+----------+-------------+-------+
+| Independence Day   | Sci-Fi   |         4.5 | 32.99 |
+| Lord of the Rings  | Fantasy  |           5 | 31.99 |
+| Men in Black II    | Action   |           4 | 29.99 |
+| Die Another Day    | Action   |           5 | 21.99 |
+| Shrek              | Children |           4 |  18.5 |
+| Harry Potter       | Children |         4.5 |  14.5 |
++--------------------+----------+-------------+-------+
+6 rows in set (0.00 sec)
+
+Q.2. List the total number of staff with a salary greater than $4000 and the sum of their salaries.
+ 
+mysql> select count(staffNo) as 'count', sum(salary) as 'sum' from Staff where salary>4000;
++-------+--------+
+| count | sum    |
++-------+--------+
+|     6 | 247000 |
++-------+--------+
+1 row in set (0.00 sec)
+
+
+
+Q.3. For each branch office with more than one member of staff, find the number of staff working in each branch and the sum of their salaries.
+
+ mysql> select branchNo,count(staffNo) as 'count', sum(salary) as 'salary' from Staff group by branchNo having count(staffNo)>1 order by branchNo;
++----------+-------+--------+
+| branchNo | count | salary |
++----------+-------+--------+
+| B001     |     2 |  76000 |
+| B002     |     2 |  82000 |
++----------+-------+--------+
+2 rows in set (0.00 sec)
+
+ 
+
+
+

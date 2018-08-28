@@ -1,0 +1,55 @@
+Write SQL queries to answer the following questions based on the classSchedule database.
+1. What is the smallest section number used in the first semester of 2008?
+2. How many students are enrolled in section 2714 in the first semester of 2008?
+3. List all students in alphabetical order by student_name.
+4. List the students who are enrolled in each course in semester I,2008. Group the students by the sections in which they are enrolled.
+
+
+Q1. What is the smallest section number used in the first semester of 2008?
+
+mysql> select semester,min(section_no) smallest  from Section where semester ='I-2008';
++----------+----------+
+| semester | smallest |
++----------+----------+
+| I-2008   |     2712 |
++----------+----------+
+1 row in set (0.00 sec)
+
+Q2.How many students are enrolled in section 2714 in the first semester of 2008?
+
+mysql> select student_id,section_no,semester from Registration where semester='I-2008';
++------------+------------+----------+
+| student_id | section_no | semester |
++------------+------------+----------+
+|      38214 |       2714 | I-2008   |
+|      66324 |       2713 | I-2008   |
++------------+------------+----------+
+2 rows in set (0.01 sec)
+
+Q3. List all students in alphabetical order by student_name.
+
+mysql> select student_name from Student order by student_name asc;
++--------------+
+| student_name |
++--------------+
+| Aiken        |
+| Altvater     |
+| Letersky     |
+| Marra        |
++--------------+
+4 rows in set (0.00 sec)
+
+Q.4. List the students who are enrolled in each course in semester I,2008. Group the students by the sections in which they are enrolled.
+
+mysql> select section_no,semester,course_id from Section where semester='I-2008';
++------------+----------+-----------+
+| section_no | semester | course_id |
++------------+----------+-----------+
+|       2712 | I-2008   | ISM 3113  |
+|       2714 | I-2008   | ISM 4212  |
++------------+----------+-----------+
+2 rows in set (0.00 sec)
+
+
+
+

@@ -1,0 +1,221 @@
+USING SUBQUERY OR JOINING TO ANSWER THE FOLLOWING QUERIES.
+ANSWER THE FOLLOWING QUESTIONS REGARDING THE CLASSSCHEDULE DATABASE:
+1. WHICH INSTRUCTOR ARE QUALIFIED TO TEACH ISM3113?
+2. IS ANY INSTRUCTOR QUALIFIED TO TEACH ISM3113 AND NOT QUALIFIED TO TEACHISM4930.
+3. HOW MANY STUDENTS ARE ENROLLED IN ISM3113 DURING SEMESTER I-2008?
+4. WHICH STUDENTS WERE NOT ENROLLED IN ANY COURSES DURING SEMESTER I-2008?
+
+
+Q.1. WHICH INSTRUCTOR ARE QUALIFIED TO TEACH ISM3113?
+
+mysql> select Faculty.faculty_name 
+    -> from Faculty, Qualified
+    -> where Qualified.faculty_id = Faculty.faculty_id
+    -> and Qualified.course_id = 'ISM 3113';
++--------------+
+| faculty_name |
++--------------+
+| Collins      |
++--------------+
+1 row in set (0.00 sec)
+
+
+Q.2. IS ANY INSTRUCTOR QUALIFIED TO TEACH ISM3113 AND NOT QUALIFIED TO TEACHISM4930.
+ 
+mysql> select Faculty.faculty_id,Faculty.faculty_name from Faculty,Qualified where Qualified.faculty_id = Faculty.faculty_id and Qualified.course_id ='ISM 3113' - select Faculty.faculty_id,Faculty.faculty_name from Faculty,Qualified where  Qualified.faculty_id = Faculty.faculty_id and Qualified.course_id = 'ISM 4930';
++------------+--------------+
+| faculty_id | faculty_name |
++------------+--------------+
+|       4756 | Collins      |
++------------+--------------+
+1 row in set (0.00 sec)
+
+ 
+
+Q.3. HOW MANY STUDENTS ARE ENROLLED IN ISM3113 DURING SEMESTER I-2008?
+
+mysql> select student_id from Section,Registration where Section.section_no = Registration.section_no and course_id ='ISM 3113' and Registration.semester ='I-2008';
++------------+
+| student_id |
++------------+
+|      66324 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select count(student_id)as student_id from Section,Registration where Section.section_no = Registration.section_no and course_id ='ISM 3113' and Registration.semester ='I-2008';
++------------+
+| student_id |
++------------+
+|          1 |
++------------+
+1 row in set (0.00 sec)
+
+Q.4. WHICH STUDENTS WERE NOT ENROLLED IN ANY COURSES DURING SEMESTER I-2008?
+
+mysql> select DISTINCT student_id,student_name from Student
+    -> where NOT EXISTS
+    -> (select* from Registration where Student.student_id=Registration.student_id and semester='I-2008');
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|      54907 | Altvater     |
+|      70542 | Marra        |
++------------+--------------+
+2 rows in set (0.42 sec)
+
+
+---------------------------*****************************---------------------------
+
+
+ANSWER THE FOLLOWING QUESTIONS REGARDING THE HOTELBOOKING DATABASE:
+1. CREATE A VIEW CONTAINING THE HOTEL NAME AND THE NAMES OF THE GUESTS STAYING AT THE HOTEL.
+2. CREATE A VIEW CONTAINING THE ACCOUNT FOR EACH GUEST AT THE GROSVENOR HOTEL.
+3. WHAT IS THE TOTAL INCOME FROM BOOKINGS FOR THE GROSVENOR HOTEL TODAY?
+4. LIST THE ROOMS THAT ARE CURRENTLY UNOCCUPIED AT THE GROSVENOR HOTEL.
+5. WHAT IS THE LOST INCOME FROM UNOCCUPIED ROOMS AT THE GROSVENOR HOTEL?
+6. WHAT IS THE LOST INCOME FROM UNOCCUPIED ROOMS AT EACH HOTEL TODAY?
+
+
+Q.1. CREATE A VIEW CONTAINING THE HOTEL NAME AND THE NAMES OF THE GUESTS STAYING AT THE HOTEL.
+
+mysql> create view hotelAndGuestName(hotel_no,hotel_name, guest_no,guest_name) 
+    ->as select h.hotel_no,h.hotel_name,g.guest_no ,g.guest_name 
+    ->from Booking b, Hotel h, Guest g where h.hotel_no=b.hotel_no and g.guest_no=b.guest_no;
+
+Query OK, 0 rows affected (0.82 sec)
+
+mysql> select*from hotelAndGuestName;
++----------+----------------+----------+------------+
+| hotel_no | hotel_name     | guest_no | guest_name |
++----------+----------------+----------+------------+
+| H001     | Meteor Garden  | G001     | Mary       |
+| H002     | Hilton         | G002     | Tom        |
+| H004     | Imperical      | G003     | John       |
++----------+----------------+----------+------------+
+3 rows in set (0.00 sec)
+
+
+Q.2. CREATE A VIEW CONTAINING THE ACCOUNT FOR EACH GUEST AT THE GROSVENOR HOTEL.
+
+mysql> create view guestAccount(hotel_no,room_no,type,price,guest_name) 
+    ->as select r.hotel_no,r.room_no,r.type,r.price,g.guest_name 
+    ->from Hotel h,Room r, Booking b, Guest g 
+    ->where h.hotel_name='Grosvenor' 
+    ->and (b.date_from <='system date' and b.date_to >='system date') 
+    ->and h.hotel_no=r.hotel_no and r.hotel_no=b.hotel_no and r.room_no=b.room_no and b.guest_no=g.guest_no;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select*from guestAccount;
++---------+----------+---------+-------+-------------+
+| room_no | hotel_no | type    | price |  guest_name |
++---------+----------+---------+-------+-------------+
+| R001    | H001     | single  |    30 |  Mary	     |
+| R101    | H001     | double  |    25 |  Tom	     |
+| R104    | H002     | double  |    90 |  John       |
+| R110    | H003     | double  |    35 |  Stephenie  | 
++---------+----------+---------+-------+-------------+
+4 rows in set (0.00 sec)
+
+
+Q3. WHAT IS THE TOTAL INCOME FROM BOOKINGS FOR THE GROSVENOR HOTEL TODAY?
+
+
+mysql> select sum(price) from Booking b, Room r, Hotel h 
+    ->where (b.date_from<='2012-08-02' and b.date_to>='2013-01-14') 
+    ->and r.hotel_no=h.hotel_no and r.hotel_no=b.hotel_no 
+    ->and r.room_no=b.room_no and h.hotel_name='Grosvenor';
++------------+
+| sum(price) |
++------------+
+|       NULL |
++------------+
+1 row in set (0.00 sec)
+
+mysql>  select sum(price) from Room, Booking,Hotel where Hotel.hotel_name='Grosvenor';
++------------+
+| sum(price) |
++------------+
+|       1860 |
++------------+
+1 row in set (0.00 sec)
+
+
+Q.4. LIST THE ROOMS THAT ARE CURRENTLY UNOCCUPIED AT THE GROSVENOR HOTEL.
+
+mysql> (select*from Booking b, Hotel h,Room r where (date_from<='2012-08-02' and date_to >='2013-01-14') and r.hotel_no = b.hotel_no and r.room_no = b.room_no and r. hotel_no = h.hotel_no and hotel_name = 'Grosvenor');
+Empty set (0.00 sec)
+
+
+Q.5. WHAT IS THE LOST INCOME FROM UNOCCUPIED ROOMS AT THE GROSVENOR HOTEL?
+
+mysql> select sum(price) from Room r, Hotel h where r.hotel_no=h.hotel_no and h.hotel_name='Grosvenor'and room_no NOT IN (select room_no from Booking b, Hotel h where (date_from<='system date' and date_to>='system date') and b.hotel_no=h.hotel_no and r.hotel_no=b.hotel_no and r.room_no=b.room_no and h.hotel_name='Grosvenro');
++------------+
+| sum(price) |
++------------+
+|        235 |
++------------+
+1 row in set, 2 warnings (1.91 sec)
+
+
+Q.6. WHAT IS THE LOST INCOME FROM UNOCCUPIED ROOMS AT EACH HOTEL TODAY?
+
+mysql> select hotel_no, SUM(price) 
+    ->from Room r where room_no NOT IN 
+    ->(select room_no from Booking b, Hotel h 
+    ->where (date_from<=CURRENT_DATE and date_to>=CURRENT_DATE) 
+    ->and b.hotel_no=h.hotel_no) GROUP BY hotel_no;
++----------+------------+
+| hotel_no | SUM(price) |
++----------+------------+
+| H001     |         95 |
+| H002     |         90 |
+| H003     |        235 |
+| H004     |        200 |
++----------+------------+
+4 rows in set (2.58 sec)
+
+-----------------------------***************************--------------------------------------
+
+
+ANSWER THE FOLLOWING QUESTIONS REGARDING THE NEW ADULTLITERACY DATABASE:
+1. FIND ANY TUTORS WHO HAVE NOT SUBMITTED A REPORT FOR JULY
+2. WHICH TUTORS, BY ID, ARE AVAILABLE TO TUTOR?
+3. WHICH TUTOR NEEDS TO BE REMINDED TO TURN IN REPORTS?
+
+
+Q.1. FIND ANY TUTORS WHO HAVE NOT SUBMITTED A REPORT FOR JULY
+
+mysql> select a.*from Match_History a 
+    ->left join tutor_report b 
+    ->on a. match_id=b.match_id 
+    ->and b.month ='6-08' where b.match_id is null;
++----------+----------+------------+------------+------------+
+| match_id | tutor_id | student_id | start_date | end_date   |
++----------+----------+------------+------------+------------+
+| 2        | 101      | 3001       | 2008-01-15 | 2008-05-15 |
+| 3        | 102      | 3002       | 2008-02-10 | 2008-03-01 |
+| 6        | 104      | 3005       | 2008-06-01 | 2008-06-28 |
+| 7        | 104      | 3006       | 2008-06-01 | NULL       |
++----------+----------+------------+------------+------------+
+4 rows in set (0.00 sec)
+
+
+Q.2. WHICH TUTORS, BY ID, ARE AVAILABLE TO TUTOR?
+
+mysql> select tutor_id from Tutor where Status = 'Active';
++----------+
+| tutor_id |
++----------+
+| 100      |
+| 103      |
+| 104      |
+| 106      |
++----------+
+4 rows in set (0.00 sec)
+
+Q.3. WHICH TUTOR NEEDS TO BE REMINDED TO TURN IN REPORTS?
+
+mysql> select Tutor.tutor_id,Match_History.start_date,end_date from Tutor,Match_History where start_date >='2008-07-01'and end_date <='2008-07-31';
+Empty set (0.00 sec)
+
+

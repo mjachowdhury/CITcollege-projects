@@ -1,0 +1,118 @@
+mysql> use hotel_booking;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-------------------------+
+| Tables_in_hotel_booking |
++-------------------------+
+| Booking                 |
+| Hotel                   |
+| Room                    |
++-------------------------+
+
+mysql> desc Hotel;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| hotel_no   | varchar(10) | NO   | PRI | NULL    |       |
+| hotel_name | varchar(20) | YES  |     | NULL    |       |
+| city       | varchar(15) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Hotel_booking/hotel.txt' into table Hotel;
+Query OK, 4 rows affected (0.10 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Hotel;
++----------+----------------+------------+
+| hotel_no | hotel_name     | city       |
++----------+----------------+------------+
+| H001     | Meteor Garden  | Washington |
+| H002     | Hilton         | Texas      |
+| H003     | Grosvenor      | Boston     |
+| H004     | Imperical      | New York   |
++----------+----------------+------------+
+4 rows in set (0.00 sec)
+
+mysql> desc Booking;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| hotel_no  | varchar(10) | YES  | MUL | NULL    |       |
+| guest_no  | varchar(10) | NO   | PRI | NULL    |       |
+| date_from | date        | YES  |     | NULL    |       |
+| date_to   | date        | YES  |     | NULL    |       |
+| room_no   | varchar(10) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select*from Booking;                                                     +----------+----------+------------+------------+---------+
+| hotel_no | guest_no | date_from  | date_to    | room_no |
++----------+----------+------------+------------+---------+
+| H001     | G001     | 2012-08-02 | 0000-00-00 |         |
+| H002     | G002     | 2013-01-01 | 2013-01-03 | R104    |
+| H004     | G003     | 2012-12-31 | 2013-01-14 | R907    |
++----------+----------+------------+------------+---------+
+3 rows in set (0.00 sec)
+
+
+mysql> desc Room;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| room_no  | varchar(10) | NO   | PRI | NULL    |       |
+| hotel_no | varchar(10) | YES  |     | NULL    |       |
+| type     | varchar(10) | YES  |     | NULL    |       |
+| price    | float       | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Hotel_booking/room.txt' into table Room;
+Query OK, 7 rows affected, 2 warnings (0.08 sec)
+Records: 9  Deleted: 0  Skipped: 2  Warnings: 2
+
+mysql> select*from Room;
++---------+----------+---------+-------+
+| room_no | hotel_no | type    | price |
++---------+----------+---------+-------+
+| R001    | H001     | single  |    30 |
+| R101    | H001     | double  |    25 |
+| R104    | H002     | double  |    90 |
+| R110    | H003     | double  |    35 |
+| R210    | H003     | family  |   200 |
+| R302    | H001     | family  |    40 |
+| R907    | H004     | amily   |   200 |
++---------+----------+---------+-------+
+7 rows in set (0.00 sec)
+
+
+mysql> desc Guest;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| guest_no      | varchar(10) | YES  |     | NULL    |       |
+| guest_name    | varchar(20) | YES  |     | NULL    |       |
+| guest_address | varchar(30) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Hotel_booking/guest.txt' into table Guest;
+Query OK, 4 rows affected (0.10 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Guest;
++----------+------------+-----------------+
+| guest_no | guest_name | guest_address   |
++----------+------------+-----------------+
+| G001     | Mary       | Cork, Ireland   |
+| G002     | Tom        | NY, USA         |
+| G003     | John       | Dublin, Ireland |
+| G004     | Sephenie   | Paris, France   |
++----------+------------+-----------------+
+4 rows in set (0.00 sec)
+
