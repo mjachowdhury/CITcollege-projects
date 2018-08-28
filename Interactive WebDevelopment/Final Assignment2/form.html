@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--Author : Mohammed Jahangir Alom. Student ID : R00144214 Email: mohammed.alom@mycit.ie-->
+<html>
+   <head>
+      <title>Cork Wounder Pizza</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><!--footer social icon-->
+      <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	  
+	  <script
+      src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous">
+      </script>
+	  <script type="text/javascript" src ="calculate.js"></script>
+	  
+	  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>-->	   
+	  
+	  <meta name="description" content="Cork's newest Pizza shop delivery and takeway Service available.">
+      <meta name="keywords" content="Italian pizza, cork pizza, takeway service, delivery service, italian pizza,pizza,business">
+   </head>
+   <body onload = 'hideTotal()'>
+        <div id="pagewrap">
+		  <header>
+			 <h1>!! Wounder Pizza !!</h1>
+			 <br/>
+			 <h1>Delivery & Takeway</h1><br/>
+			 <h3 id="mobile">Order HotLine:086238344</h3>
+		  </header>
+		  
+			<img  src="images/header1.jpeg" class="home" id = "myPhoto" alt="Image"><!--header image-->
+			<script type="text/javascript">slideit();</script>
+			<!--<script type="text/javascript">changeImage();</script>-->
+			
+			<NAV id ="container"> <!--header menu part-->
+				 <UL id="menu">
+					<LI><A HREF="index.html" class="current"><span>Home</span></A></LI>
+					<LI><A HREF="#"><span>Services</span></A></LI>
+					<LI><A HREF="#"><span>Delivery</span></A></LI>
+					<LI><A HREF="#"><span>Contact Us</span></A></LI>
+				 </UL>
+			</NAV>
+		  
+				<h3>Online Pizza Order Form</h3>
+				<form method = "post" action ="http://atlantis.cit.ie/displayvalues.php" id ="pizzaform" >
+					 
+						<fieldset>
+							<!--This part for choosing size of the pizza onclick =sumTotal() function will automatically will add the price when select the size frm the checkBox button-->
+							<h3>Choose Size Of The Pizza</h3>
+							<input type="checkbox" name="SmallSize" value ="Small - 9.99" id ="Small" onclick="sumTotal()" onChange="pizzaSizeChange('sPizza')" >Small Size <span class ="cost">&euro; 9.99</span><br/>
+							<input type="checkbox" name="MediumSize" value ="Medium - 12.99" id ="Medium" onclick="sumTotal()" onChange="pizzaSizeChange('mPizza')">Medium Size <span class ="cost">&euro; 12.99</span><br/>
+							<input type="checkbox" name="LargeSize" value ="Large - 14.99" id ="Large" onclick="sumTotal()"  onChange="pizzaSizeChange('lPizza')">Large Size <span class ="cost">&euro; 14.99</span><br/>
+							<input type="checkbox" name="ExtraLargeSize" value ="ExtraLarge - 15.99" id ="ExtraLarge" onclick="sumTotal()"  onChange="pizzaSizeChange('elPizza')">Extra Large Size <span class ="cost">&euro; 15.99</span><br/>
+							
+						 
+							<img id="sPizza" class="checkbox" src="images/cheese.png" alt="pizzaPic" />
+							<img id="mPizza" class="checkbox" src="images/cheese.png" alt="pizzaPic"  style="visibility:hidden" />
+							<img id="lPizza" class="checkbox" src="images/cheese.png" alt="pizzaPic"  style="visibility:hidden" />
+							<img id="elPizza" class="checkbox" src="images/cheese.png" alt="pizzaPic"  style="visibility:hidden" />
+							
+						</fieldset>
+						<br/>
+						<!--This part for choosing topping of the pizza onclick= sumTotal() function will automatically will add the price when select the upgrade on checkBox button-->
+						<fieldset>
+							<h3>Choose Pizza Topping</h3>
+							<input type="checkbox" name="Onion" value="Onion- 0.50" id="Onion" onclick="sumTotal()" onchange="pizzaToppingChange('onion')">Onion<span class="cost">&euro; 0.50</span><br/>
+							<input type="checkbox" name="Olive" value="Olive - 0.50" id="Olive" onclick="sumTotal()" onchange="pizzaToppingChange('olive')">Olive <span class="cost">&euro; 0.50</span><br/>
+							<input type="checkbox" name="Chicken" value="Chicken - 1.00" id="Chicken" onclick="sumTotal()" onchange="pizzaToppingChange('chicken')">Chicken<span class="cost">&euro; 1.00</span><br/>
+							<input type="checkbox" name="Papperoni" value="Papperoni - 1.00" id="Papperoni" onclick="sumTotal()" onchange="pizzaToppingChange('papperoni')">Papperoni<span class="cost">&euro; 1.00</span><br/>
+							<input type="checkbox" name="Pappers" value="Pappers - 0.50" id="Pappers" onclick="sumTotal() " onchange="pizzaToppingChange('pappers')">Pappers<span class="cost">&euro; 0.50</span><br/>
+							
+							<img id="onion" class="checkbox" src="images/onion.png" alt="pizzaPic"  style="visibility:hidden"/>
+							<img id="olive" class="checkbox" src="images/blackOlive.png" alt="pizzaPic"  style="visibility:hidden" />
+							<img id="chicken" class="checkbox" src="images/chicken.png" alt="pizzaPic"  style="visibility:hidden" />
+							<img id="papperoni" class="checkbox" src="images/pepperoni.png" alt="pizzaPic"  style="visibility:hidden" />
+							<img id="pappers" class="checkbox" src="images/greenPepper.png" alt="pizzaPic"  style="visibility:hidden" />
+							
+						</fieldset>
+						                   				 
+						<!--<fieldset>-->
+							<h3>Tick If you have valid CIT Email Address - 5% Discount</h3>
+							<input type="checkbox" name="Cit EmailAddress" value="Discount - 5%" id="Email" onclick="sumTotal()">CIT Email Address<span class="cost"></span><br/>							 
+						<!--</fieldset>-->
+					 
+						<!--This part for delivery address-->
+						<fieldset>
+						
+						<h3>Delivery Details</h3>
+						
+						<div>
+							<label>Name:</label>
+							<input  type ="text" name="Name" value="" required  pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="firstname lastname" aria-required="true" >
+							<span   class="help">Format: Firstname Lastname</span>
+						</div>
+						<div>
+							<label>Address:</label>
+							<input   type="text" name="Address" value="" required  pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="Address" aria-required="true" >
+							<span   class="help">Format: Full Address Please</span>
+						</div>
+						<div>
+							<label>Mobile:</label>
+							<input type="tel"   name="Mobile" value="" required  pattern="[0-9]+" required aria-required="true">
+							<span   class="help">Format: 0871111111</span>
+						</div>
+						<div>
+							<label>Email:</label>
+							<input type="email" id="Email"  name="Email" value="" pattern= "[a-zA-Z][-\w\.]{1,20}@mycit\.ie" required aria-required="true">
+							<span   class="help">Format: example@mycit.ie</span>
+						</div>
+						
+						<br/>                      
+							<!--This input type hidden will not show in the webpage but when submit the order it will show the TotalPrice -->
+							<input type="hidden" name="TotalPrice" id = "tprice"  />	
+							<input type='submit' id='submit' value='Order Now' onclick=" return submitForm() " /><!--When order now button will be pressed then onclick="submitForm() function will work"-->
+							<input type='reset' id='reset' value='Reset' onclick="this.form.reset();"><!--When reset button will be pressed then onclick="reset() function will work"-->                       
+						<div id="totalPrice"></div> 
+						</fieldset>
+				</form>
+				<!--End of from-->
+						 
+				<!--<img src="images/1.jpg" class = "home" id="myImage" alt="footerImage"/>-->
+			 		 
+			<footer class="footer-part"> <!--footer part-->
+				<div class="footer-left">
+					<h3>Wounder Pizza<span>Delivery & Takeway Service</span></h3>
+					<p class="footer-links"><!--footer part menu-->
+					   <a href="index.html">Home</a>
+					   |
+					   <a href="#">Service</a>
+					   |
+					   <a href="#">Delivery</a>
+					   |
+					   <a href="#">Contact Us</a>
+					</p>
+					<p class="footer-company-name">Wounder Pizza | Delivery & Takeway Services &copy; 2016</p>
+				</div>
+				<div class="footer-center">
+					<div>
+					   <i class="fa fa-map-marker"></i>
+					   <p><span>McCuratin Street</span> Cork, Ireland</p>
+					</div>
+					<div>
+					   <i class="fa fa-phone"></i>
+					   <p>+353 862383449</p>
+					</div>
+					<div>
+					   <i class="fa fa-envelope"></i>
+					   <p><a href="mailto:mohammed.alom@mycit.ie">mohammed.alom@mycit.ie</a></p>
+					</div>
+				</div>
+				<div class="footer-right">
+					<p class="footer-company-about">
+					   <span>About the company</span>
+						We are newest in the cork city. All of our ingridents are source from locally. Come and Enjoy our Award wining Pizza.					
+					</p>
+					<div class="footer-icons">
+					   <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+					   <a href="http://twitter.com"><i class="fa fa-twitter"></i></a>
+					   <a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+					   <a href="http://www.github.com"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
+			</footer>
+        </div>
+	</body> 	
+</html>
