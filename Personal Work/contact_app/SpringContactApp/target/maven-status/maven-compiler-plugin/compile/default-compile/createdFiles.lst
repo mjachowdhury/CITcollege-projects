@@ -1,0 +1,10 @@
+com\alomsoft\capp\domain\User.class
+com\alomsoft\capp\dao\ContactDAO.class
+com\alomsoft\capp\config\ContactAppDispatcherServletInitializer.class
+com\alomsoft\capp\config\SpringWebConfig.class
+com\alomsoft\capp\controller\TestController.class
+com\alomsoft\capp\dao\UserDAOImpl.class
+com\alomsoft\capp\dao\BaseDAO.class
+com\alomsoft\capp\config\SpringRootConfig.class
+com\alomsoft\capp\domain\Contact.class
+com\alomsoft\capp\dao\UserDAO.class
