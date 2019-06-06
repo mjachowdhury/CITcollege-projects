@@ -1,0 +1,1721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/contractorloginaction.do" />
+  <StrutsActivity path="/edittenderaction.do" />
+  <StrutsActivity path="/searchtenderaction.do" />
+  <StrutsActivity path="/storetenderaction.do" />
+  <StrutsActivity path="/deletetenderaction.do" />
+  <StrutsActivity path="/searchcontractoraction.do" />
+  <StrutsActivity path="/editcontractoraction.do" />
+  <StrutsActivity path="/deletecontractoraction.do" />
+  <StrutsActivity path="/storecontractoraction.do" />
+  <StrutsActivity path="/storepolicestaction.do" />
+  <StrutsActivity path="/deletepolicestaction.do" />
+  <StrutsActivity path="/searchpolicestaction.do" />
+  <StrutsActivity path="/editpolicestaction.do" />
+  <StrutsActivity path="/storepassportaction.do" />
+  <StrutsActivity path="/storebirthaction.do" />
+  <StrutsActivity path="/storedeathaction.do" />
+  <StrutsActivity path="/storewidowaction.do" />
+  <StrutsActivity path="/storeincomeaction.do" />
+  <StrutsActivity path="/storeresdaction.do" />
+  <StrutsActivity path="/storedomcileaction.do" />
+  <StrutsActivity path="/storeminorityaction.do" />
+  <StrutsActivity path="/storecasteaction.do" />
+  <StrutsActivity path="/loginaction.do" />
+  <StrutsActivity path="/policeloginaction.do" />
+  <StrutsActivity path="/showbirthaction.do" />
+  <StrutsActivity path="/viewbirthaction.do" />
+  <StrutsActivity path="/decideBirth.do" />
+  <StrutsActivity path="/decideCaste.do" />
+  <StrutsActivity path="/decideMinoity.do" />
+  <StrutsActivity path="/decideResident.do" />
+  <StrutsActivity path="/decideIncome.do" />
+  <StrutsActivity path="/decideDomcile.do" />
+  <StrutsActivity path="/decideWidow.do" />
+  <StrutsActivity path="/decideDeath.do" />
+  <StrutsActivity path="/aviewbirthaction.do" />
+  <StrutsActivity path="/aaviewbirthaction.do" />
+  <StrutsActivity path="/adviewbirthaction.do" />
+  <StrutsActivity path="/viewpassportaction.do" />
+  <StrutsActivity path="/candidateDetails.do" />
+  <StrutsActivity path="/pcandidateDetails.do" />
+  <StrutsActivity path="/aacandidateDetails.do" />
+  <StrutsActivity path="/dcandidateDetails.do" />
+  <StrutsActivity path="/adcandidateDetails.do" />
+  <StrutsActivity path="/pacandidateDetails.do" />
+  <StrutsActivity path="/pdcandidateDetails.do" />
+  <StrutsActivity path="/decidePolice.do" />
+  <StrutsActivity path="/decideAdmin.do" />
+  <StrutsActivity path="/assignPolice.do" />
+  <StrutsActivity path="/showdeathaction.do" />
+  <StrutsActivity path="/viewdeathaction.do" />
+  <StrutsActivity path="/aadviewdeathaction.do" />
+  <StrutsActivity path="/aaviewdeathaction.do" />
+  <StrutsActivity path="/adviewdeathaction.do" />
+  <StrutsActivity path="/showwidowaction.do" />
+  <StrutsActivity path="/viewwidowaction.do" />
+  <StrutsActivity path="/aadviewwidoaction.do" />
+  <StrutsActivity path="/aawviewwidowaction.do" />
+  <StrutsActivity path="/adwviewwidowaction.do" />
+  <StrutsActivity path="/showincomeaction.do" />
+  <StrutsActivity path="/viewincomeaction.do" />
+  <StrutsActivity path="/aaviewincomeaction.do" />
+  <StrutsActivity path="/adviewincomeaction.do" />
+  <StrutsActivity path="/aadiviewincomeaction.do" />
+  <StrutsActivity path="/showresdaction.do" />
+  <StrutsActivity path="/viewresdaction.do" />
+  <StrutsActivity path="/aadresidentview.do" />
+  <StrutsActivity path="/adresidentview.do" />
+  <StrutsActivity path="/aaresidentview.do" />
+  <StrutsActivity path="/showdomaction.do" />
+  <StrutsActivity path="/viewdomaction.do" />
+  <StrutsActivity path="/aadviewdomaction.do" />
+  <StrutsActivity path="/aaviewdomaction.do" />
+  <StrutsActivity path="/adviewdomaction.do" />
+  <StrutsActivity path="/showminaction.do" />
+  <StrutsActivity path="/viewminaction.do" />
+  <StrutsActivity path="/aadviewminaction.do" />
+  <StrutsActivity path="/aaviewminaction.do" />
+  <StrutsActivity path="/adviewminaction.do" />
+  <StrutsActivity path="/showcasteaction.do" />
+  <StrutsActivity path="/viewcasteaction.do" />
+  <StrutsActivity path="/aadviewcasteaction.do" />
+  <StrutsActivity path="/aaviewcasteaction.do" />
+  <StrutsActivity path="/adviewcasteaction.do" />
+  <StrutsActivity path="/issuebirthcer.do" />
+  <StrutsActivity path="/issuedeathcer.do" />
+  <StrutsActivity path="/issuewidowcer.do" />
+  <StrutsActivity path="/issueincomecer.do" />
+  <StrutsActivity path="/issueresdcer.do" />
+  <StrutsActivity path="/issuemincer.do" />
+  <StrutsActivity path="/issuecastecer.do" />
+  <StrutsActivity path="/checkbirthaction.do" />
+  <StrutsActivity path="/checkpassportaction.do" />
+  <StrutsActivity path="/checkdeathaction.do" />
+  <StrutsActivity path="/checkwidowaction.do" />
+  <StrutsActivity path="/checkincomeaction.do" />
+  <StrutsActivity path="/checkresdaction.do" />
+  <StrutsActivity path="/checkdomaction.do" />
+  <StrutsActivity path="/checkminaction.do" />
+  <StrutsActivity path="/checkcasteaction.do" />
+  <StrutsActivity path="/ContractorHome.jsp" />
+  <StrutsActivity path="/loginfail.jsp" />
+  <StrutsActivity path="/tendereditsuc.jsp" />
+  <StrutsActivity path="/edittenderfail.jsp" />
+  <StrutsActivity path="/tenderedit.jsp" />
+  <StrutsActivity path="/searchtender.jsp" />
+  <StrutsActivity path="/storetendersuc.jsp" />
+  <StrutsActivity path="/storetenderfail.jsp" />
+  <StrutsActivity path="/createcontractor.jsp" />
+  <StrutsActivity path="/deletetendersuc.jsp" />
+  <StrutsActivity path="/deletetenderfail.jsp" />
+  <StrutsActivity path="/deletetender.jsp" />
+  <StrutsActivity path="/contractoredit.jsp" />
+  <StrutsActivity path="/editcontractorfail.jsp" />
+  <StrutsActivity path="/searchcontractor.jsp" />
+  <StrutsActivity path="/editcontractorsuc.jsp" />
+  <StrutsActivity path="/editcontractor.jsp" />
+  <StrutsActivity path="/deletecontractorsuc.jsp" />
+  <StrutsActivity path="/deletecontractorfail.jsp" />
+  <StrutsActivity path="/deletecontractor.jsp" />
+  <StrutsActivity path="/storecontractorsuc.jsp" />
+  <StrutsActivity path="/storecontractorfail.jsp" />
+  <StrutsActivity path="/storepolicestsuc.jsp" />
+  <StrutsActivity path="/storepolicestfail.jsp" />
+  <StrutsActivity path="/createpolicest.jsp" />
+  <StrutsActivity path="/deletepolicestsuc.jsp" />
+  <StrutsActivity path="/deletepolicestfail.jsp" />
+  <StrutsActivity path="/deletepolicest.jsp" />
+  <StrutsActivity path="/policestedit.jsp" />
+  <StrutsActivity path="/editpolicestfail.jsp" />
+  <StrutsActivity path="/searchpolicest.jsp" />
+  <StrutsActivity path="/editpolicestsuc.jsp" />
+  <StrutsActivity path="/editpolicest.jsp" />
+  <StrutsActivity path="/storepassportsuc.jsp" />
+  <StrutsActivity path="/storepassportfail.jsp" />
+  <StrutsActivity path="/applypassport.jsp" />
+  <StrutsActivity path="/storebirthsuc.jsp" />
+  <StrutsActivity path="/storebirthfail.jsp" />
+  <StrutsActivity path="/applybirth.jsp" />
+  <StrutsActivity path="/storedeathsuc.jsp" />
+  <StrutsActivity path="/storedeathfail.jsp" />
+  <StrutsActivity path="/applydeath.jsp" />
+  <StrutsActivity path="/storewidowsuc.jsp" />
+  <StrutsActivity path="/storewidowfail.jsp" />
+  <StrutsActivity path="/applywidow.jsp" />
+  <StrutsActivity path="/storeincomesuc.jsp" />
+  <StrutsActivity path="/storeincomefail.jsp" />
+  <StrutsActivity path="/applyincome.jsp" />
+  <StrutsActivity path="/storeresdsuc.jsp" />
+  <StrutsActivity path="/storeresdfail.jsp" />
+  <StrutsActivity path="/applyresd.jsp" />
+  <StrutsActivity path="/storedomcilesuc.jsp" />
+  <StrutsActivity path="/storedomcilefail.jsp" />
+  <StrutsActivity path="/applydomcile.jsp" />
+  <StrutsActivity path="/storeminoritysuc.jsp" />
+  <StrutsActivity path="/storeminorityfail.jsp" />
+  <StrutsActivity path="/applyminority.jsp" />
+  <StrutsActivity path="/storecastesuc.jsp" />
+  <StrutsActivity path="/storecastefail.jsp" />
+  <StrutsActivity path="/applycaste.jsp" />
+  <StrutsActivity path="/ahead.jsp" />
+  <StrutsActivity path="/AdminLogin.jsp" />
+  <StrutsActivity path="/phead.jsp" />
+  <StrutsActivity path="/showbirthsuc.jsp" />
+  <StrutsActivity path="/showbirthfail.jsp" />
+  <StrutsActivity path="/viewbirthsuc.jsp" />
+  <StrutsActivity path="/viewbirthfail.jsp" />
+  <StrutsActivity path="/decidebirthadminsuc.jsp" />
+  <StrutsActivity path="/decidebirthadminfail.jsp" />
+  <StrutsActivity path="/decidecasteadminsuc.jsp" />
+  <StrutsActivity path="/decidecasteadminfail.jsp" />
+  <StrutsActivity path="/decideminorityadminsuc.jsp" />
+  <StrutsActivity path="/decideminorityadminfail.jsp" />
+  <StrutsActivity path="/decideresidentadminsuc.jsp" />
+  <StrutsActivity path="/decideresidentadminfail.jsp" />
+  <StrutsActivity path="/decideincomeadminsuc.jsp" />
+  <StrutsActivity path="/decideincomeadminfail.jsp" />
+  <StrutsActivity path="/decidedomcileadminsuc.jsp" />
+  <StrutsActivity path="/decidedomcileadminfail.jsp" />
+  <StrutsActivity path="/decidewidowadminsuc.jsp" />
+  <StrutsActivity path="/decidewidowadminfail.jsp" />
+  <StrutsActivity path="/decidedeathadminsuc.jsp" />
+  <StrutsActivity path="/decidedeathadminfail.jsp" />
+  <StrutsActivity path="/aviewbirthsuc.jsp" />
+  <StrutsActivity path="/aviewbirthfail.jsp" />
+  <StrutsActivity path="/aaviewbirthsuc.jsp" />
+  <StrutsActivity path="/aaviewbirthfail.jsp" />
+  <StrutsActivity path="/adviewbirthsuc.jsp" />
+  <StrutsActivity path="/adviewbirthfail.jsp" />
+  <StrutsActivity path="/viewpassportsuc.jsp" />
+  <StrutsActivity path="/viewpassportfail.jsp" />
+  <StrutsActivity path="/viewcandidatepassportsuc.jsp" />
+  <StrutsActivity path="/pviewcandidatepassportsuc.jsp" />
+  <StrutsActivity path="/pviewpassportfail.jsp" />
+  <StrutsActivity path="/aaviewcandidatepassportsuc.jsp" />
+  <StrutsActivity path="/aaviewpassportfail.jsp" />
+  <StrutsActivity path="/ddviewcandidatepassportsuc.jsp" />
+  <StrutsActivity path="/ddviewpassportfail.jsp" />
+  <StrutsActivity path="/adviewcandidatepassportsuc.jsp" />
+  <StrutsActivity path="/adviewpassportfail.jsp" />
+  <StrutsActivity path="/paviewcandidatepassportsuc.jsp" />
+  <StrutsActivity path="/paviewpassportfail.jsp" />
+  <StrutsActivity path="/pdviewcandidatepassportsuc.jsp" />
+  <StrutsActivity path="/pdviewpassportfail.jsp" />
+  <StrutsActivity path="/decidepolicesuc.jsp" />
+  <StrutsActivity path="/decidepolicefail.jsp" />
+  <StrutsActivity path="/decideadminsuc.jsp" />
+  <StrutsActivity path="/decideadminfail.jsp" />
+  <StrutsActivity path="/assignpolicesuc.jsp" />
+  <StrutsActivity path="/assignpolicefail.jsp" />
+  <StrutsActivity path="/showdeathsuc.jsp" />
+  <StrutsActivity path="/showdeathfail.jsp" />
+  <StrutsActivity path="/viewdeathsuc.jsp" />
+  <StrutsActivity path="/viewdeathfail.jsp" />
+  <StrutsActivity path="/aadviewdeathsuc.jsp" />
+  <StrutsActivity path="/aadviewbirthfail.jsp" />
+  <StrutsActivity path="/aaviewdeathsuc.jsp" />
+  <StrutsActivity path="/adviewdeathsuc.jsp" />
+  <StrutsActivity path="/showwidowsuc.jsp" />
+  <StrutsActivity path="/showwidowfail.jsp" />
+  <StrutsActivity path="/viewwidowsuc.jsp" />
+  <StrutsActivity path="/viewwidowfail.jsp" />
+  <StrutsActivity path="/aadviewwidowsuc.jsp" />
+  <StrutsActivity path="/aadviewwidowfail.jsp" />
+  <StrutsActivity path="/aawviewwidowsuc.jsp" />
+  <StrutsActivity path="/aaviewwidowfail.jsp" />
+  <StrutsActivity path="/adwviewwidowsuc.jsp" />
+  <StrutsActivity path="/adviewwidowfail.jsp" />
+  <StrutsActivity path="/showincomesuc.jsp" />
+  <StrutsActivity path="/showincomefail.jsp" />
+  <StrutsActivity path="/viewincomesuc.jsp" />
+  <StrutsActivity path="/viewincomefail.jsp" />
+  <StrutsActivity path="/aaviewincomesuc.jsp" />
+  <StrutsActivity path="/aaviewincomefail.jsp" />
+  <StrutsActivity path="/adviewincomesuc.jsp" />
+  <StrutsActivity path="/adviewincomefail.jsp" />
+  <StrutsActivity path="/aadviewincomesuc.jsp" />
+  <StrutsActivity path="/aadviewincomefail.jsp" />
+  <StrutsActivity path="/showresdsuc.jsp" />
+  <StrutsActivity path="/showresdfail.jsp" />
+  <StrutsActivity path="/viewresdsuc.jsp" />
+  <StrutsActivity path="/viewresdfail.jsp" />
+  <StrutsActivity path="/aadviewresdsuc.jsp" />
+  <StrutsActivity path="/aadviewresdfail.jsp" />
+  <StrutsActivity path="/adviewresdsuc.jsp" />
+  <StrutsActivity path="/adviewresdfail.jsp" />
+  <StrutsActivity path="/aaviewresdsuc.jsp" />
+  <StrutsActivity path="/aaviewresdfail.jsp" />
+  <StrutsActivity path="/showdomsuc.jsp" />
+  <StrutsActivity path="/showdomfail.jsp" />
+  <StrutsActivity path="/viewdomsuc.jsp" />
+  <StrutsActivity path="/viewdomfail.jsp" />
+  <StrutsActivity path="/aadviewdomsuc.jsp" />
+  <StrutsActivity path="/aadviewdomfail.jsp" />
+  <StrutsActivity path="/aaviewdomsuc.jsp" />
+  <StrutsActivity path="/aaviewdomfail.jsp" />
+  <StrutsActivity path="/adviewdomsuc.jsp" />
+  <StrutsActivity path="/adviewdomfail.jsp" />
+  <StrutsActivity path="/showminsuc.jsp" />
+  <StrutsActivity path="/showminfail.jsp" />
+  <StrutsActivity path="/viewminsuc.jsp" />
+  <StrutsActivity path="/viewminfail.jsp" />
+  <StrutsActivity path="/aadviewminsuc.jsp" />
+  <StrutsActivity path="/aadviewminfail.jsp" />
+  <StrutsActivity path="/aaviewminsuc.jsp" />
+  <StrutsActivity path="/aaviewminfail.jsp" />
+  <StrutsActivity path="/adviewminsuc.jsp" />
+  <StrutsActivity path="/adviewminfail.jsp" />
+  <StrutsActivity path="/showcastesuc.jsp" />
+  <StrutsActivity path="/showcastefail.jsp" />
+  <StrutsActivity path="/viewcastesuc.jsp" />
+  <StrutsActivity path="/viewcastefail.jsp" />
+  <StrutsActivity path="/aadviewcastesuc.jsp" />
+  <StrutsActivity path="/aadviewcastefail.jsp" />
+  <StrutsActivity path="/aaviewcastesuc.jsp" />
+  <StrutsActivity path="/aaviewcastefail.jsp" />
+  <StrutsActivity path="/adviewcastesuc.jsp" />
+  <StrutsActivity path="/adviewcastefail.jsp" />
+  <StrutsActivity path="/issuebirthsuc1.jsp" />
+  <StrutsActivity path="/issuebirthsuc.jsp" />
+  <StrutsActivity path="/issuebirthfail.jsp" />
+  <StrutsActivity path="/issuedeathsuc1.jsp" />
+  <StrutsActivity path="/issuedeathsuc.jsp" />
+  <StrutsActivity path="/issuedeathfail.jsp" />
+  <StrutsActivity path="/issuewidowsuc1.jsp" />
+  <StrutsActivity path="/issuewidowsuc.jsp" />
+  <StrutsActivity path="/issuewidowfail.jsp" />
+  <StrutsActivity path="/issueincomesuc1.jsp" />
+  <StrutsActivity path="/issueincomesuc.jsp" />
+  <StrutsActivity path="/issueincomefail.jsp" />
+  <StrutsActivity path="/issueresdsuc1.jsp" />
+  <StrutsActivity path="/issueresdsuc.jsp" />
+  <StrutsActivity path="/issueresdfail.jsp" />
+  <StrutsActivity path="/issueminsuc1.jsp" />
+  <StrutsActivity path="/issueminsuc.jsp" />
+  <StrutsActivity path="/issueminfail.jsp" />
+  <StrutsActivity path="/issuecastesuc1.jsp" />
+  <StrutsActivity path="/issuecastesuc.jsp" />
+  <StrutsActivity path="/issuecastefail.jsp" />
+  <StrutsActivity path="/checkstatsuc1.jsp" />
+  <StrutsActivity path="/checkstatsuc.jsp" />
+  <StrutsActivity path="/checkstatfail.jsp" />
+  <StrutsTransition id="/issuewidowcer.do,fail,/issuewidowfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewdeathaction.do,fail,/adviewbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchcontractor.jsp,null,/searchcontractoraction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storeresdaction.do,success,/storeresdsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletetender.jsp,null,/deletetenderaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideDeath.do,success,/decidedeathadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storeminorityaction.do,success,/storeminoritysuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storewidowaction.do,success,/storewidowsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewdeathaction.do,success,/viewdeathsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/contractorloginaction.do,loginfail,/loginfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aawviewwidowaction.do,fail,/aaviewwidowfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadresidentview.do,fail,/aadviewresdfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storecontractoraction.do,success,/storecontractorsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewpassportaction.do,fail,/viewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadiviewincomeaction.do,fail,/aadviewincomefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decidePolice.do,success,/decidepolicesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showresdaction.do,fail,/showresdfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkwidowaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuemincer.do,success1,/issueminsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewdomaction.do,success,/adviewdomsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewresdaction.do,success,/viewresdsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewcasteaction.do,fail,/aaviewcastefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showincomeaction.do,fail,/showincomefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaresidentview.do,success,/aaviewresdsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewdomaction.do,success,/viewdomsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showminaction.do,success,/showminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchpolicest.jsp,null,/searchpolicestaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkdeathaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showwidowaction.do,fail,/showwidowfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkresdaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuewidowcer.do,success1,/issuewidowsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/candidateDetails.do,success,/viewcandidatepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuecastecer.do,fail,/issuecastefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/candidateDetails.do,fail,/viewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewresdaction.do,fail,/viewresdfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decidePolice.do,fail,/decidepolicefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewcasteaction.do,success,/aadviewcastesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issueresdcer.do,fail,/issueresdfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletepolicest.jsp,null,/deletepolicestaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aviewbirthaction.do,success,/aviewbirthsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewincomeaction.do,success,/adviewincomesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storecasteaction.do,fail,/storecastefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewminaction.do,success,/aaviewminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applydomcile.jsp,null,/storedomcileaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dcandidateDetails.do,fail,/ddviewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideAdmin.do,success,/decideadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storedomcileaction.do,fail,/storedomcilefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createpolicest.jsp,null,/storepolicestaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletecontractoraction.do,fail,/deletecontractorfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issueresdcer.do,success1,/issueresdsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applyminority.jsp,null,/storeminorityaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewdomaction.do,fail,/aaviewdomfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewwidoaction.do,success,/aadviewwidowsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewminaction.do,fail,/viewminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuedeathcer.do,fail,/issuedeathfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchcontractoraction.do,success,/contractoredit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storedomcileaction.do,success,/storedomcilesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pcandidateDetails.do,success,/pviewcandidatepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkincomeaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkcasteaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issueincomecer.do,success1,/issueincomesuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editpolicestaction.do,success,/editpolicestsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewcasteaction.do,fail,/adviewcastefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkminaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storeminorityaction.do,fail,/storeminorityfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applyresd.jsp,null,/storeresdaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showdeathaction.do,success,/showdeathsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editcontractoraction.do,success,/editcontractorsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideIncome.do,success,/decideincomeadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuebirthcer.do,success1,/issuebirthsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuemincer.do,fail,/issueminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storecasteaction.do,success,/storecastesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuecastecer.do,success,/issuecastesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideBirth.do,success,/decidebirthadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pacandidateDetails.do,fail,/paviewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editcontractor.jsp,null,/editcontractoraction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dcandidateDetails.do,success,/ddviewcandidatepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkincomeaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkwidowaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginaction.do,adminlogin,/ahead.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkdeathaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showincomeaction.do,success,/showincomesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkpassportaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storedeathaction.do,success,/storedeathsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issueincomecer.do,success,/issueincomesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createcontractor.jsp,null,/storetenderaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showdomaction.do,success,/showdomsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideMinoity.do,success,/decideminorityadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkcasteaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkdeathaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/contractorloginaction.do,adminlogin,/ContractorHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkbirthaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewcasteaction.do,fail,/viewcastefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewdeathaction.do,success,/aadviewdeathsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applypassport.jsp,null,/storepassportaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewincomeaction.do,success,/aaviewincomesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applydeath.jsp,null,/storedeathaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkcasteaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storetenderaction.do,fail,/storetenderfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewminaction.do,fail,/aaviewminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issueincomecer.do,fail,/issueincomefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewbirthaction.do,fail,/viewbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showbirthaction.do,success,/showbirthsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewbirthaction.do,success,/aaviewbirthsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tenderedit.jsp,null,/edittenderaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/edittenderaction.do,fail,/edittenderfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchtenderaction.do,success,/tenderedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkwidowaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/policeloginaction.do,loginfail,/loginfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showdeathaction.do,fail,/showdeathfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletepolicestaction.do,fail,/deletepolicestfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pdcandidateDetails.do,fail,/pdviewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewdeathaction.do,fail,/aaviewbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewdomaction.do,fail,/aadviewdomfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storewidowaction.do,fail,/storewidowfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideDeath.do,fail,/decidedeathadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issueresdcer.do,success,/issueresdsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuemincer.do,success,/issueminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideWidow.do,fail,/decidewidowadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applycaste.jsp,null,/storecasteaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showresdaction.do,success,/showresdsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadresidentview.do,success,/aadviewresdsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storetenderaction.do,success,/storetendersuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewcasteaction.do,fail,/aadviewcastefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletecontractoraction.do,success,/deletecontractorsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewminaction.do,success,/aadviewminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchcontractoraction.do,fail,/editcontractorfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletepolicestaction.do,success,/deletepolicestsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewwidowaction.do,fail,/viewwidowfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applyincome.jsp,null,/storeincomeaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storeincomeaction.do,fail,/storeincomefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createcontractor.jsp,null,/storecontractoraction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aawviewwidowaction.do,success,/aawviewwidowsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadiviewincomeaction.do,success,/aadviewincomesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewdomaction.do,fail,/adviewdomfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideMinoity.do,fail,/decideminorityadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideDomcile.do,fail,/decidedomcileadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storepassportaction.do,success,/storepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storepassportaction.do,fail,/storepassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewdeathaction.do,fail,/aadviewbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adcandidateDetails.do,fail,/adviewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showcasteaction.do,fail,/showcastefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuedeathcer.do,success,/issuedeathsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/assignPolice.do,success,/assignpolicesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkpassportaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pdcandidateDetails.do,success,/pdviewcandidatepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storedeathaction.do,fail,/storedeathfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editcontractoraction.do,fail,/editcontractorfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuedeathcer.do,success1,/issuedeathsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewbirthaction.do,success,/adviewbirthsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkbirthaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideDomcile.do,success,/decidedomcileadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showwidowaction.do,success,/showwidowsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storeincomeaction.do,success,/storeincomesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkincomeaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletecontractor.jsp,null,/deletecontractoraction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkresdaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storebirthaction.do,fail,/storebirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adresidentview.do,success,/adviewresdsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchtenderaction.do,fail,/edittenderfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuebirthcer.do,success,/issuebirthsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editpolicestaction.do,fail,/editpolicestfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkresdaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adcandidateDetails.do,success,/adviewcandidatepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkminaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewwidowaction.do,success,/viewwidowsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkpassportaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuebirthcer.do,fail,/issuebirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adwviewwidowaction.do,fail,/adviewwidowfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewincomeaction.do,fail,/aaviewincomefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuecastecer.do,success1,/issuecastesuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adwviewwidowaction.do,success,/adwviewwidowsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aviewbirthaction.do,fail,/aviewbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adresidentview.do,fail,/adviewresdfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuewidowcer.do,success,/issuewidowsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideResident.do,success,/decideresidentadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/AdminLogin.jsp,null,/loginaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideCaste.do,success,/decidecasteadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkbirthaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchpolicestaction.do,success,/policestedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aacandidateDetails.do,success,/aaviewcandidatepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewincomeaction.do,fail,/viewincomefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkdomaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewcasteaction.do,success,/adviewcastesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pacandidateDetails.do,success,/paviewcandidatepassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storeresdaction.do,fail,/storeresdfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkdomaction.do,success1,/checkstatsuc1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showbirthaction.do,fail,/showbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editpolicest.jsp,null,/editpolicestaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/policeloginaction.do,adminlogin,/phead.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applybirth.jsp,null,/storebirthaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewcasteaction.do,success,/aaviewcastesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storepolicestaction.do,fail,/storepolicestfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pcandidateDetails.do,fail,/pviewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaresidentview.do,fail,/aaviewresdfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkdomaction.do,success,/checkstatsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideCaste.do,fail,/decidecasteadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchpolicestaction.do,fail,/editpolicestfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewminaction.do,success,/viewminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewdomaction.do,fail,/viewdomfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideWidow.do,success,/decidewidowadminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/assignPolice.do,fail,/assignpolicefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewincomeaction.do,fail,/adviewincomefail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewdomaction.do,success,/aadviewdomsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginaction.do,loginfail,/loginfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewdomaction.do,success,/aaviewdomsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletetenderaction.do,fail,/deletetenderfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewdeathaction.do,fail,/viewdeathfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletetenderaction.do,success,/deletetendersuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewminaction.do,fail,/adviewminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/edittenderaction.do,success,/tendereditsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewminaction.do,fail,/aadviewminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showcasteaction.do,success,/showcastesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storepolicestaction.do,success,/storepolicestsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aadviewwidoaction.do,fail,/aadviewwidowfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewminaction.do,success,/adviewminsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showminaction.do,fail,/showminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewbirthaction.do,success,/viewbirthsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewbirthaction.do,fail,/aaviewbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideResident.do,fail,/decideresidentadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storebirthaction.do,success,/storebirthsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showdomaction.do,fail,/showdomfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewcasteaction.do,success,/viewcastesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideAdmin.do,fail,/decideadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideBirth.do,fail,/decidebirthadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewbirthaction.do,fail,/adviewbirthfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/decideIncome.do,fail,/decideincomeadminfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checkminaction.do,fail,/checkstatfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aacandidateDetails.do,fail,/aaviewpassportfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aaviewdeathaction.do,success,/aaviewdeathsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adviewdeathaction.do,success,/adviewdeathsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewincomeaction.do,success,/viewincomesuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewpassportaction.do,success,/viewpassportsuc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/applywidow.jsp,null,/storewidowaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/storecontractoraction.do,fail,/storecontractorfail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchtender.jsp,null,/searchtenderaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

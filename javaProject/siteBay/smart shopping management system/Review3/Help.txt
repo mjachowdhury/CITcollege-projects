@@ -1,0 +1,8 @@
+DataBase	: Oracle 9i
+
+create user supermarket identified by supermarket;
+grant dba to supermarket;
+conn supermarket/supermarket
+select * from tab;
+
+DataSourceName	: supermarket

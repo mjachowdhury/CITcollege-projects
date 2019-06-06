@@ -1,0 +1,11 @@
+package differentProblemSolve;
+
+public class FindingFactorial {
+	
+
+	public static void main(String[] args) {
+	 
+
+	}
+
+}

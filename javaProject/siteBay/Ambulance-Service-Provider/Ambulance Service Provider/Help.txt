@@ -1,0 +1,10 @@
+Database	: Oracle 9i
+
+create user ems identified by ems;
+grant dba to ems;
+show user;
+conn ems/ems
+show user;
+select * from tab;
+
+GlobalDatabaseName/Oracle service name :satya

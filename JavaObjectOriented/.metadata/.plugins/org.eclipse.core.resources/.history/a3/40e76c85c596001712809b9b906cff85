@@ -1,0 +1,10 @@
+
+public class FarmMain {
+	
+	public static void main(String args[]){
+		//set up a farm
+		
+		Farm homeFarm = new Farm();
+	}
+
+}

@@ -1,0 +1,14 @@
+03/01/98 15:19:00 INFO  remotemanager: Remote Manager Service uses default thread group.
+03/01/98 15:19:00 INFO  remotemanager: Remote Manager Service is running on: java6
+03/01/98 15:19:00 INFO  remotemanager: Remote Manager Service handler hello name is: java6
+03/01/98 15:19:00 INFO  remotemanager: Remote Manager Service handler connection timeout is: 60000
+03/01/98 15:19:00 INFO  remotemanager: Remote Manager Service started plain:4555
+03/01/98 15:19:23 INFO  remotemanager: Access from localhost(127.0.0.1)
+03/01/98 15:19:29 INFO  remotemanager: Login for root successful
+03/01/98 15:20:05 INFO  remotemanager: User bharath added
+03/01/98 15:20:47 INFO  remotemanager: User user1 added
+03/01/98 15:20:59 INFO  remotemanager: User user1 deleted
+03/01/98 15:23:05 INFO  remotemanager: Logout for root.
+03/01/98 15:24:44 INFO  remotemanager: Access from localhost(127.0.0.1)
+03/01/98 15:24:48 INFO  remotemanager: Login for root successful
+03/01/98 15:25:15 INFO  remotemanager: Logout for root.

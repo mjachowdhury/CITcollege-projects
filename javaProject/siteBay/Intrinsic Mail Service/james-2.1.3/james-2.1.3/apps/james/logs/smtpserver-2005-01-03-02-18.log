@@ -1,0 +1,8 @@
+03/01/05 02:18:14 INFO  smtpserver: SMTP Service uses default thread group.
+03/01/05 02:18:14 INFO  smtpserver: SMTP Service is running on: java6
+03/01/05 02:18:14 INFO  smtpserver: SMTP Service handler hello name is: java6
+03/01/05 02:18:14 INFO  smtpserver: SMTP Service handler connection timeout is: 360000
+03/01/05 02:18:14 INFO  smtpserver: This SMTP server does not require authentication.
+03/01/05 02:18:14 INFO  smtpserver: No maximum message size is enforced for this server.
+03/01/05 02:18:14 INFO  smtpserver: The idle timeout will be reset every 20480 bytes.
+03/01/05 02:18:15 INFO  smtpserver: SMTP Service started plain:25

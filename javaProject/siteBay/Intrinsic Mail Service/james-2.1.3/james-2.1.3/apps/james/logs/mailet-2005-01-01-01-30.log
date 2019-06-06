@@ -1,0 +1,7 @@
+01/01/05 02:01:50 INFO  James.Mailet: RemoteDelivery: No mail server found for: gmail.com
+01/01/05 02:01:50 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1104525049843-0-to-gmail.com: javax.mail.MessagingException: There are no DNS entries for the hostname gmail.com.  I cannot determine where to send this message.
+	at org.apache.james.transport.mailets.RemoteDelivery.deliver(RemoteDelivery.java:263)
+	at org.apache.james.transport.mailets.RemoteDelivery.run(RemoteDelivery.java:758)
+	at java.lang.Thread.run(Thread.java:595)
+
+01/01/05 02:01:50 INFO  James.Mailet: RemoteDelivery: Storing message Mail1104525049843-0-to-gmail.com into outgoing after 0 retries

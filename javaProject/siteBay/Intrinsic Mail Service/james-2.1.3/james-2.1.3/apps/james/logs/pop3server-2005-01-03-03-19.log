@@ -1,0 +1,14 @@
+03/01/05 03:19:17 INFO  pop3server: POP3 Service uses default thread group.
+03/01/05 03:19:17 INFO  pop3server: POP3 Service is running on: java6
+03/01/05 03:19:17 INFO  pop3server: POP3 Service handler hello name is: java6
+03/01/05 03:19:17 INFO  pop3server: POP3 Service handler connection timeout is: 120000
+03/01/05 03:19:17 INFO  pop3server: The idle timeout will be reset every 20480 bytes.
+03/01/05 03:19:17 INFO  pop3server: POP3 Service started plain:110
+03/01/05 03:21:10 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 03:21:16 INFO  pop3server: Connection for rameez from localhost (127.0.0.1) closed.
+03/01/05 03:21:16 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 03:21:16 INFO  pop3server: Connection for rameez from localhost (127.0.0.1) closed.
+03/01/05 03:27:19 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 03:27:19 INFO  pop3server: Connection for rameez from localhost (127.0.0.1) closed.
+03/01/05 03:31:42 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 03:31:42 INFO  pop3server: Connection for rameez from localhost (127.0.0.1) closed.

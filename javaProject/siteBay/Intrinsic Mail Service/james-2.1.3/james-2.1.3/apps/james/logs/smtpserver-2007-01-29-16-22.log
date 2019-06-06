@@ -1,0 +1,14 @@
+29/01/07 16:22:37 INFO  smtpserver: SMTP Service uses default thread group.
+29/01/07 16:22:37 INFO  smtpserver: SMTP Service is running on: inetsolv
+29/01/07 16:22:37 INFO  smtpserver: SMTP Service handler hello name is: inetsolv
+29/01/07 16:22:37 INFO  smtpserver: SMTP Service handler connection timeout is: 360000
+29/01/07 16:22:37 INFO  smtpserver: This SMTP server does not require authentication.
+29/01/07 16:22:37 INFO  smtpserver: No maximum message size is enforced for this server.
+29/01/07 16:22:37 INFO  smtpserver: The idle timeout will be reset every 20480 bytes.
+29/01/07 16:22:37 INFO  smtpserver: SMTP Service started plain:25
+29/01/07 16:50:44 INFO  smtpserver: Connection from localhost (127.0.0.1)
+29/01/07 16:50:56 INFO  smtpserver: Successfully spooled mail from one@localhost for [two@localhost]
+29/01/07 17:09:11 INFO  smtpserver: Connection from localhost (127.0.0.1)
+29/01/07 17:09:23 INFO  smtpserver: Successfully spooled mail from two@localhost for [one@localhost]
+29/01/07 17:14:04 INFO  smtpserver: Connection from localhost (127.0.0.1)
+29/01/07 17:14:13 INFO  smtpserver: Successfully spooled mail from two@localhost for [one@localhost]

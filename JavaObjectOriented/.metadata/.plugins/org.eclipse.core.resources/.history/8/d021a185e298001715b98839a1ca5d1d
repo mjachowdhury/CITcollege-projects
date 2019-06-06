@@ -1,0 +1,23 @@
+package vehicle;
+/*
+ * This class will inheritance from the Vehicle class
+ */
+public class Car extends Vehicle{
+	private boolean powerStearing = false;
+	private boolean ledScreen = true;
+	
+	//constructor
+	public Car() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	//I do not have to assign all the field variable here I can call super() and put all the parameters name
+	public Car(String name, String color, String model, String complany, String engine, boolean powerStearing, boolean ledScreen) {
+		super(name, color, model, complany, engine);
+		 
+	}
+	
+	
+	
+
+}

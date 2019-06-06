@@ -1,0 +1,22 @@
+package ifExample;
+
+import java.util.Scanner;
+
+public class IfExampleApp {
+
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		
+		String password;
+		System.out.println("Please enter your password :");
+		password = input.nextLine();
+		//both will work
+		//if(password.equals("javaProgram")){
+			if(password.equalsIgnoreCase("javaProgram")){
+			System.out.println("Password is corret");
+		}
+		else{
+			System.out.println();
+		}
+	}
+}

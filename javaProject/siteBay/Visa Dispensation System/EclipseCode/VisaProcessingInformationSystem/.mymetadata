@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="VisaProcessingInformationSystem"
+  id="myeclipse.1252214013859"
+  context-root="/VisaProcessingInformationSystem"
+  j2ee-spec="1.4"
+  archive="VisaProcessingInformationSystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<data-sources>
+	</data-sources>
+
+	<form-beans>
+		<form-bean name="ListNotesFormBean" type="org.claros.groupware.notes.models.ListNotesFormBean">
+		</form-bean>
+		<form-bean name="NoteFormBean" type="org.claros.groupware.notes.models.NoteFormBean">
+		</form-bean>
+		<form-bean name="ListFoldersFormBean" type="org.claros.groupware.notes.models.ListFoldersFormBean">
+		</form-bean>
+		<form-bean name="FolderFormBean" type="org.claros.groupware.notes.models.FolderFormBean">
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions>
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="/error/generalErr.do" path="/error/generalErr.do"  contextRelative="true">
+		</forward>
+		<forward name="/profiling/loginStart.do" path="/profiling/loginStart.do" contextRelative="true">
+		</forward>
+		<forward name="/webmail/mailbox.do" path="/webmail/mailbox.do" contextRelative="true">
+		</forward>
+		<forward name="/preferences/prefEntry.do" path="/preferences/prefEntry.do" contextRelative="true">
+		</forward>
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/listNotes" type="org.claros.groupware.notes.actions.ListNotesAction">
+			<forward name="/list_notes.jsp" path="/list_notes.jsp">
+			</forward>
+		</action>
+		<action path="/deleteNote" type="org.claros.groupware.notes.actions.DeleteNoteAction" name="ListNotesFormBean" scope="request">
+			<forward name="/listNotes.do" path="/listNotes.do">
+			</forward>
+		</action>
+		<action path="/saveNote" type="org.claros.groupware.notes.actions.SaveNoteAction" name="NoteFormBean" scope="request">
+			<forward name="/save_result.jsp" path="/save_result.jsp">
+			</forward>
+			<forward name="/webmail/emailNote.do" path="/webmail/emailNote.do" contextRelative="true">
+			</forward>
+		</action>
+		<action path="/folders" type="org.claros.groupware.notes.actions.FoldersAction">
+			<forward name="/list_folders.jsp" path="/list_folders.jsp">
+			</forward>
+		</action>
+		<action path="/deleteFolder" type="org.claros.groupware.notes.actions.DeleteFolderAction" name="ListFoldersFormBean" scope="request">
+			<forward name="/folders.do" path="/folders.do">
+			</forward>
+		</action>
+		<action path="/saveFolder" type="org.claros.groupware.notes.actions.SaveFolderAction" name="FolderFormBean" scope="request">
+			<forward name="/folders.do" path="/folders.do">
+			</forward>
+		</action>
+		<action path="/newNote" type="org.claros.groupware.notes.actions.NewNoteAction">
+			<forward name="/note.jsp" path="/note.jsp">
+			</forward>
+		</action>
+		<action path="/showNote" type="org.claros.groupware.notes.actions.ShowNoteAction">
+			<forward name="/note.jsp" path="/note.jsp">
+			</forward>
+		</action>
+		<action path="/newFolder" type="org.claros.groupware.notes.actions.NewFolderAction">
+			<forward name="/folder.jsp" path="/folder.jsp">
+			</forward>
+		</action>
+		<action path="/showFolder" type="org.claros.groupware.notes.actions.ShowFolderAction">
+			<forward name="/folder.jsp" path="/folder.jsp">
+			</forward>
+		</action>
+		<action path="/emptyFolder" type="org.claros.groupware.notes.actions.EmptyFolderAction">
+			<forward name="/folders.do" path="/folders.do">
+			</forward>
+		</action>
+	</action-mappings>
+</struts-config>

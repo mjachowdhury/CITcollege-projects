@@ -1,0 +1,31 @@
+create table users(username varchar2(20) primary key,password varchar2(20),utype varchar2(20));
+
+create table exec_master(execid number(10) primary key,execname varchar2(20) references users(username),location varchar2(30),mobileno varchar2(20));
+
+create table event_master(evtid number(10) primary key,evtname varchar2(30),venue varchar2(30),curdate date,address varchar2(50),location varchar2(50),city varchar2(15),phno varchar2(20));
+
+create table event_desc(evtid number(10) references event_master(evtid),evtdesc varchar2(50),exec_id references exec_master(execid));
+
+create table event_feedback(evtid number(10) references event_master(evtid),f_name varchar2(30),feedback varchar2(200),mailid varchar2(25),conno varchar2(20),address varchar2(30));
+
+create table meeting_master(meeting_id number(10) primary key,meetingdesc varchar2(30),curdate date,time varchar2(20),location varchar2(30),address varchar2(50),city varchar2(15),phno varchar2(20),state varchar2(20));
+
+create table meeting_desc(meeting_id number(10) references meeting_master(meeting_id),agenda varchar2(200),exec_id number(10) references exec_master(execid));
+
+create table attendee_master(name varchar2(30),desg varchar2(30),meetingid number(10) references meeting_master(meeting_id),address varchar2(30),phno varchar2(10),mailid varchar2(30));
+
+create table address(addrefno number(10) primary key,compname varchar2(30),location varchar2(30),city varchar2(20),state varchar2(20),country varchar2(20));
+
+create table email(addrefno number(10) references address(addrefno),cont_person varchar2(20),emailid1 varchar2(30),emailid2 varchar2(30),others varchar2(30));
+
+create table phnos(addrefno number(10) references address(addrefno),phno1 varchar2(20),phno2 varchar2(20),Mobile varchar2(20));
+
+
+create table minutes(meetingid number(10) references meeting_master(meeting_id),minutes varchar2(200),n_name varchar2(20),st_time varchar2(20),end_time varchar2(20));
+
+create table con_master(contid number(10) primary key,cont_category varchar2(20));
+
+create table con_details(contid number(10) references con_master(contid),addrefno number(10) references address(addrefno),con_desc varchar2(100),cont_task varchar2(100),Exec_id number(10) references exec_master(execid));
+
+
+create table con_status(contid number(10) references con_master(contid),exec_id number(10) references exec_master(execid),status varchar2(200));

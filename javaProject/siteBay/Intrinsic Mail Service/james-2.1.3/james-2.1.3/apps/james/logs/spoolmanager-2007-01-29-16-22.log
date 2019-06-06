@@ -1,0 +1,48 @@
+29/01/07 16:22:37 INFO  spoolmanager: JamesSpoolManager init...
+29/01/07 16:22:37 INFO  spoolmanager: Matcher RelayLimit=30 instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet Null instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher InSpammerBlacklist=query.bondedsender.org instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToProcessor instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher InSpammerBlacklist=dnsbl.njabl.org instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToProcessor instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher InSpammerBlacklist=relays.ordb.org instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToProcessor instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher All instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToProcessor instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Processor root instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher All instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToRepository instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Processor error instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher RecipientIsLocal instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet LocalDelivery instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher HostIsLocal instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToProcessor instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher RemoteAddrNotInNetwork=127.0.0.1 instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToProcessor instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher All instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet RemoteDelivery instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Processor transport instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Matcher All instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Mailet ToRepository instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Processor spam instantiated.
+29/01/07 16:22:37 INFO  spoolmanager: Spooler Manager uses 10 Thread(s)
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #1
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #2
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #3
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #4
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #5
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #6
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #7
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #8
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #9
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository
+29/01/07 16:22:37 INFO  spoolmanager: Run JamesSpoolManager: default Worker #10
+29/01/07 16:22:37 INFO  spoolmanager: Spool=org.apache.james.mailrepository.AvalonSpoolRepository

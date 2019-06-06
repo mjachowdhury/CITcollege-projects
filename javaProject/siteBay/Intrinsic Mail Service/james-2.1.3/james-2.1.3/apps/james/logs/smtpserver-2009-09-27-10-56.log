@@ -1,0 +1,8 @@
+27/09/09 10:56:07 INFO  smtpserver: SMTP Service uses default thread group.
+27/09/09 10:56:07 INFO  smtpserver: SMTP Service is running on: satya
+27/09/09 10:56:07 INFO  smtpserver: SMTP Service handler hello name is: satya
+27/09/09 10:56:07 INFO  smtpserver: SMTP Service handler connection timeout is: 360000
+27/09/09 10:56:07 INFO  smtpserver: This SMTP server does not require authentication.
+27/09/09 10:56:07 INFO  smtpserver: No maximum message size is enforced for this server.
+27/09/09 10:56:07 INFO  smtpserver: The idle timeout will be reset every 20480 bytes.
+27/09/09 10:56:07 INFO  smtpserver: SMTP Service started plain:25

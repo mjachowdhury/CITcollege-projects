@@ -1,0 +1,11 @@
+package vehicle;
+
+public class VehicleMain {
+
+	public static void main(String[] args) {
+	 
+		Vehicle vehicle1 = new Vehicle();//creating vehicle object
+
+	}
+
+}

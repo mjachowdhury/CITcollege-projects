@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<data-sources>
+	</data-sources>
+
+	<form-beans>
+	</form-beans>
+
+	<global-exceptions>
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="/profiling/loginStart.do" path="/profiling/loginStart.do" contextRelative="true">
+		</forward>
+		<forward name="/error/generalErr.do" path="/error/generalErr.do" contextRelative="true">
+		</forward>
+		<forward name="/preferences/prefEntry.do" path="/preferences/prefEntry.do" contextRelative="true">
+		</forward>
+	</global-forwards> 
+</struts-config>

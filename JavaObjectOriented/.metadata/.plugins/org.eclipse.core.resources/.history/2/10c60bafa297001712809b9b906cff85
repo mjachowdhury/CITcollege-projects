@@ -1,0 +1,10 @@
+package BankAccount;
+
+public class BankAccountMain {
+
+	public static void main(String [] args){
+		BankAccount customerAccount1 = new BankAccount();
+		BankAccount customerAccount2 = new BankAccount();
+		
+	}
+}

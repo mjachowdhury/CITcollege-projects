@@ -1,0 +1,10 @@
+package shape;
+
+public class Rectangle extends Shape {
+
+	public Rectangle(){}
+	// I am implementing the parent class method here
+	public void draw(){
+		System.out.println("Rectange Drawn.");
+	}
+}

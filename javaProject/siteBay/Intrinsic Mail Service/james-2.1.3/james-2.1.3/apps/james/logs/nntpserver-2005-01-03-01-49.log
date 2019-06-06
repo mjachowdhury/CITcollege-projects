@@ -1,0 +1,5 @@
+03/01/05 01:49:35 INFO  nntpserver: NNTP Service uses default thread group.
+03/01/05 01:49:35 INFO  nntpserver: NNTP Service is running on: java6
+03/01/05 01:49:35 INFO  nntpserver: NNTP Service handler hello name is: java6
+03/01/05 01:49:35 INFO  nntpserver: NNTP Service handler connection timeout is: 120000
+03/01/05 01:49:35 INFO  nntpserver: NNTP Service started plain:119

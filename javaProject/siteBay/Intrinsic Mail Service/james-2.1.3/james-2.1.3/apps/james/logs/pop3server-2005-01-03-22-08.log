@@ -1,0 +1,22 @@
+03/01/05 22:08:13 INFO  pop3server: POP3 Service uses default thread group.
+03/01/05 22:08:13 INFO  pop3server: POP3 Service is running on: java6
+03/01/05 22:08:13 INFO  pop3server: POP3 Service handler hello name is: java6
+03/01/05 22:08:13 INFO  pop3server: POP3 Service handler connection timeout is: 120000
+03/01/05 22:08:13 INFO  pop3server: The idle timeout will be reset every 20480 bytes.
+03/01/05 22:08:13 INFO  pop3server: POP3 Service started plain:110
+03/01/05 22:17:42 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:17:48 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.
+03/01/05 22:17:48 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:17:48 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.
+03/01/05 22:27:06 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:27:06 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.
+03/01/05 22:32:15 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:32:15 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.
+03/01/05 22:36:03 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:36:03 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.
+03/01/05 22:38:14 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:38:14 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.
+03/01/05 22:47:42 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:47:42 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.
+03/01/05 22:56:02 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/05 22:56:02 INFO  pop3server: Connection for anirudh from localhost (127.0.0.1) closed.

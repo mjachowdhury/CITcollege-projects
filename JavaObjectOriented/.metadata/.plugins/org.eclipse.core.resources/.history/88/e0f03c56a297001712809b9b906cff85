@@ -1,0 +1,11 @@
+package BankAccount;
+
+public class BankAccount {
+
+	String cuntomerName = "Blank";
+	String address = "Blank";
+	int telephone = 0;
+	boolean student = false;
+	double amount = 0.0;
+	
+}

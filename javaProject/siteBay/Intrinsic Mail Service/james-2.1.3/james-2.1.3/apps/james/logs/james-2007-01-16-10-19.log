@@ -1,0 +1,8 @@
+16/01/07 10:19:14 INFO  James: JAMES init...
+16/01/07 10:19:14 INFO  James: Local host is: inetsolv
+16/01/07 10:19:14 INFO  James: Handling mail for: localhost
+16/01/07 10:19:14 INFO  James: Handling mail for: 127.0.0.1
+16/01/07 10:19:14 INFO  James: Handling mail for: inetsolv
+16/01/07 10:19:14 INFO  James: Local users repository opened
+16/01/07 10:19:14 INFO  James: Private Repository LocalInbox opened
+16/01/07 10:19:14 INFO  James: JAMES ...init end

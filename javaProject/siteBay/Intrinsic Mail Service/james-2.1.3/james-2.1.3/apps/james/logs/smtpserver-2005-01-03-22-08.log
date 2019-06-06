@@ -1,0 +1,14 @@
+03/01/05 22:08:13 INFO  smtpserver: SMTP Service uses default thread group.
+03/01/05 22:08:13 INFO  smtpserver: SMTP Service is running on: java6
+03/01/05 22:08:13 INFO  smtpserver: SMTP Service handler hello name is: java6
+03/01/05 22:08:13 INFO  smtpserver: SMTP Service handler connection timeout is: 360000
+03/01/05 22:08:13 INFO  smtpserver: This SMTP server does not require authentication.
+03/01/05 22:08:13 INFO  smtpserver: No maximum message size is enforced for this server.
+03/01/05 22:08:13 INFO  smtpserver: The idle timeout will be reset every 20480 bytes.
+03/01/05 22:08:13 INFO  smtpserver: SMTP Service started plain:25
+03/01/05 22:32:52 INFO  smtpserver: Connection from localhost (127.0.0.1)
+03/01/05 22:32:52 INFO  smtpserver: Successfully spooled mail from anirudh@localhost for [anirudh@localhost]
+03/01/05 22:34:26 INFO  smtpserver: Connection from localhost (127.0.0.1)
+03/01/05 22:34:26 INFO  smtpserver: Successfully spooled mail from anirudh@localhost for [anirudh@localhost]
+03/01/05 22:35:57 INFO  smtpserver: Connection from localhost (127.0.0.1)
+03/01/05 22:35:57 INFO  smtpserver: Successfully spooled mail from anirudh@localhost for [arjun@gmail.com]

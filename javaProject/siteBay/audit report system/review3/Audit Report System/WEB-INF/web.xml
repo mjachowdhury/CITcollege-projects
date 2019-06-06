@@ -1,0 +1,241 @@
+<web-app>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+<context>
+  <param-name>driver</param-name>
+  <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+</context>
+<context>
+  <param-name>url</param-name>
+  <param-value>jdbc:odbc:JDSN</param-value>
+</context>
+<context>
+  <param-name>user</param-name>
+  <param-value>interact</param-value>
+</context>
+<context>
+  <param-name>pass</param-name>
+  <param-value>interact</param-value>
+</context>
+
+
+
+<servlet>
+<servlet-name>HelloServlet</servlet-name>
+<servlet-class>HelloServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>HelloServlet</servlet-name>
+<url-pattern>/Hello</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+		<servlet-name>InsClient</servlet-name>
+		<servlet-class>InsClient</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>InsClient</servlet-name>
+	<url-pattern>/Insert</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>EventMaster</servlet-name>
+	<servlet-class>EventMaster</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>EventMaster</servlet-name>
+	<url-pattern>/EventMaster</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>Data</servlet-name>
+		<servlet-class>Data</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Data</servlet-name>
+	<url-pattern>/Data</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+		<servlet-name>EventDesc</servlet-name>
+		<servlet-class>EventDesc</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>EventDesc</servlet-name>
+	<url-pattern>/EventDesc</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+		<servlet-name>EventFeedback</servlet-name>
+	<servlet-class>EventFeedback</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>EventFeedback</servlet-name>
+	<url-pattern>/EventFeedback</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>MeetingMaster</servlet-name>
+	<servlet-class>MeetingMaster</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>MeetingMaster</servlet-name>
+	<url-pattern>/MeetingMaster</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>MeetingDesc</servlet-name>
+	<servlet-class>MeetingDesc</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>MeetingDesc</servlet-name>
+	<url-pattern>/MeetingDesc</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>Minute</servlet-name>
+	<servlet-class>Minute</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Minute</servlet-name>
+	<url-pattern>/Minute</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>ContractMaster</servlet-name>
+	<servlet-class>ContractMaster</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ContractMaster</servlet-name>
+	<url-pattern>/ContractMaster</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>ContractStatus</servlet-name>
+	<servlet-class>ContractStatus</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ContractStatus</servlet-name>
+	<url-pattern>/ContractStatus</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>AttendeeMaster</servlet-name>
+	<servlet-class>AttendeeMaster</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>AttendeeMaster</servlet-name>
+	<url-pattern>/AttendeeMaster</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>ExecMaster</servlet-name>
+	<servlet-class>ExecMaster</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ExecMaster</servlet-name>
+	<url-pattern>/ExecMaster</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+		<servlet-name>Email</servlet-name>
+	<servlet-class>Email</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Email</servlet-name>
+	<url-pattern>/Email</url-pattern>
+</servlet-mapping>
+
+<servlet>
+      <servlet-name>Phno</servlet-name>
+	<servlet-class>Phno</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Phno</servlet-name>
+	<url-pattern>/Phno</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+		<servlet-name>Addres</servlet-name>
+	<servlet-class>Addres</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Addres</servlet-name>
+	<url-pattern>/Addres</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>ContractDetails</servlet-name>
+	<servlet-class>ContractDetails</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ContractDetails</servlet-name>
+	<url-pattern>/ContractDetails</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>LoginCheck</servlet-name>
+	<servlet-class>LoginCheck</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>LoginCheck</servlet-name>
+	<url-pattern>/LoginCheck</url-pattern>
+</servlet-mapping>
+
+<servlet>
+		<servlet-name>UpdateContractDetails</servlet-name>
+	<servlet-class>UpdateContractDetails</servlet-class>
+</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MinutesServlet</servlet-name>
+    <servlet-class>MinutesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TestBean</servlet-name>
+    <servlet-class>TestBean</servlet-class>
+  </servlet>
+
+
+
+<servlet-mapping>
+	<servlet-name>UpdateContractDetails</servlet-name>
+	<url-pattern>/UpdateContractDetails</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MinutesServlet</servlet-name>
+    <url-pattern>/servlet/MinutesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestBean</servlet-name>
+    <url-pattern>/servlet/TestBean</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

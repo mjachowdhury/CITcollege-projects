@@ -1,0 +1,6 @@
+27/09/09 10:56:07 INFO  pop3server: POP3 Service uses default thread group.
+27/09/09 10:56:07 INFO  pop3server: POP3 Service is running on: satya
+27/09/09 10:56:07 INFO  pop3server: POP3 Service handler hello name is: satya
+27/09/09 10:56:07 INFO  pop3server: POP3 Service handler connection timeout is: 120000
+27/09/09 10:56:07 INFO  pop3server: The idle timeout will be reset every 20480 bytes.
+27/09/09 10:56:07 INFO  pop3server: POP3 Service started plain:110

@@ -1,0 +1,30 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/22/2008 4:55:28 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   AttachmentFormBean.java
+
+package org.claros.groupware.webmail.models;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.upload.FormFile;
+
+public class AttachmentFormBean extends ActionForm
+{
+
+    public AttachmentFormBean()
+    {
+        attachFile = null;
+    }
+
+    public FormFile getAttachFile()
+    {
+        return attachFile;
+    }
+
+    public void setAttachFile(FormFile a)
+    {
+        attachFile = a;
+    }
+
+    private FormFile attachFile;
+}

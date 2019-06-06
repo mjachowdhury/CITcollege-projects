@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><products>
+	<books><product name="Visual Studio.Net" unitcost="1250" vendor_company="Wrox PRess" web_email="http://p2p.com">Trust Microsoft Products</product><product name="mozilla firefox" unitcost="ljls" vendor_company="lksdjfl" web_email="dlsfj">ldsjfl</product><product name="VC++" unitcost="1234" vendor_company="TATA McGrill" web_email="tata@mcgrill.com">How to Program VC++</product><product name="Java" unitcost="563" vendor_company="Java" web_email="completereference@java.com">Completer Reference For Java</product><product name="VB" unitcost="550" vendor_company="Dietal &amp; Dietal" web_email="dietal@dietal.com">How to programming using VB</product><product name="EJB" unitcost="770" vendor_company="Complete Refeternce" web_email="EJB@Java.com">dsfkjkldjf</product><product name="Perl Scripting" unitcost="1200" vendor_company="wrox press" web_email="lfjsdl">Perl Script designed for vb jsp,asp</product><product name="PHP Scripting" unitcost="1200" vendor_company="wrox press" web_email="lfjsdl">Perl Script designed for vb jsp,asp</product><product name="Action Scripting" unitcost="1200" vendor_company="wrox press" web_email="lfjsdl">Perl Script designed for vb jsp,asp</product><product name="Lingo Scripting" unitcost="1200" vendor_company="wrox press" web_email="lfjsdl">Perl Script designed for vb jsp,asp</product><product name="#d max scripting Scripting" unitcost="1200" vendor_company="wrox press" web_email="lfjsdl">Perl Script designed for vb jsp,asp</product><product name="Not Specified" unitcost="Not Specified" vendor_company="Not Specified" web_email="Not Specified">Not Specified</product><product name="Not Specified" unitcost="Not Specified" vendor_company="Not Specified" web_email="Not Specified">sdfsdf</product><product name="Not Specified" unitcost="Not Specified" vendor_company="Not Specified" web_email="Not Specified">ghari</product><product name="Not Specified" unitcost="Not Specified" vendor_company="Not Specified" web_email="Not Specified">g.hari kishore</product><product name="Not Specified" unitcost="Not Specified" vendor_company="Not Specified" web_email="Not Specified">sample product&#13;
+insertion</product><product name="php script" unitcost="2300" vendor_company="linux" web_email="http://www.wrox.com">p2p programmer</product></books>
+	<appliances/>
+	<softwares><product name="java" unitcost="9284" vendor_company="satyam" web_email="ghkishore9@y.com">shdfkshd</product></softwares>
+	<hardware/>
+	<electronics/>
+	<gifts/>
+	<flowers><product name="Roses" unitcost="500" vendor_company="Rose Flowers" web_email="rose@roses.com">All color roses</product></flowers>
+	<food><product name="sonamasuri" unitcost="35" vendor_company="bigbazar" web_email="bigbazarb2b.com">we offer good quality things</product></food>
+	<health/>
+	<music/>
+	<officesupplies/>
+	<sports/>
+	<toys/>
+	<clothing/>
+	<magazines/>
+<browser><product name="Netscape" unitcost="400000" vendor_company="Netscape gecko" web_email="http://home.netscape.com">Fastest Web and java enabled browser</product><product name="gfh" unitcost="hfghfg" vendor_company="fghfg" web_email="hfgh">fghfg</product></browser><browsers><product name="mybrowser" unitcost="hfgh" vendor_company="fghfg" web_email="hfgh">fghfg</product></browsers><entertainment><product name="films" unitcost="50" vendor_company="satyam" web_email="http://www.satyamonline.com">displays latest films and&#13;
+providing online services like ticket booking etc., at satyam</product></entertainment><nekkanti_srinivas><product name="Database Programming" unitcost="2400" vendor_company="Sathya Technologies" web_email="http://www.sathyatechnolgies.com">database programming and java and aspx and srinivas</product></nekkanti_srinivas></products>

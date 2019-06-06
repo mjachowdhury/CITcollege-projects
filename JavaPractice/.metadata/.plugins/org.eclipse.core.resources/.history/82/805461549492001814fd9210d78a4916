@@ -1,0 +1,10 @@
+package differentProblemSolve;
+
+public class FIndingFactorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

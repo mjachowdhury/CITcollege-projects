@@ -1,0 +1,60 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/3/2012 4:36:33 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   LoginCheck.java
+
+import DBcon.DataCon;
+import java.io.PrintStream;
+import java.sql.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.http.*;
+
+public class LoginCheck extends HttpServlet
+{
+
+    public LoginCheck()
+    {
+    }
+
+    public void doPost(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
+    {
+        String s = "login.html";
+        try
+        {
+            Connection connection = (new DataCon()).getConnection(getServletContext());
+            Statement statement = connection.createStatement();
+            System.out.println((new StringBuilder()).append("select * from users where username='").append(httpservletrequest.getParameter("user")).append("' and password='").append(httpservletrequest.getParameter("pass")).append("'").toString());
+            ResultSet resultset = statement.executeQuery((new StringBuilder()).append("select * from users where username='").append(httpservletrequest.getParameter("user")).append("' and password='").append(httpservletrequest.getParameter("pass")).append("'").toString());
+            javax.servlet.http.HttpSession httpsession = httpservletrequest.getSession(true);
+            do
+            {
+                if(!resultset.next())
+                    break;
+                String s1 = resultset.getString(3);
+                if(s1.equalsIgnoreCase("Admin"))
+                {
+                    getServletContext().setAttribute("user", httpservletrequest.getParameter("user"));
+                    s = "f1.jsp";
+                } else
+                if(s1.equalsIgnoreCase("exec"))
+                {
+                    resultset = statement.executeQuery((new StringBuilder()).append("select e.execid from exec_master e,users u where u.username='").append(httpservletrequest.getParameter("user")).append("' and u.username=e.execname").toString());
+                    if(resultset.next())
+                    {
+                        String s2 = resultset.getString(1);
+                        getServletContext().setAttribute("execid", s2);
+                        getServletContext().setAttribute("user", httpservletrequest.getParameter("user"));
+                        s = "f2.jsp";
+                    }
+                }
+            } while(true);
+            RequestDispatcher requestdispatcher = httpservletrequest.getRequestDispatcher(s);
+            requestdispatcher.forward(httpservletrequest, httpservletresponse);
+        }
+        catch(Exception exception)
+        {
+            exception.printStackTrace();
+        }
+    }
+}

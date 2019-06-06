@@ -1,0 +1,123 @@
+SQL> select * from tab;
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+ADMIN                          TABLE                                            
+BUYER                          TABLE                                            
+CBALANCE                       TABLE                                            
+CUSTOMER_MASTER                TABLE                                            
+FEEDBACK                       TABLE                                            
+PORTFOLIO                      TABLE                                            
+QUOTE                          TABLE                                            
+SELLER                         TABLE                                            
+SYMBOL                         TABLE                                            
+
+9 rows selected.
+
+SQL> desc admin
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(20)
+ PASSWORD                                           VARCHAR2(20)
+
+SQL> desc buyer
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CID                                                NUMBER(10)
+ COMPANY_NAME                                       VARCHAR2(25)
+ NO_OF_SHARES                                       NUMBER(5)
+ RATE_PER_SHARE                                     NUMBER(5,2)
+ VALIDITY                                           VARCHAR2(25)
+ DATE_B                                             VARCHAR2(25)
+ ORDER_TYPE                                         VARCHAR2(25)
+ STATUS                                             VARCHAR2(25)
+
+SQL> desc cbalance
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CID                                                NUMBER(5)
+ BALANCE                                            NUMBER(10,2)
+ MODE_OF_PAYM                                       VARCHAR2(25)
+ CARD_TYPE                                          VARCHAR2(25)
+ CARD_NO                                            VARCHAR2(25)
+ CARD_HOLDER_NAME                                   VARCHAR2(25)
+ EXPIRY_DATE                                        VARCHAR2(25)
+ CHEQUE_NO                                          VARCHAR2(25)
+ CHEQUE_DATE                                        VARCHAR2(25)
+ BANK_DRAWN                                         VARCHAR2(25)
+ LOCATION                                           VARCHAR2(25)
+
+SQL> desc CUSTOMER_MASTER
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CID                                                NUMBER(25)
+ NAME                                               VARCHAR2(25)
+ ADDRESS                                            VARCHAR2(25)
+ PHONE_R                                            VARCHAR2(25)
+ PHONE_O                                            VARCHAR2(25)
+ PHONE_M                                            VARCHAR2(25)
+ FAX                                                VARCHAR2(25)
+ CITY                                               VARCHAR2(25)
+ STATE                                              VARCHAR2(25)
+ DOB                                                VARCHAR2(25)
+ PINCODE                                            VARCHAR2(25)
+ EMAILID                                            VARCHAR2(25)
+ OCCUPATION                                         VARCHAR2(25)
+ INCOME                                             VARCHAR2(25)
+ DATE_OF_OPENING                                    VARCHAR2(25)
+ LOGNAME                                            VARCHAR2(25)
+ PASSWORD                                           VARCHAR2(25)
+ LNAME                                              VARCHAR2(25)
+ TITLE                                              VARCHAR2(25)
+
+SQL> desc feedback
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                                NUMBER(5)
+ NAME                                               VARCHAR2(25)
+ EMAIL                                              VARCHAR2(25)
+ COMMENTS                                           VARCHAR2(25)
+
+SQL> desc quote
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SYMBOL                                             VARCHAR2(25)
+ CURRENT_PRICE                                      NUMBER(5,2)
+ CHANGE                                             NUMBER(5)
+ VOLUME                                             NUMBER(8)
+ HIGH                                               NUMBER(5)
+ LOW                                                NUMBER(5)
+ DAY_OPEN                                           NUMBER(5)
+ PREV_PRICE                                         NUMBER(5)
+
+SQL> desc portfolio
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CID                                                NUMBER(5)
+ SYMBOL                                             VARCHAR2(20)
+ NO_SHARES_TRADED                                   NUMBER(10)
+ BUY_RATE                                           NUMBER(5,2)
+ SALE_RATE                                          NUMBER(5,2)
+ PURCHASE_VALUE                                     NUMBER(10,5)
+ SALE_VALUE                                         NUMBER(10,5)
+ PROFIT                                             NUMBER(10,5)
+
+SQL> desc symbol
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COMPANYNAME                                        VARCHAR2(25)
+ SYMBOL                                             VARCHAR2(5)
+
+SQL> desc seller
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CID                                                NUMBER(10)
+ COMPANY_NAME                                       VARCHAR2(25)
+ NO_OF_SHARES                                       NUMBER
+ RATE_PER_SHARE                                     NUMBER
+ VALIDITY                                           VARCHAR2(30)
+ DATE_S                                             VARCHAR2(20)
+ ORDER_TYPE                                         VARCHAR2(30)
+ STATUS                                             VARCHAR2(25)
+
+SQL> spool off

@@ -1,0 +1,32 @@
+29/01/07 16:22:37 INFO  pop3server: POP3 Service uses default thread group.
+29/01/07 16:22:37 INFO  pop3server: POP3 Service is running on: inetsolv
+29/01/07 16:22:37 INFO  pop3server: POP3 Service handler hello name is: inetsolv
+29/01/07 16:22:37 INFO  pop3server: POP3 Service handler connection timeout is: 120000
+29/01/07 16:22:37 INFO  pop3server: The idle timeout will be reset every 20480 bytes.
+29/01/07 16:22:37 INFO  pop3server: POP3 Service started plain:110
+29/01/07 16:47:10 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:47:10 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.
+29/01/07 16:48:58 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:48:58 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.
+29/01/07 16:48:58 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:48:58 INFO  pop3server: Connection for two from localhost (127.0.0.1) closed.
+29/01/07 16:49:13 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:49:13 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.
+29/01/07 16:49:13 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:49:13 INFO  pop3server: Connection for two from localhost (127.0.0.1) closed.
+29/01/07 16:49:42 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:49:42 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.
+29/01/07 16:49:42 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:49:42 INFO  pop3server: Connection for two from localhost (127.0.0.1) closed.
+29/01/07 16:51:01 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:51:01 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.
+29/01/07 16:51:01 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:51:02 INFO  pop3server: Connection for two from localhost (127.0.0.1) closed.
+29/01/07 16:51:22 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:51:22 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.
+29/01/07 16:51:23 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 16:51:26 INFO  pop3server: Connection for two from localhost (127.0.0.1) closed.
+29/01/07 17:12:41 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 17:12:42 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.
+29/01/07 17:14:07 INFO  pop3server: Connection from localhost (127.0.0.1) 
+29/01/07 17:14:12 INFO  pop3server: Connection for one from localhost (127.0.0.1) closed.

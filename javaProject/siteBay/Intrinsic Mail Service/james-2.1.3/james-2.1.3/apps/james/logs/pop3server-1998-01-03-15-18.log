@@ -1,0 +1,10 @@
+03/01/98 15:19:00 INFO  pop3server: POP3 Service uses default thread group.
+03/01/98 15:19:00 INFO  pop3server: POP3 Service is running on: java6
+03/01/98 15:19:00 INFO  pop3server: POP3 Service handler hello name is: java6
+03/01/98 15:19:00 INFO  pop3server: POP3 Service handler connection timeout is: 120000
+03/01/98 15:19:00 INFO  pop3server: The idle timeout will be reset every 20480 bytes.
+03/01/98 15:19:00 INFO  pop3server: POP3 Service started plain:110
+03/01/98 15:26:40 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/98 15:26:48 INFO  pop3server: Connection for bharath from localhost (127.0.0.1) closed.
+03/01/98 15:26:48 INFO  pop3server: Connection from localhost (127.0.0.1) 
+03/01/98 15:26:48 INFO  pop3server: Connection for bharath from localhost (127.0.0.1) closed.

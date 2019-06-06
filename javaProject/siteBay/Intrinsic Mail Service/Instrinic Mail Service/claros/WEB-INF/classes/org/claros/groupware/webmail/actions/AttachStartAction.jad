@@ -1,0 +1,25 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/22/2008 4:49:03 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   AttachStartAction.java
+
+package org.claros.groupware.webmail.actions;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.struts.action.*;
+import org.claros.groupware.common.actions.BaseLoggedAction;
+
+public class AttachStartAction extends BaseLoggedAction
+{
+
+    public AttachStartAction()
+    {
+    }
+
+    public ActionForward myExecute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response)
+        throws Exception
+    {
+        return mapping.findForward("/attachments.jsp");
+    }
+}

@@ -1,0 +1,8 @@
+03/01/05 01:49:35 INFO  James: JAMES init...
+03/01/05 01:49:35 INFO  James: Local host is: java6
+03/01/05 01:49:35 INFO  James: Handling mail for: java6
+03/01/05 01:49:35 INFO  James: Handling mail for: localhost
+03/01/05 01:49:35 INFO  James: Handling mail for: 127.0.0.1
+03/01/05 01:49:35 INFO  James: Local users repository opened
+03/01/05 01:49:35 INFO  James: Private Repository LocalInbox opened
+03/01/05 01:49:35 INFO  James: JAMES ...init end

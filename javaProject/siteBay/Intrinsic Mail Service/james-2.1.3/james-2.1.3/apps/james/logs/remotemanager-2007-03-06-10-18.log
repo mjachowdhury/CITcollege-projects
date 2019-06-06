@@ -1,0 +1,19 @@
+06/03/07 10:18:43 INFO  remotemanager: Remote Manager Service uses default thread group.
+06/03/07 10:18:43 INFO  remotemanager: Remote Manager Service is running on: inetsolv
+06/03/07 10:18:43 INFO  remotemanager: Remote Manager Service handler hello name is: inetsolv
+06/03/07 10:18:43 INFO  remotemanager: Remote Manager Service handler connection timeout is: 60000
+06/03/07 10:18:43 INFO  remotemanager: Remote Manager Service started plain:4555
+06/03/07 10:18:48 INFO  remotemanager: Access from localhost(127.0.0.1)
+06/03/07 10:18:51 INFO  remotemanager: Login for root successful
+06/03/07 10:23:58 INFO  remotemanager: Logout for root.
+06/03/07 10:29:16 INFO  remotemanager: Access from localhost(127.0.0.1)
+06/03/07 10:29:20 INFO  remotemanager: Login for root successful
+06/03/07 10:31:20 ERROR remotemanager: Remote Manager Connection has idled out.
+06/03/07 10:31:20 INFO  remotemanager: Logout for root.
+06/03/07 11:11:50 INFO  remotemanager: Access from localhost(127.0.0.1)
+06/03/07 11:11:53 INFO  remotemanager: Login for root successful
+06/03/07 11:12:09 INFO  remotemanager: User swmay added
+06/03/07 11:12:19 INFO  remotemanager: User veknkat added
+06/03/07 11:13:53 ERROR remotemanager: Remote Manager Connection has idled out.
+06/03/07 11:13:53 INFO  remotemanager: Logout for root.
+06/03/07 11:45:10 INFO  remotemanager: Access from localhost(127.0.0.1)

@@ -1,0 +1,38 @@
+#contactlist {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #FFFFFF;
+	width: 120px;
+	border: 0px solid #E9E9E9;
+	color: #006699;
+/*	font-weight: bold; */
+	text-decoration: none;
+	overflow: auto;
+}
+.contactheader {
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 3px;
+	margin: 4px;
+}
+#contactlist td {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+
+.selectedAdr {
+	background-color: #FFFFCC;
+	border: 1px solid #999999;
+	width:400px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.normalAdr {
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+	width:400px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}

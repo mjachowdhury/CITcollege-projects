@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+     <form-bean name="tender"  type="district.TenderFB">
+     <form-property name="tid"  type="java.lang.String"/>
+     <form-property name="tname"  type="java.lang.String"/>
+     <form-property name="wplace"  type="java.lang.String"/> 
+     <form-property name="tdesc"  type="java.lang.String"/>
+     <form-property name="flag"  type="java.lang.String"/>
+	 <form-property name="method"  type="java.lang.String"/>   
+	 </form-bean>
+
+     <form-bean name="contractor"  type="district.ContractorFB">
+     <form-property name="pk"  type="java.lang.String"/>
+     <form-property name="cname"  type="java.lang.String"/>
+     <form-property name="caddr"  type="java.lang.String"/> 
+     <form-property name="bid"  type="java.lang.String"/>
+     <form-property name="bname"  type="java.lang.String"/>
+     <form-property name="baddr"  type="java.lang.String"/>	   
+     <form-property name="years"  type="java.lang.String"/>
+	 <form-property name="pwd"  type="java.lang.String"/>
+	 <form-property name="method"  type="java.lang.String"/>
+	 </form-bean>
+
+
+     <form-bean name="PoliceStation"  type="district.PoliceFB">
+     <form-property name="pname"  type="java.lang.String"/>
+     <form-property name="addr"  type="java.lang.String"/> 
+     <form-property name="login"  type="java.lang.String"/>
+     <form-property name="pwd"  type="java.lang.String"/>
+     <form-property name="pk"  type="java.lang.String"/>	    
+     <form-property name="method"  type="java.lang.String"/>	    
+     </form-bean>
+
+	 <form-bean name="PassportCertificate"  type="district.PassportFB">
+     <form-property name="first"  type="java.lang.String"/>
+     <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="sname"  type="java.lang.String"/>
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="mname"  type="java.lang.String"/>	    
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="dob"  type="java.lang.String"/>	    
+     <form-property name="sex"  type="java.lang.String"/>	    
+     <form-property name="bplace"  type="java.lang.String"/>	    
+     <form-property name="telno"  type="java.lang.String"/>	    
+     <form-property name="mobileno"  type="java.lang.String"/>	    
+     <form-property name="emailid"  type="java.lang.String"/>	    
+     <form-property name="qul"  type="java.lang.String"/>	    
+     <form-property name="prof"  type="java.lang.String"/>	    
+     <form-property name="id"  type="java.lang.String"/>	    
+     <form-property name="height"  type="java.lang.String"/>	    
+     </form-bean>
+
+	 <form-bean name="BirthCertificate"  type="district.BirthFB">
+     <form-property name="first"  type="java.lang.String"/>
+     <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="mname"  type="java.lang.String"/>	    
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="dob"  type="java.lang.String"/>	    
+     <form-property name="sex"  type="java.lang.String"/>	    
+     <form-property name="caste"  type="java.lang.String"/>	    
+     <form-property name="bplace"  type="java.lang.String"/>	    
+      <form-property name="drname"  type="java.lang.String"/>	    
+      <form-property name="foccup"  type="java.lang.String"/>	    
+       <form-property name="hname"  type="java.lang.String"/>	    
+     </form-bean>
+   
+    <form-bean name="DeathCertificate"  type="district.DeathFB">
+      <form-property name="first"  type="java.lang.String"/>
+      <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="mname"  type="java.lang.String"/>	    
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="dod"  type="java.lang.String"/>	    
+     <form-property name="sex"  type="java.lang.String"/>	    
+     <form-property name="caste"  type="java.lang.String"/>	    
+     <form-property name="dplace"  type="java.lang.String"/>	    
+      <form-property name="drname"  type="java.lang.String"/>
+     <form-property name="rdeath"  type="java.lang.String"/>	    	    
+      <form-property name="occup"  type="java.lang.String"/>	    
+       <form-property name="hname"  type="java.lang.String"/>	
+       <form-property name="dob"  type="java.lang.String"/>	        
+     </form-bean>
+
+    <form-bean name="WidowCertificate"  type="district.WidowFB">
+      <form-property name="first"  type="java.lang.String"/>
+      <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="hname"  type="java.lang.String"/>
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="dcid"  type="java.lang.String"/>	    
+     <form-property name="rdeath"  type="java.lang.String"/>	    	    
+     <form-property name="occup"  type="java.lang.String"/>	    
+     <form-property name="dod"  type="java.lang.String"/>	        
+     <form-property name="dplace"  type="java.lang.String"/>	 
+     <form-property name="drname"  type="java.lang.String"/>	
+     <form-property name="hosname"  type="java.lang.String"/>	
+     </form-bean>
+ 
+    <form-bean name="IncomeCertificate"  type="district.IncomeFB">
+      <form-property name="first"  type="java.lang.String"/>
+      <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="dob"  type="java.lang.String"/>	    
+     <form-property name="qual"  type="java.lang.String"/>	    	    
+     <form-property name="occup"  type="java.lang.String"/>	    
+     <form-property name="income"  type="java.lang.String"/>	        
+    <form-property name="purpose"  type="java.lang.String"/>	
+    </form-bean>
+ 
+   <form-bean name="ResidentialCertificate"  type="district.ResdFB">
+      <form-property name="first"  type="java.lang.String"/>
+      <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="caste"  type="java.lang.String"/>	    
+     <form-property name="lsince"  type="java.lang.String"/>	    	    
+     <form-property name="occup"  type="java.lang.String"/>	    
+     <form-property name="dob"  type="java.lang.String"/>	        
+    <form-property name="purpose"  type="java.lang.String"/>	
+    <form-property name="reason"  type="java.lang.String"/>	
+    </form-bean>
+  
+    <form-bean name="DomicileCertificate"  type="district.DomicileFB">
+      <form-property name="first"  type="java.lang.String"/>
+      <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="caste"  type="java.lang.String"/>	    
+     <form-property name="lsince"  type="java.lang.String"/>	    	    
+     <form-property name="occup"  type="java.lang.String"/>	    
+     <form-property name="dob"  type="java.lang.String"/>	        
+    <form-property name="purpose"  type="java.lang.String"/>	
+    </form-bean>
+
+    <form-bean name="MinorityCertificate"  type="district.MinorityFB">
+      <form-property name="first"  type="java.lang.String"/>
+      <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="sex"  type="java.lang.String"/>	    
+     <form-property name="religion"  type="java.lang.String"/>	    	    
+     <form-property name="occup"  type="java.lang.String"/>
+    <form-property name="income"  type="java.lang.String"/>	    
+     <form-property name="dob"  type="java.lang.String"/>	        
+    <form-property name="purpose"  type="java.lang.String"/>	
+    </form-bean>
+ 
+      <form-bean name="CasteCertificate"  type="district.CasteFB">
+      <form-property name="first"  type="java.lang.String"/>
+      <form-property name="last"  type="java.lang.String"/> 
+     <form-property name="fname"  type="java.lang.String"/>
+     <form-property name="resadd"  type="java.lang.String"/>
+     <form-property name="peradd"  type="java.lang.String"/>
+     <form-property name="sex"  type="java.lang.String"/>	   
+    <form-property name="caste"  type="java.lang.String"/>	    
+     <form-property name="religion"  type="java.lang.String"/>	    	    
+     <form-property name="occup"  type="java.lang.String"/>
+    <form-property name="income"  type="java.lang.String"/>	    
+     <form-property name="dob"  type="java.lang.String"/>	        
+    <form-property name="purpose"  type="java.lang.String"/>	
+    </form-bean>
+
+    <form-bean name="LoginForm"  type="district.LoginFB">
+      <form-property name="uname"  type="java.lang.String"/>
+      <form-property name="pwd"  type="java.lang.String"/> 
+    </form-bean>
+    </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  <action path="/contractorloginaction" type="district.ContractorLoginAction">
+        <forward name="adminlogin" path="/ContractorHome.jsp"/>
+        <forward name="loginfail" path="/loginfail.jsp"/> 
+       </action> 
+	
+		 <action name="tender" input="/tenderedit.jsp"  path="/edittenderaction"  type="district.TenderAction">
+         <forward name="success" path="/tendereditsuc.jsp"/>
+         <forward name="fail" path="/edittenderfail.jsp"/> 
+         </action>  	
+		 <action name="tender" input="/searchtender.jsp" path="/searchtenderaction"  type="district.TenderAction">
+         <forward name="success" path="/tenderedit.jsp"/>
+         <forward name="fail" path="/edittenderfail.jsp"/> 
+         </action>  
+		 
+		 <action name="tender" input="/createcontractor.jsp" path="/storetenderaction"  type="district.TenderAction">
+         <forward name="success" path="/storetendersuc.jsp"/>
+         <forward name="fail" path="/storetenderfail.jsp"/> 
+         </action>
+
+	 <action name="tender" input="/deletetender.jsp"  path="/deletetenderaction"  type="district.TenderAction">
+         <forward name="success" path="/deletetendersuc.jsp"/>
+         <forward name="fail" path="/deletetenderfail.jsp"/> 
+         </action>
+
+		 
+		 <action name="contractor" input="/searchcontractor.jsp" path="/searchcontractoraction"  type="district.ContractorAction">
+         <forward name="success" path="/contractoredit.jsp"/>
+         <forward name="fail" path="/editcontractorfail.jsp"/> 
+         </action>
+	
+		 <action name="contractor" input="/editcontractor.jsp" path="/editcontractoraction"  type="district.ContractorAction">
+         <forward name="success" path="/editcontractorsuc.jsp"/>
+         <forward name="fail" path="/editcontractorfail.jsp"/> 
+         </action>
+		 
+		 <action name="contractor" input="/deletecontractor.jsp" path="/deletecontractoraction"  type="district.ContractorAction">
+         <forward name="success" path="/deletecontractorsuc.jsp"/>
+         <forward name="fail" path="/deletecontractorfail.jsp"/> 
+         </action>
+
+		<action name="contractor" input="/createcontractor.jsp" path="/storecontractoraction"  type="district.ContractorAction">
+         <forward name="success" path="/storecontractorsuc.jsp"/>
+         <forward name="fail" path="/storecontractorfail.jsp"/> 
+         </action>
+
+		 
+
+
+
+         <action name="PoliceStation" input="/createpolicest.jsp" path="/storepolicestaction"  type="district.PoliceAction">
+         <forward name="success" path="/storepolicestsuc.jsp"/>
+         <forward name="fail" path="/storepolicestfail.jsp"/> 
+         </action>
+
+		 <action name="PoliceStation" input="/deletepolicest.jsp" path="/deletepolicestaction"  type="district.PoliceAction">
+         <forward name="success" path="/deletepolicestsuc.jsp"/>
+         <forward name="fail" path="/deletepolicestfail.jsp"/> 
+         </action>
+
+		 <action name="PoliceStation" input="/searchpolicest.jsp" path="/searchpolicestaction"  type="district.PoliceAction">
+         <forward name="success" path="/policestedit.jsp"/>
+         <forward name="fail" path="/editpolicestfail.jsp"/> 
+         </action>
+
+		 <action name="PoliceStation" input="/editpolicest.jsp" path="/editpolicestaction"  type="district.PoliceAction">
+         <forward name="success" path="/editpolicestsuc.jsp"/>
+         <forward name="fail" path="/editpolicestfail.jsp"/> 
+         </action>
+
+         <action name="PassportCertificate" input="/applypassport.jsp" path="/storepassportaction"  type="district.StorePassportAction">
+         <forward name="success" path="/storepassportsuc.jsp"/>
+         <forward name="fail" path="/storepassportfail.jsp"/> 
+          </action>
+
+		 <action name="BirthCertificate" input="/applybirth.jsp" path="/storebirthaction"  type="district.StorebirthAction">
+         <forward name="success" path="/storebirthsuc.jsp"/>
+         <forward name="fail" path="/storebirthfail.jsp"/> 
+          </action>
+  
+         <action name="DeathCertificate" input="/applydeath.jsp" path="/storedeathaction"  type="district.StoredeathAction">
+         <forward name="success" path="/storedeathsuc.jsp"/>
+         <forward name="fail" path="/storedeathfail.jsp"/> 
+          </action>
+ 
+         <action name="WidowCertificate" input="/applywidow.jsp" path="/storewidowaction"  type="district.StorewidowAction">
+         <forward name="success" path="/storewidowsuc.jsp"/>
+         <forward name="fail" path="/storewidowfail.jsp"/> 
+          </action>
+
+        <action name="IncomeCertificate" input="/applyincome.jsp" path="/storeincomeaction"  type="district.StoreincomeAction">
+         <forward name="success" path="/storeincomesuc.jsp"/>
+         <forward name="fail" path="/storeincomefail.jsp"/> 
+          </action>
+  
+        <action name="ResidentialCertificate" input="/applyresd.jsp" path="/storeresdaction"  type="district.StoreresdAction">
+        <forward name="success" path="/storeresdsuc.jsp"/>
+        <forward name="fail" path="/storeresdfail.jsp"/> 
+       </action> 
+  
+       <action name="DomicileCertificate" input="/applydomcile.jsp" path="/storedomcileaction"  type="district.StoredomcileAction">
+        <forward name="success" path="/storedomcilesuc.jsp"/>
+        <forward name="fail" path="/storedomcilefail.jsp"/> 
+       </action> 
+      
+       <action name="MinorityCertificate" input="/applyminority.jsp" path="/storeminorityaction"  type="district.StoreminorityAction">
+        <forward name="success" path="/storeminoritysuc.jsp"/>
+        <forward name="fail" path="/storeminorityfail.jsp"/> 
+       </action>  
+ 
+      <action name="CasteCertificate"  input="/applycaste.jsp" path="/storecasteaction"  type="district.StorecasteAction">
+        <forward name="success" path="/storecastesuc.jsp"/>
+        <forward name="fail" path="/storecastefail.jsp"/> 
+       </action> 
+
+       <action name="LoginForm"  input="/AdminLogin.jsp" path="/loginaction"  type="district.LoginAction">
+        <forward name="adminlogin" path="/ahead.jsp"/>
+        <forward name="loginfail" path="/loginfail.jsp"/> 
+       </action> 
+
+       <action path="/policeloginaction" type="district.PoliceLoginAction">
+        <forward name="adminlogin" path="/phead.jsp"/>
+        <forward name="loginfail" path="/loginfail.jsp"/> 
+       </action> 
+
+      <action  path="/showbirthaction"  type="district.ShowbirthAction">
+        <forward name="success" path="/showbirthsuc.jsp"/>
+        <forward name="fail" path="/showbirthfail.jsp"/> 
+       </action> 
+
+       <action  path="/viewbirthaction"  type="district.ViewbirthAction">
+        <forward name="success" path="/viewbirthsuc.jsp"/>
+        <forward name="fail" path="/viewbirthfail.jsp"/> 
+       </action> 
+   
+	  <action  path="/decideBirth"  type="district.DecideBirthAction">
+        <forward name="success" path="/decidebirthadminsuc.jsp"/>
+        <forward name="fail" path="/decidebirthadminfail.jsp"/> 
+       </action> 
+
+	  <action  path="/decideCaste"  type="district.DecideCasteAction">
+        <forward name="success" path="/decidecasteadminsuc.jsp"/>
+        <forward name="fail" path="/decidecasteadminfail.jsp"/> 
+       </action> 
+
+	  <action  path="/decideMinoity"  type="district.DecideMinorityAction">
+        <forward name="success" path="/decideminorityadminsuc.jsp"/>
+        <forward name="fail" path="/decideminorityadminfail.jsp"/> 
+       </action> 
+
+	  <action  path="/decideResident"  type="district.DecideResidentAction">
+        <forward name="success" path="/decideresidentadminsuc.jsp"/>
+        <forward name="fail" path="/decideresidentadminfail.jsp"/> 
+       </action> 
+
+	  <action  path="/decideIncome"  type="district.DecideIncomeAction">
+        <forward name="success" path="/decideincomeadminsuc.jsp"/>
+        <forward name="fail" path="/decideincomeadminfail.jsp"/> 
+       </action> 
+
+	  <action  path="/decideDomcile"  type="district.DecideDomcileAction">
+        <forward name="success" path="/decidedomcileadminsuc.jsp"/>
+        <forward name="fail" path="/decidedomcileadminfail.jsp"/> 
+       </action> 
+
+	  <action  path="/decideWidow"  type="district.DecideWidowAction">
+        <forward name="success" path="/decidewidowadminsuc.jsp"/>
+        <forward name="fail" path="/decidewidowadminfail.jsp"/> 
+       </action> 
+
+	  <action  path="/decideDeath"  type="district.DecideDeathAction">
+        <forward name="success" path="/decidedeathadminsuc.jsp"/>
+        <forward name="fail" path="/decidedeathadminfail.jsp"/> 
+       </action> 
+
+		<action  path="/aviewbirthaction"  type="district.ViewbirthAction">
+        <forward name="success" path="/aviewbirthsuc.jsp"/>
+        <forward name="fail" path="/aviewbirthfail.jsp"/> 
+       </action> 
+ 
+		<action  path="/aaviewbirthaction"  type="district.ViewbirthAction">
+        <forward name="success" path="/aaviewbirthsuc.jsp"/>
+        <forward name="fail" path="/aaviewbirthfail.jsp"/> 
+       </action> 
+ 
+		<action  path="/adviewbirthaction"  type="district.ViewbirthAction">
+        <forward name="success" path="/adviewbirthsuc.jsp"/>
+        <forward name="fail" path="/adviewbirthfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/viewpassportaction"  type="district.ViewPassportAction">
+        <forward name="success" path="/viewpassportsuc.jsp"/>
+        <forward name="fail" path="/viewpassportfail.jsp"/> 
+       </action> 
+  
+       <action  path="/candidateDetails"  type="district.PassportAction">
+        <forward name="success" path="/viewcandidatepassportsuc.jsp"/>
+        <forward name="fail" path="/viewpassportfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/pcandidateDetails"  type="district.PassportAction">
+        <forward name="success" path="/pviewcandidatepassportsuc.jsp"/>
+        <forward name="fail" path="/pviewpassportfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/aacandidateDetails"  type="district.PassportAction">
+        <forward name="success" path="/aaviewcandidatepassportsuc.jsp"/>
+        <forward name="fail" path="/aaviewpassportfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/dcandidateDetails"  type="district.PassportAction">
+        <forward name="success" path="/ddviewcandidatepassportsuc.jsp"/>
+        <forward name="fail" path="/ddviewpassportfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/adcandidateDetails"  type="district.PassportAction">
+        <forward name="success" path="/adviewcandidatepassportsuc.jsp"/>
+        <forward name="fail" path="/adviewpassportfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/pacandidateDetails"  type="district.PassportAction">
+        <forward name="success" path="/paviewcandidatepassportsuc.jsp"/>
+        <forward name="fail" path="/paviewpassportfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/pdcandidateDetails"  type="district.PassportAction">
+        <forward name="success" path="/pdviewcandidatepassportsuc.jsp"/>
+        <forward name="fail" path="/pdviewpassportfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/decidePolice"  type="district.DecidePoliceAction">
+        <forward name="success" path="/decidepolicesuc.jsp"/>
+        <forward name="fail" path="/decidepolicefail.jsp"/> 
+       </action> 
+
+       <action  path="/decideAdmin"  type="district.DecideAdminAction">
+        <forward name="success" path="/decideadminsuc.jsp"/>
+        <forward name="fail" path="/decideadminfail.jsp"/> 
+       </action> 
+
+       <action  path="/assignPolice"  type="district.AssignPoliceAction">
+        <forward name="success" path="/assignpolicesuc.jsp"/>
+        <forward name="fail" path="/assignpolicefail.jsp"/> 
+       </action> 
+
+       <action  path="/showdeathaction"  type="district.ShowdeathAction">
+        <forward name="success" path="/showdeathsuc.jsp"/>
+        <forward name="fail" path="/showdeathfail.jsp"/> 
+       </action> 
+
+ 
+        <action  path="/viewdeathaction"  type="district.ViewdeathAction">
+        <forward name="success" path="/viewdeathsuc.jsp"/>
+        <forward name="fail" path="/viewdeathfail.jsp"/> 
+       </action> 
+
+		<action  path="/aadviewdeathaction"  type="district.ViewdeathAction">
+        <forward name="success" path="/aadviewdeathsuc.jsp"/>
+        <forward name="fail" path="/aadviewbirthfail.jsp"/> 
+       </action> 
+
+		<action  path="/aaviewdeathaction"  type="district.ViewdeathAction">
+        <forward name="success" path="/aaviewdeathsuc.jsp"/>
+        <forward name="fail" path="/aaviewbirthfail.jsp"/> 
+       </action> 
+
+		<action  path="/adviewdeathaction"  type="district.ViewdeathAction">
+        <forward name="success" path="/adviewdeathsuc.jsp"/>
+        <forward name="fail" path="/adviewbirthfail.jsp"/> 
+       </action> 
+
+      <action  path="/showwidowaction"  type="district.ShowwidowAction">
+        <forward name="success" path="/showwidowsuc.jsp"/>
+        <forward name="fail" path="/showwidowfail.jsp"/> 
+       </action> 
+  
+      <action  path="/viewwidowaction"  type="district.ViewwidowAction">
+        <forward name="success" path="/viewwidowsuc.jsp"/>
+        <forward name="fail" path="/viewwidowfail.jsp"/> 
+       </action> 
+     
+      <action  path="/aadviewwidoaction"  type="district.ViewwidowAction">
+        <forward name="success" path="/aadviewwidowsuc.jsp"/>
+        <forward name="fail" path="/aadviewwidowfail.jsp"/> 
+       </action> 
+     
+      <action  path="/aawviewwidowaction"  type="district.ViewwidowAction">
+        <forward name="success" path="/aawviewwidowsuc.jsp"/>
+        <forward name="fail" path="/aaviewwidowfail.jsp"/> 
+       </action> 
+     
+      <action  path="/adwviewwidowaction"  type="district.ViewwidowAction">
+        <forward name="success" path="/adwviewwidowsuc.jsp"/>
+        <forward name="fail" path="/adviewwidowfail.jsp"/> 
+       </action> 
+     
+      <action  path="/showincomeaction"  type="district.ShowincomeAction">
+        <forward name="success" path="/showincomesuc.jsp"/>
+        <forward name="fail" path="/showincomefail.jsp"/> 
+       </action> 
+
+      <action  path="/viewincomeaction"  type="district.ViewincomeAction">
+        <forward name="success" path="/viewincomesuc.jsp"/>
+        <forward name="fail" path="/viewincomefail.jsp"/> 
+       </action> 
+
+      <action  path="/aaviewincomeaction"  type="district.ViewincomeAction">
+        <forward name="success" path="/aaviewincomesuc.jsp"/>
+        <forward name="fail" path="/aaviewincomefail.jsp"/> 
+       </action> 
+
+      <action  path="/adviewincomeaction"  type="district.ViewincomeAction">
+        <forward name="success" path="/adviewincomesuc.jsp"/>
+        <forward name="fail" path="/adviewincomefail.jsp"/> 
+       </action> 
+
+    <action  path="/aadiviewincomeaction"  type="district.ViewincomeAction">
+        <forward name="success" path="/aadviewincomesuc.jsp"/>
+        <forward name="fail" path="/aadviewincomefail.jsp"/> 
+       </action> 
+
+    <action  path="/showresdaction"  type="district.ShowresdAction">
+        <forward name="success" path="/showresdsuc.jsp"/>
+        <forward name="fail" path="/showresdfail.jsp"/> 
+       </action> 
+
+     <action  path="/viewresdaction"  type="district.ViewresdAction">
+        <forward name="success" path="/viewresdsuc.jsp"/>
+        <forward name="fail" path="/viewresdfail.jsp"/> 
+       </action> 
+
+     <action  path="/aadresidentview"  type="district.ViewresdAction">
+        <forward name="success" path="/aadviewresdsuc.jsp"/>
+        <forward name="fail" path="/aadviewresdfail.jsp"/> 
+       </action> 
+
+     <action  path="/adresidentview"  type="district.ViewresdAction">
+        <forward name="success" path="/adviewresdsuc.jsp"/>
+        <forward name="fail" path="/adviewresdfail.jsp"/> 
+       </action> 
+
+     <action  path="/aaresidentview"  type="district.ViewresdAction">
+        <forward name="success" path="/aaviewresdsuc.jsp"/>
+        <forward name="fail" path="/aaviewresdfail.jsp"/> 
+       </action> 
+
+    <action  path="/showdomaction"  type="district.ShowdomAction">
+        <forward name="success" path="/showdomsuc.jsp"/>
+        <forward name="fail" path="/showdomfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/viewdomaction"  type="district.ViewdomAction">
+        <forward name="success" path="/viewdomsuc.jsp"/>
+        <forward name="fail" path="/viewdomfail.jsp"/> 
+       </action> 
+    
+       <action  path="/aadviewdomaction"  type="district.ViewdomAction">
+        <forward name="success" path="/aadviewdomsuc.jsp"/>
+        <forward name="fail" path="/aadviewdomfail.jsp"/> 
+       </action> 
+    
+       <action  path="/aaviewdomaction"  type="district.ViewdomAction">
+        <forward name="success" path="/aaviewdomsuc.jsp"/>
+        <forward name="fail" path="/aaviewdomfail.jsp"/> 
+       </action> 
+    
+       <action  path="/adviewdomaction"  type="district.ViewdomAction">
+        <forward name="success" path="/adviewdomsuc.jsp"/>
+        <forward name="fail" path="/adviewdomfail.jsp"/> 
+       </action> 
+    
+         <action  path="/showminaction"  type="district.ShowminAction">
+        <forward name="success" path="/showminsuc.jsp"/>
+        <forward name="fail" path="/showminfail.jsp"/> 
+       </action> 
+ 
+          <action  path="/viewminaction"  type="district.ViewminAction">
+        <forward name="success" path="/viewminsuc.jsp"/>
+        <forward name="fail" path="/viewminfail.jsp"/> 
+       </action> 
+   
+       <action  path="/aadviewminaction"  type="district.ViewminAction">
+        <forward name="success" path="/aadviewminsuc.jsp"/>
+        <forward name="fail" path="/aadviewminfail.jsp"/> 
+       </action>    
+       <action  path="/aaviewminaction"  type="district.ViewminAction">
+        <forward name="success" path="/aaviewminsuc.jsp"/>
+        <forward name="fail" path="/aaviewminfail.jsp"/> 
+       </action>    
+       <action  path="/adviewminaction"  type="district.ViewminAction">
+        <forward name="success" path="/adviewminsuc.jsp"/>
+        <forward name="fail" path="/adviewminfail.jsp"/> 
+       </action> 
+   
+       <action  path="/showcasteaction"  type="district.ShowcasteAction">
+        <forward name="success" path="/showcastesuc.jsp"/>
+        <forward name="fail" path="/showcastefail.jsp"/> 
+       </action> 
+
+        <action  path="/viewcasteaction"  type="district.ViewcasteAction">
+        <forward name="success" path="/viewcastesuc.jsp"/>
+        <forward name="fail" path="/viewcastefail.jsp"/> 
+       </action> 
+
+       <action  path="/aadviewcasteaction"  type="district.ViewcasteAction">
+        <forward name="success" path="/aadviewcastesuc.jsp"/>
+        <forward name="fail" path="/aadviewcastefail.jsp"/> 
+       </action> 
+     
+       <action  path="/aaviewcasteaction"  type="district.ViewcasteAction">
+        <forward name="success" path="/aaviewcastesuc.jsp"/>
+        <forward name="fail" path="/aaviewcastefail.jsp"/> 
+       </action> 
+     
+       <action  path="/adviewcasteaction"  type="district.ViewcasteAction">
+        <forward name="success" path="/adviewcastesuc.jsp"/>
+        <forward name="fail" path="/adviewcastefail.jsp"/> 
+       </action> 
+     
+     <action  path="/issuebirthcer"  type="district.IssuebirthcerAction">
+        <forward name="success" path="/issuebirthsuc.jsp"/>
+       <forward name="success1" path="/issuebirthsuc1.jsp"/>
+        <forward name="fail" path="/issuebirthfail.jsp"/> 
+       </action> 
+   
+     <action  path="/issuedeathcer"  type="district.IssuedeathcerAction">
+        <forward name="success" path="/issuedeathsuc.jsp"/>
+       <forward name="success1" path="/issuedeathsuc1.jsp"/>
+        <forward name="fail" path="/issuedeathfail.jsp"/> 
+       </action> 
+    
+     <action  path="/issuewidowcer"  type="district.IssuewidowcerAction">
+        <forward name="success" path="/issuewidowsuc.jsp"/>
+       <forward name="success1" path="/issuewidowsuc1.jsp"/>
+        <forward name="fail" path="/issuewidowfail.jsp"/> 
+       </action> 
+
+      <action  path="/issueincomecer"  type="district.IssueincomecerAction">
+        <forward name="success" path="/issueincomesuc.jsp"/>
+       <forward name="success1" path="/issueincomesuc1.jsp"/>
+        <forward name="fail" path="/issueincomefail.jsp"/> 
+       </action> 
+
+       <action  path="/issueresdcer"  type="district.IssueresdcerAction">
+        <forward name="success" path="/issueresdsuc.jsp"/>
+       <forward name="success1" path="/issueresdsuc1.jsp"/>
+       <forward name="fail" path="/issueresdfail.jsp"/> 
+        </action> 
+  
+       <action  path="/issuemincer"  type="district.IssuemincerAction">
+        <forward name="success" path="/issueminsuc.jsp"/>
+       <forward name="success1" path="/issueminsuc1.jsp"/>
+        <forward name="fail" path="/issueminfail.jsp"/> 
+       </action> 
+
+        <action  path="/issuecastecer"  type="district.IssuecastecerAction">
+        <forward name="success" path="/issuecastesuc.jsp"/>
+       <forward name="success1" path="/issuecastesuc1.jsp"/>
+        <forward name="fail" path="/issuecastefail.jsp"/> 
+       </action> 
+
+        <action  path="/checkbirthaction"  type="district.CheckbirthAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+	   
+	   <action  path="/checkpassportaction"  type="district.CheckPassportAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+  
+        <action  path="/checkdeathaction"  type="district.CheckdeathAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/checkwidowaction"  type="district.CheckwidowAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+
+      <action  path="/checkincomeaction"  type="district.CheckincomeAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+ 
+       <action  path="/checkresdaction"  type="district.CheckresdAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+
+       <action  path="/checkdomaction"  type="district.CheckdomAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+
+       <action  path="/checkminaction"  type="district.CheckminAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+
+        <action  path="/checkcasteaction"  type="district.CheckcasteAction">
+        <forward name="success" path="/checkstatsuc.jsp"/>
+       <forward name="success1" path="/checkstatsuc1.jsp"/>
+        <forward name="fail" path="/checkstatfail.jsp"/> 
+       </action> 
+   
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+   <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+
+      <!-- Path to XML definition file -->
+      <set-property property="definitions-config"
+                       value="/WEB-INF/tiles-defs.xml" />
+      <!-- Set Module-awareness to true -->
+      <set-property property="moduleAware" value="true" />
+    </plug-in>
+
+   
+   <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property
+        property="pathnames"
+        value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+</struts-config>

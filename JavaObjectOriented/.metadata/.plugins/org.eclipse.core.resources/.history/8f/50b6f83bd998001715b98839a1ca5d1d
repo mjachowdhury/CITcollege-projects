@@ -1,0 +1,22 @@
+package vehicle;
+
+public class Vehicle {
+	//instance variable
+	public String name = "";
+	public String color = "";
+	public String model = "";
+	public String company = "";
+	
+	//empty constructor
+	public Vehicle(){		
+	}
+	
+	//constructor with parameters
+	public Vehicle(String name, String color, String model, String complany){
+		this.name = name;
+		this.color = color;
+		this.model = model;
+		this.company = company;
+	}
+
+}

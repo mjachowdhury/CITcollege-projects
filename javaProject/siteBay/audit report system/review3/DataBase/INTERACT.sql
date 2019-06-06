@@ -1,0 +1,807 @@
+
+CREATE TABLE ADDRESS
+(
+  ADDREFNO  NUMBER(10)                              NULL,
+  COMPNAME  VARCHAR2(30 BYTE)                       NULL,
+  LOCATION  VARCHAR2(30 BYTE)                       NULL,
+  CITY      VARCHAR2(20 BYTE)                       NULL,
+  STATE     VARCHAR2(20 BYTE)                       NULL,
+  COUNTRY   VARCHAR2(20 BYTE)                       NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE CON_MASTER
+(
+  CONTID         NUMBER(10)                         NULL,
+  CONT_CATEGORY  VARCHAR2(20 BYTE)                  NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE EMAIL
+(
+  ADDREFNO     NUMBER(10)                           NULL,
+  CONT_PERSON  VARCHAR2(20 BYTE)                    NULL,
+  EMAILID1     VARCHAR2(30 BYTE)                    NULL,
+  EMAILID2     VARCHAR2(30 BYTE)                    NULL,
+  OTHERS       VARCHAR2(30 BYTE)                    NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE EVENT_MASTER
+(
+  EVTID     NUMBER(10)                              NULL,
+  EVTNAME   VARCHAR2(30 BYTE)                       NULL,
+  VENUE     VARCHAR2(30 BYTE)                       NULL,
+  CURDATE   DATE                                    NULL,
+  ADDRESS   VARCHAR2(50 BYTE)                       NULL,
+  LOCATION  VARCHAR2(50 BYTE)                       NULL,
+  CITY      VARCHAR2(15 BYTE)                       NULL,
+  PHNO      VARCHAR2(30 BYTE)                       NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE MEETING_MASTER
+(
+  MEETING_ID   NUMBER(10)                           NULL,
+  MEETINGDESC  VARCHAR2(30 BYTE)                    NULL,
+  CURDATE      DATE                                 NULL,
+  TIME         VARCHAR2(20 BYTE)                    NULL,
+  LOCATION     VARCHAR2(30 BYTE)                    NULL,
+  ADDRESS      VARCHAR2(50 BYTE)                    NULL,
+  CITY         VARCHAR2(15 BYTE)                    NULL,
+  PHNO         VARCHAR2(20 BYTE)                    NULL,
+  STATE        VARCHAR2(20 BYTE)                    NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE MINUTES
+(
+  MEETINGID  NUMBER(10)                             NULL,
+  MINUTES    VARCHAR2(200 BYTE)                     NULL,
+  N_NAME     VARCHAR2(20 BYTE)                      NULL,
+  ST_TIME    VARCHAR2(20 BYTE)                      NULL,
+  END_TIME   VARCHAR2(20 BYTE)                      NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE PHNOS
+(
+  ADDREFNO  NUMBER(10)                              NULL,
+  PHNO1     VARCHAR2(20 BYTE)                       NULL,
+  PHNO2     VARCHAR2(20 BYTE)                       NULL,
+  MOBILE    VARCHAR2(20 BYTE)                       NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE USERS
+(
+  USERNAME  VARCHAR2(20 BYTE)                       NULL,
+  PASSWORD  VARCHAR2(20 BYTE)                       NULL,
+  UTYPE     VARCHAR2(20 BYTE)                       NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE ATTENDEE_MASTER
+(
+  NAME       VARCHAR2(30 BYTE)                      NULL,
+  DESG       VARCHAR2(30 BYTE)                      NULL,
+  MEETINGID  NUMBER(10)                             NULL,
+  ADDRESS    VARCHAR2(30 BYTE)                      NULL,
+  PHNO       VARCHAR2(10 BYTE)                      NULL,
+  MAILID     VARCHAR2(30 BYTE)                      NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE EVENT_FEEDBACK
+(
+  EVTID     NUMBER(10)                              NULL,
+  F_NAME    VARCHAR2(30 BYTE)                       NULL,
+  FEEDBACK  VARCHAR2(200 BYTE)                      NULL,
+  MAILID    VARCHAR2(25 BYTE)                       NULL,
+  CONNO     VARCHAR2(20 BYTE)                       NULL,
+  ADDRESS   VARCHAR2(30 BYTE)                       NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE EXEC_MASTER
+(
+  EXECID    NUMBER(10)                              NULL,
+  EXECNAME  VARCHAR2(20 BYTE)                       NULL,
+  LOCATION  VARCHAR2(30 BYTE)                       NULL,
+  MOBILENO  VARCHAR2(20 BYTE)                       NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE MEETING_DESC
+(
+  MEETING_ID  NUMBER(10)                            NULL,
+  AGENDA      VARCHAR2(200 BYTE)                    NULL,
+  EXEC_ID     NUMBER(10)                            NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE CON_DETAILS
+(
+  CONTID     NUMBER(10)                             NULL,
+  ADDREFNO   NUMBER(10)                             NULL,
+  CON_DESC   VARCHAR2(100 BYTE)                     NULL,
+  CONT_TASK  VARCHAR2(100 BYTE)                     NULL,
+  EXEC_ID    NUMBER(10)                             NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE CON_STATUS
+(
+  CONTID   NUMBER(10)                               NULL,
+  EXEC_ID  NUMBER(10)                               NULL,
+  STATUS   VARCHAR2(200 BYTE)                       NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+CREATE TABLE EVENT_DESC
+(
+  EVTID    NUMBER(10)                               NULL,
+  EVTDESC  VARCHAR2(50 BYTE)                        NULL,
+  EXEC_ID  NUMBER(10)                               NULL
+)
+TABLESPACE SYSTEM
+PCTUSED    40
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            MINEXTENTS       1
+            MAXEXTENTS       2147483645
+            PCTINCREASE      0
+            FREELISTS        1
+            FREELIST GROUPS  1
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+
+ALTER TABLE ADDRESS ADD (
+  PRIMARY KEY
+ (ADDREFNO)
+    USING INDEX 
+    TABLESPACE SYSTEM
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+
+
+ALTER TABLE CON_MASTER ADD (
+  PRIMARY KEY
+ (CONTID)
+    USING INDEX 
+    TABLESPACE SYSTEM
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+
+
+ALTER TABLE EVENT_MASTER ADD (
+  PRIMARY KEY
+ (EVTID)
+    USING INDEX 
+    TABLESPACE SYSTEM
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+
+
+ALTER TABLE MEETING_MASTER ADD (
+  PRIMARY KEY
+ (MEETING_ID)
+    USING INDEX 
+    TABLESPACE SYSTEM
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+
+
+ALTER TABLE USERS ADD (
+  PRIMARY KEY
+ (USERNAME)
+    USING INDEX 
+    TABLESPACE SYSTEM
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+
+
+ALTER TABLE EXEC_MASTER ADD (
+  PRIMARY KEY
+ (EXECID)
+    USING INDEX 
+    TABLESPACE SYSTEM
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          64K
+                MINEXTENTS       1
+                MAXEXTENTS       2147483645
+                PCTINCREASE      0
+                FREELISTS        1
+                FREELIST GROUPS  1
+               ));
+
+
+ALTER TABLE EMAIL ADD (
+  FOREIGN KEY (ADDREFNO) 
+ REFERENCES ADDRESS (ADDREFNO));
+
+
+ALTER TABLE MINUTES ADD (
+  FOREIGN KEY (MEETINGID) 
+ REFERENCES MEETING_MASTER (MEETING_ID));
+
+
+ALTER TABLE PHNOS ADD (
+  FOREIGN KEY (ADDREFNO) 
+ REFERENCES ADDRESS (ADDREFNO));
+
+
+ALTER TABLE ATTENDEE_MASTER ADD (
+  FOREIGN KEY (MEETINGID) 
+ REFERENCES MEETING_MASTER (MEETING_ID));
+
+
+ALTER TABLE EVENT_FEEDBACK ADD (
+  FOREIGN KEY (EVTID) 
+ REFERENCES EVENT_MASTER (EVTID));
+
+
+ALTER TABLE EXEC_MASTER ADD (
+  FOREIGN KEY (EXECNAME) 
+ REFERENCES USERS (USERNAME));
+
+
+ALTER TABLE MEETING_DESC ADD (
+  FOREIGN KEY (MEETING_ID) 
+ REFERENCES MEETING_MASTER (MEETING_ID));
+
+ALTER TABLE MEETING_DESC ADD (
+  FOREIGN KEY (EXEC_ID) 
+ REFERENCES EXEC_MASTER (EXECID));
+
+
+ALTER TABLE CON_DETAILS ADD (
+  FOREIGN KEY (CONTID) 
+ REFERENCES CON_MASTER (CONTID));
+
+ALTER TABLE CON_DETAILS ADD (
+  FOREIGN KEY (ADDREFNO) 
+ REFERENCES ADDRESS (ADDREFNO));
+
+ALTER TABLE CON_DETAILS ADD (
+  FOREIGN KEY (EXEC_ID) 
+ REFERENCES EXEC_MASTER (EXECID));
+
+
+ALTER TABLE CON_STATUS ADD (
+  FOREIGN KEY (CONTID) 
+ REFERENCES CON_MASTER (CONTID));
+
+ALTER TABLE CON_STATUS ADD (
+  FOREIGN KEY (EXEC_ID) 
+ REFERENCES EXEC_MASTER (EXECID));
+
+
+ALTER TABLE EVENT_DESC ADD (
+  FOREIGN KEY (EVTID) 
+ REFERENCES EVENT_MASTER (EVTID));
+
+ALTER TABLE EVENT_DESC ADD (
+  FOREIGN KEY (EXEC_ID) 
+ REFERENCES EXEC_MASTER (EXECID));
+
+
+
+INSERT INTO ADDRESS
+   (ADDREFNO, COMPNAME, LOCATION, CITY, STATE, 
+    COUNTRY)
+ VALUES
+   (1, 'Sathya Technologies', 'Ameerpet', 'Hyderabad', 'AP', 
+    'India');
+COMMIT;
+
+INSERT INTO ATTENDEE_MASTER
+   (NAME, DESG, MEETINGID, ADDRESS, PHNO, 
+    MAILID)
+ VALUES
+   ('Kumar', 'SEngineer', 1, 'hyderabad', '9985049551', 
+    'kumar@yha.com');
+INSERT INTO ATTENDEE_MASTER
+   (NAME, DESG, MEETINGID, ADDRESS, PHNO, 
+    MAILID)
+ VALUES
+   ('kishor', 'L1', 1, 'hyderbad', '999888444', 
+    'e@mail.com');
+COMMIT;
+
+INSERT INTO CON_DETAILS
+   (CONTID, ADDREFNO, CON_DESC, CONT_TASK, EXEC_ID)
+ VALUES
+   (1, 1, 'Nagarjuna Construction', 'BuildingConstruction', 1);
+INSERT INTO CON_DETAILS
+   (CONTID, ADDREFNO, CON_DESC, CONT_TASK, EXEC_ID)
+ VALUES
+   (2, 1, 'Nagarjuna Construction', 'BuildingConstruction', 2);
+COMMIT;
+
+INSERT INTO CON_MASTER
+   (CONTID, CONT_CATEGORY)
+ VALUES
+   (1, 'Construction');
+INSERT INTO CON_MASTER
+   (CONTID, CONT_CATEGORY)
+ VALUES
+   (2, 'Construction11');
+INSERT INTO CON_MASTER
+   (CONTID, CONT_CATEGORY)
+ VALUES
+   (3, 'sap1');
+COMMIT;
+
+INSERT INTO CON_STATUS
+   (CONTID, EXEC_ID, STATUS)
+ VALUES
+   (1, 1, 'Finished');
+INSERT INTO CON_STATUS
+   (CONTID, EXEC_ID, STATUS)
+ VALUES
+   (2, 2, 'Not Finished');
+COMMIT;
+
+INSERT INTO EMAIL
+   (ADDREFNO, CONT_PERSON, EMAILID1, EMAILID2, OTHERS)
+ VALUES
+   (1, 'Raju', 'raju@sathya.com', 'raju@sathya.com', 'Sr Nagar');
+COMMIT;
+
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (1, NULL, NULL);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (1, NULL, NULL);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (3, 'java', 3);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (3, 'java', 1);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (3, NULL, 3);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (3, 'java', 2);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (1, NULL, 1);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (3, NULL, 3);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (4, 'c++', 3);
+INSERT INTO EVENT_DESC
+   (EVTID, EVTDESC, EXEC_ID)
+ VALUES
+   (1, NULL, 1);
+COMMIT;
+
+INSERT INTO EVENT_FEEDBACK
+   (EVTID, F_NAME, FEEDBACK, MAILID, CONNO, 
+    ADDRESS)
+ VALUES
+   (1, 'kishor', 'success', 'e@mail.com', '999662212', 
+    'hyderabad');
+COMMIT;
+
+INSERT INTO EVENT_MASTER
+   (EVTID, EVTNAME, VENUE, CURDATE, ADDRESS, 
+    LOCATION, CITY, PHNO)
+ VALUES
+   (1, 'Discussion Forum', 'Blue Fox', TO_DATE('09/15/2009 00:00:00', 'MM/DD/YYYY HH24:MI:SS'), 'Ameerpet', 
+    'Ameerpet', 'Hyderabad', '9985049551');
+INSERT INTO EVENT_MASTER
+   (EVTID, EVTNAME, VENUE, CURDATE, ADDRESS, 
+    LOCATION, CITY, PHNO)
+ VALUES
+   (2, 'e1', 'taj', TO_DATE('10/02/2009 00:00:00', 'MM/DD/YYYY HH24:MI:SS'), 'hyderabad', 
+    'bh', 'hyd', '9492951915');
+INSERT INTO EVENT_MASTER
+   (EVTID, EVTNAME, VENUE, CURDATE, ADDRESS, 
+    LOCATION, CITY, PHNO)
+ VALUES
+   (3, 'java2', 'Hyderabad', TO_DATE('01/12/2009 00:00:00', 'MM/DD/YYYY HH24:MI:SS'), '5-2-2/2h', 
+    'srnagar', 'hyderabad', '999888444');
+INSERT INTO EVENT_MASTER
+   (EVTID, EVTNAME, VENUE, CURDATE, ADDRESS, 
+    LOCATION, CITY, PHNO)
+ VALUES
+   (4, 'c++', 'hyderabad', TO_DATE('01/12/1999 00:00:00', 'MM/DD/YYYY HH24:MI:SS'), 'sss', 
+    'hyud', 'hyd', '9985049554');
+COMMIT;
+
+INSERT INTO EXEC_MASTER
+   (EXECID, EXECNAME, LOCATION, MOBILENO)
+ VALUES
+   (1, 'sunil', 'Hyderabad', '9985049551');
+INSERT INTO EXEC_MASTER
+   (EXECID, EXECNAME, LOCATION, MOBILENO)
+ VALUES
+   (2, 'vijay', 'hyd', '9492851915');
+INSERT INTO EXEC_MASTER
+   (EXECID, EXECNAME, LOCATION, MOBILENO)
+ VALUES
+   (3, 'kishor', 'hyderabad', '999888444');
+COMMIT;
+
+INSERT INTO MEETING_DESC
+   (MEETING_ID, AGENDA, EXEC_ID)
+ VALUES
+   (1, 'Meeting Starts At 11:33am', 3);
+INSERT INTO MEETING_DESC
+   (MEETING_ID, AGENDA, EXEC_ID)
+ VALUES
+   (2, 'About shares ', 3);
+COMMIT;
+
+INSERT INTO MEETING_MASTER
+   (MEETING_ID, MEETINGDESC, CURDATE, TIME, LOCATION, 
+    ADDRESS, CITY, PHNO, STATE)
+ VALUES
+   (1, 'Employees Meeting', TO_DATE('09/15/2010 00:00:00', 'MM/DD/YYYY HH24:MI:SS'), '3:00pm', 'Ameerpet', 
+    'Ameerpet', 'Hyderabad', '9985049551', 'AP');
+INSERT INTO MEETING_MASTER
+   (MEETING_ID, MEETINGDESC, CURDATE, TIME, LOCATION, 
+    ADDRESS, CITY, PHNO, STATE)
+ VALUES
+   (2, 'metting details2', TO_DATE('01/12/2009 00:00:00', 'MM/DD/YYYY HH24:MI:SS'), '11:30am', 'hyderabad', 
+    '5-2-2/2h', 'hyderabad', '999888444', 'ap');
+COMMIT;
+
+INSERT INTO MINUTES
+   (MEETINGID, MINUTES, N_NAME, ST_TIME, END_TIME)
+ VALUES
+   (1, '90', 'Naresh', '11:00am', '2:00pm');
+INSERT INTO MINUTES
+   (MEETINGID, MINUTES, N_NAME, ST_TIME, END_TIME)
+ VALUES
+   (2, '60', 'kishor', '10:00am', '2:00pm');
+COMMIT;
+
+INSERT INTO PHNOS
+   (ADDREFNO, PHNO1, PHNO2, MOBILE)
+ VALUES
+   (1, '2509408', '9985132253', '9985132253');
+COMMIT;
+
+INSERT INTO USERS
+   (USERNAME, PASSWORD, UTYPE)
+ VALUES
+   ('admin', 'admin', 'Admin');
+INSERT INTO USERS
+   (USERNAME, PASSWORD, UTYPE)
+ VALUES
+   ('sunil', 'sunil', 'exec');
+INSERT INTO USERS
+   (USERNAME, PASSWORD, UTYPE)
+ VALUES
+   ('vijay', 'vijay', 'exec');
+INSERT INTO USERS
+   (USERNAME, PASSWORD, UTYPE)
+ VALUES
+   ('kishor', 'kishor', 'exec');
+COMMIT;
+

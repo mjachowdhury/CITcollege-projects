@@ -1,0 +1,21 @@
+package lotteryResult;
+
+import java.util.Scanner;
+
+public class LotteryResultMain {
+
+	public static void main(String[] args) {
+		//creating object instantiating 
+		LotteryResult thisWeekResult = new LotteryResult();
+		
+		System.out.println("Welcome to the national lottery program.");
+		
+		
+		Scanner keyboard = new Scanner(System.in);
+		String number;
+		System.out.println("Please type the number one by one ,"
+				+"pressing the return key each time.");
+
+	}
+
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<data-sources>
+	</data-sources>
+
+	<form-beans>
+		<form-bean name="PrefFormBean" type="org.claros.groupware.preferences.models.PrefFormBean">
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions>
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="/error/generalErr.do" path="/error/generalErr.do"  contextRelative="true">
+		</forward>
+		<forward name="/profiling/loginStart.do" path="/profiling/loginStart.do" contextRelative="true">
+		</forward>
+		<forward name="/webmail/mailbox.do" path="/webmail/mailbox.do" contextRelative="true">
+		</forward>
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/prefEntry" type="org.claros.groupware.preferences.actions.PrefEntryAction">
+			<forward name="/preferences.jsp" path="/preferences.jsp">
+			</forward>
+		</action>
+		<action path="/prefSave" type="org.claros.groupware.preferences.actions.PrefSaveAction" name="PrefFormBean" scope="request">
+			<forward name="/prefEntry.do" path="/prefEntry.do">
+			</forward>
+			<forward name="/save_result.jsp" path="/save_result.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+</struts-config>

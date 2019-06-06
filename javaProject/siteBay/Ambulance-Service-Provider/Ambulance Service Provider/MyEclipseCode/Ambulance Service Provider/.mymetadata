@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Ambulance Service Provider"
+  id="myeclipse.1252298222265"
+  context-root="/Ambulance Service Provider"
+  j2ee-spec="1.4"
+  archive="Ambulance Service Provider.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

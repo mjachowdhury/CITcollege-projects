@@ -1,0 +1,32 @@
+12/02/07 10:04:57 INFO  smtpserver: SMTP Service uses default thread group.
+12/02/07 10:04:57 INFO  smtpserver: SMTP Service is running on: inetsolv
+12/02/07 10:04:57 INFO  smtpserver: SMTP Service handler hello name is: inetsolv
+12/02/07 10:04:57 INFO  smtpserver: SMTP Service handler connection timeout is: 360000
+12/02/07 10:04:57 INFO  smtpserver: This SMTP server does not require authentication.
+12/02/07 10:04:57 INFO  smtpserver: No maximum message size is enforced for this server.
+12/02/07 10:04:57 INFO  smtpserver: The idle timeout will be reset every 20480 bytes.
+12/02/07 10:04:57 INFO  smtpserver: SMTP Service started plain:25
+12/02/07 10:26:59 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:27:04 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:28:13 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:28:14 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [nagendra@localhost]
+12/02/07 10:37:17 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:37:19 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:37:51 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:37:52 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:42:28 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:42:30 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:43:02 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:43:04 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:51:07 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:51:09 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:51:30 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:51:32 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:56:56 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:56:58 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 10:57:40 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 10:57:42 INFO  smtpserver: Successfully spooled mail from sitaram@localhost for [yoganandh@localhost]
+12/02/07 11:02:25 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 11:02:27 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]
+12/02/07 11:02:54 INFO  smtpserver: Connection from localhost (127.0.0.1)
+12/02/07 11:02:56 INFO  smtpserver: Successfully spooled mail from nagendra@localhost for [yoganandh@localhost]

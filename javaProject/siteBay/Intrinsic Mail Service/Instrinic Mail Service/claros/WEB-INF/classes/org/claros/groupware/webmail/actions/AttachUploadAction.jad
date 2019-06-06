@@ -1,0 +1,58 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/22/2008 4:48:56 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   AttachUploadAction.java
+
+package org.claros.groupware.webmail.actions;
+
+import java.util.ArrayList;
+import javax.activation.DataHandler;
+import javax.mail.internet.MimeBodyPart;
+import javax.servlet.http.*;
+import org.apache.struts.action.*;
+import org.apache.struts.upload.FormFile;
+import org.claros.commons.mail.models.ByteArrayDataSource;
+import org.claros.commons.mail.models.EmailPart;
+import org.claros.commons.mail.utility.Utility;
+import org.claros.groupware.common.actions.BaseLoggedAction;
+import org.claros.groupware.webmail.models.AttachmentFormBean;
+
+public class AttachUploadAction extends BaseLoggedAction
+{
+
+    public AttachUploadAction()
+    {
+    }
+
+    public ActionForward myExecute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response)
+        throws Exception
+    {
+        AttachmentFormBean bean = (AttachmentFormBean)form;
+        FormFile file = bean.getAttachFile();
+        EmailPart part = null;
+        ArrayList parts = (ArrayList)request.getSession().getAttribute("attachments");
+        if(parts == null)
+            parts = new ArrayList();
+        part = new EmailPart();
+        byte data[] = file.getFileData();
+        String fileName = file.getFileName();
+        String contentType = file.getContentType();
+        int size = file.getFileSize();
+        MimeBodyPart bodyPart = new MimeBodyPart();
+        javax.activation.DataSource ds = new ByteArrayDataSource(data, contentType, fileName);
+        bodyPart.setDataHandler(new DataHandler(ds));
+        bodyPart.setDisposition("attachment; filename=\"" + fileName + "\"");
+        bodyPart.setFileName(fileName);
+        part.setDataSource(ds);
+        part.setContent(bodyPart.getContent());
+        part.setContentType(contentType);
+        part.setDisposition(bodyPart.getDisposition());
+        part.setFilename(fileName);
+        part.setSize(size);
+        part.setSizeReadable(Utility.sizeToHumanReadable(size));
+        parts.add(part);
+        file.destroy();
+        request.getSession().setAttribute("attachments", parts);
+        return mapping.findForward("/attachStart.do");
+    }
+}

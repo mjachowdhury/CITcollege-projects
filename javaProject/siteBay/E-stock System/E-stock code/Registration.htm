@@ -1,0 +1,679 @@
+	<html>
+<head>
+<title>Registration</title>
+<!--Applying styles for the textbox. -->
+<script language="javascript">
+function init() 
+{
+document.forms[0].name1.focus();
+}
+function kaps(fieldname) 
+{
+fieldname.value= fieldname.value.toUpperCase();
+}
+function clearYear() 
+{
+if(document.forms[0].DOBYear.value == "Year") {
+document.forms[0].DOBYear.value = "";
+}
+}
+function checkOther() 
+{
+var city = document.forms[0].city.value;
+if(city == "Others") 
+{
+document.forms[0].othercity.style.display = "";
+	document.forms[0].othercity.focus();
+	} 
+else 
+{
+document.forms[0].othercity.style.display = "none";
+	}
+  }
+function isEmpty(str)
+{
+if(str=="")
+{
+return true;
+}
+else 
+return false;
+}
+function isAlpha(str1)
+{
+len=str1.length;
+for(i=0; i<len; i++)
+{
+ if( ((str1.charAt(i) >='a')&& (str1.charAt(i) <='z')) ||  ((str1.charAt(i) >='A')&& (str1.charAt(i) <='Z')) )
+{
+}
+else
+{
+return true; break;
+}
+}
+}
+function isAlphaNumeric(str1){
+len=str1.length;
+for(i=0; i<len; i++)
+{
+if( ((str1.charAt(i) >='a')&& (str1.charAt(i) <='z')) ||  ((str1.charAt(i) >='A')&& (str1.charAt(i) <='Z'))||((str1.charAt(i) >=0)&& (str1.charAt(i) <=9)) )
+{}
+else
+{
+return true; 
+break;
+}
+}
+}
+function isPosInteger(num)
+{
+if(!(isNaN(num)))
+{
+if(num>0){ return true;}
+}
+else
+{
+return false;
+}
+}
+function valid()
+{
+f=document.frmRegister;
+if(isEmpty(f.name1.value))
+{
+alert("Please type your first name");
+f.name1.focus();
+return false;
+}
+else 
+return true;
+}
+function isValidLoginPwd(str) 
+{
+if(isEmpty(str) || str == "") 
+return false;
+var name = str.toString();
+var n=name.length;	
+var i;
+for(i=0; i<n; i++) 
+{
+var ch = name.charAt(i);
+if((!isAlphaNumeric(ch)) && (ch != "_")) 	
+	 {
+	return false;
+  	}
+  	}
+	return true;
+  }
+function validateAll() 
+{
+var name1 = document.forms[0].name1.value;
+var name2 = document.forms[0].name2.value; 
+var name3 = document.forms[0].name3.value;
+var add1 = document.forms[0].address1.value;
+var city = document.forms[0].city.value;
+var occupation = document.forms[0].occupation.value;
+var pin = document.forms[0].pincode.value;
+var state = document.forms[0].state.value;
+var email = document.forms[0].email.value;
+var incomegr = document.forms[0].incomegroup.value;
+var rphone = document.forms[0].RPhone.value;
+var ophone = document.forms[0].OPhone.value;
+var mphone = document.forms[0].MPhone.value;
+var fax = document.forms[0].Fax.value;
+var dobday = document.forms[0].DOBDay.value;
+var dobmonth = document.forms[0].DOBMonth.value;
+var dobyear = document.forms[0].DOBYear.value;
+var altemail = document.forms[0].altemail.value;
+var currentYr = new Date().getFullYear();
+var loginname = document.forms[0].loginname.value;
+var pwd = document.forms[0].password.value;
+var reg = new RegExp("^[A-Za-z0-9_]{1,}[.]?[A-Za-z0-9_]{1,}@{1}([A-Za-z0-9_]+[.]{1})+[A-Za-z0-9_]{1,}$");
+if(dobyear == "Year") 
+dobyear = "";
+if(isEmpty(name1)) 
+{
+alert("Please type your first name.");
+document.forms[0].name1.focus();
+return false;
+} 
+else if(isAlpha(name1)) 
+{
+alert("First name contains invalid characters. Please re-enter.");
+document.forms[0].name1.focus();
+return false;
+}
+else if(isEmpty(name3)) 
+{
+alert("Please type your last name.");
+document.forms[0].name3.focus();
+return false;
+}
+else if(isAlpha(name3)) 
+{
+alert("The last name contains invalid characters. Please re-enter.");
+document.forms[0].name3.focus();
+return false;
+}
+else if(isEmpty(add1)) 
+{
+alert("The address is compulsory.");
+document.forms[0].address1.focus();
+return false;
+} 
+else if(isEmpty(city)) 
+{
+alert("Please select the name of the city.");
+document.forms[0].city.focus();
+return false;
+} 
+else if(city == "Others") 
+{
+ if(isEmpty(document.forms[0].othercity.value)) {
+alert("Please select the name of the city.");
+document.forms[0].othercity.focus();
+return false;
+}
+else if(isAlpha(document.forms[0].othercity.value)) {
+alert("City name contains invalid characters.  Please re-enter.");
+document.forms[0].othercity.focus();
+return false;
+}
+} 
+else if(isEmpty(occupation)) 
+{
+alert("Please select an occupation.");
+document.forms[0].occupation.focus();
+return false;
+} 
+else if(isEmpty(state)) 
+{
+alert("Please select the state.");
+document.forms[0].state.focus();
+return false;
+} 
+else if(incomegr == "-1") 
+{
+alert("Please select the income group.");
+document.forms[0].incomegroup.focus();
+return false;
+} 
+else if(isEmpty(pin)) 
+{
+alert("Please type the pin code.");
+document.forms[0].pincode.focus();
+return false;
+}
+else if(!isPosInteger(pin)) 
+{
+alert("Please type a valid 6 digit pin code.");
+document.forms[0].pincode.focus();
+return false;
+}
+else if(isEmpty(email)) {
+alert("Please type your e-mail address.");
+document.forms[0].email.focus();
+return false;
+} 
+else if(!reg.test(email)) 
+{
+alert("Invalid email address. Please re-enter.");
+document.forms[0].email.focus();
+return false;
+} 
+else if(isEmpty(rphone) && isEmpty(ophone) && isEmpty(mphone) && isEmpty(fax)) 
+{
+alert("Please enter at least one of your contact numbers.");
+document.forms[0].RPhone.focus();
+return false;
+}
+else if(dobday == 0) 
+{
+alert("Please select the day. .");
+document.forms[0].DOBDay.focus();
+return false;
+} 
+else if(dobmonth == 0) 
+{
+alert("Please select the month .");
+document.forms[0].DOBMonth.focus();
+return false;
+} 
+else if(!isPosInteger(dobyear)) 
+{
+alert("Please type a valid 4 digit year.");
+document.forms[0].DOBYear.focus();
+return false;
+}
+else if((parseInt(dobyear) < 1900) || (parseInt(dobyear) >= currentYr)) 
+{
+alert("Please type a valid 4 digit year.  Year should be greater than 1900");
+document.forms[0].DOBYear.focus();
+return false;
+} 
+else if(isEmpty(loginname)) 
+{
+alert("Please type your Login Name.");
+document.forms[0].loginname.focus();
+return false;
+} 
+else if(isEmpty(pwd)) 
+{
+alert("Please type your password.");
+document.forms[0].password.focus();
+return false;
+} 
+else if(isValidLoginPwd(loginname)) 
+{
+alert("Invalid login name. Login name can contain letters, numbers and underscore (_) only.");
+document.forms[0].focus();
+return false;
+}
+else if(!isEmpty(rphone)) 
+{
+if(!isPosInteger(rphone)) 
+{
+alert("Invalid characters in residence phone. Please re-enter.");
+document.forms[0].RPhone.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+else if(!isEmpty(ophone)) 
+{
+if(!isPosInteger(ophone)) 
+{
+alert("Invalid characters in the office phone number. Please re-enter.");
+document.forms[0].OPhone.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+else if(!isEmpty(mphone)) 
+{
+if(!isPosInteger(mphone)) 
+{
+alert("Invalid characters in the mobile phone number. Please re-enter.");
+document.forms[0].MPhone.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+else if(!isEmpty(fax)) 
+{
+if(!isPosInteger(fax)) 
+{
+alert("Invalid characters in the fax number entry. Please re-enter.");
+document.forms[0].Fax.focus();
+return false;
+}
+else
+{
+return true;
+}
+} 
+else if(!isEmpty(altemail)) 
+{
+if(!reg.test(altemail)) 
+{
+alert("Invalid alternate E-mail address. Please re-enter.");
+document.forms[0].altemail.focus();
+return false;
+}
+}
+else 
+{
+return true;
+}
+}
+function func_sub()
+{
+if(validateAll())
+{
+frmRegister.action="Register.jsp";
+frmRegister.method="post";
+frmRegister.submit();
+}
+}
+</script>
+</head>
+<body bgcolor="#FFFFF" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0">
+<table align=center border=0 cellpadding=0 cellspacing=0 width="98%">
+<tbody> 
+<tr bgcolor="#FFFFF" align="left"> 
+<td height=30 valign=top colspan="2"> 
+<div align="left" style="width: 732; height: 71">
+  <div align="center">
+<h1>E-Stock System</h1>
+  
+<span style="background-color: #000000">
+<marquee style="color: #CC0033; font-family: Century Gothic; font-weight: bold" bgcolor="#C0C0C0">Your Online Business Partners</marquee></span></div>
+</td>
+</tr>
+</tbody> 
+</table>
+<table align=center border=0 cellpadding=0 cellspacing=0 width="98%">
+<tbody> 
+<tr> 
+<td colspan=2 valign=top> 
+<hr color=#c0003b size=1>
+</td>
+  </tr>
+<!-- Top hyperlink row ends --> 
+</tbody> 
+</table>
+<table align=center border=0 cellpadding=0 cellspacing=0 width="693">
+<!-- Top links row starts. --> <tbody> <!-- Top hyperlink row ends. --> 
+<tr> 
+<td colspan=2 width="708"> 
+      <form name="frmRegister" >
+<div align="center">
+  <center>
+<table border=0 cellpadding=2 cellspacing=2 width="728" height="643" style="border-left-style: none; border-right-style: none; border-top-style: none; border-bottom: 1.5pt solid gray" fpstyle="25,011111100">
+<tbody> 
+<tr bgcolor="#c0003b"> 
+<td colspan=5 height=14 width="720" style="font-weight: bold; color: white; border-left-style: none; border-right-style: none; border-top-style: none; border-bottom: .75pt solid black; background-color: #008078">
+<p align="center"><b>
+<font color = #0000FF face=arial,verdana,sans-serief,helvetica       size=4>
+&nbsp;&nbsp;Customer 
+Registration</font></b><font color="#0000FF"> </font>
+</td>
+</tr>
+<tr> 
+      <td align=left width=97 height="54" style="border-style: none"><b>
+      <font 
+face=Garamond color="#008000">Name&nbsp; </font></b>
+</td>
+      <td align=left colspan=4 height="54" width="617"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      <select name=title>
+      <option value=MR.>Mr.</option>
+      <option value=MRS.>Mrs.</option>
+      <option value=MS. selected>Ms.</option>
+      </select> </font><font face="Garamond" size="7">
+      <input  maxlength=20 name=name1  size=21>
+      <sup>*</sup>&nbsp; 
+      <input maxlength=20 name=name2 size=10>
+      &nbsp; 
+      <input  maxlength=20 name=name3 size=19>
+      <sup>*</sup> </font></b></font> 
+</td>
+<tr> 
+      <td align=left height="132" width="97" style="border-style: none">
+      <p align="center"><b><font 
+      face=Garamond color="#008000">&nbsp; </font></b>
+</td>
+      <td align=left height="132"> 
+<font color="#008000"><b><font face="Garamond"> 
+Hno:<input maxlength=30 name=address1> <sup>*</sup><br><BR>
+</font><font face="Garamond" >
+Street:		<input  maxlength=30 name=address2 size=20><BR><BR> 
+Pin:		<input  maxlength=30 name=address3 size=30> &nbsp; </font></b></font> 
+</td>
+      <td height="468" rowspan=6 width=17>
+<b><font color="#008000" face="Garamond">
+<img height="100%" src="Your currency for online trading &amp; e-broking in India_files/gray.gif" 
+      width=1> </font></b>
+</td>
+<td align=left height="132" width="87">
+<p align="center"><b><font face = Garamond color="#008000">Phone No.&nbsp;</font></b></td>
+<td align=left valign=top height="132" width="220"><font color="#008000"><b>
+<font face = Garamond>Res.:&nbsp;<input  maxlength=10 name="RPhone" size = 15></font></b></font><p><font color="#008000"><b>
+<font face = Garamond>Mobile:&nbsp;</font><font face="Garamond" size="7">
+</font><font face="Garamond"> 
+      <input  maxlength=10 name=MPhone size=14><BR>
+<br> &nbsp;Off.: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <input maxlength=10 name=OPhone size=14></font></b></font></p>
+<p><font color="#008000"><b>
+<font face="Garamond"> 
+      Fax:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <input maxlength=10 name=Fax size=14></font><font face="Garamond" size="7">
+</font></b></font>
+       </td>
+</tr>
+<tr> 
+<td align=center colspan=5 height="18" width="720" style="border-style: none"><b>
+<font color=#008000 face=Garamond>&nbsp; (Please type at least one of the phone numbers.) </font>
+</b>
+</tr>
+<tr> 
+<td align=left height="102" width="97" style="border-style: none"><b>
+<font face=Garamond color="#008000">City &nbsp; </font>
+</b>
+</td>
+      <td align=left height="102" width="275"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      <select name=city size=1>
+      <option value="">(Select one)</option>
+      <option value=AGRA>Agra</option>
+<option value=AHMEDABAD>Ahmedabad </option>
+      <option value=Aizawl>Aizawl</option>
+
+<option value=AHMEDNAGAR>Ahmednagar </option>
+<option value=DELHI>Delhi</option>
+<option value=FARIDABAD>Faridabad </option>
+
+<option value="Hyderabad">Hyderabad</option>
+      <option value=NEWDELHI>NewDelhi</option>
+      <option value=Others>Others</option>
+      </select>
+      <sup>*</sup>&nbsp; </font><font face="Garamond" size="7"> 
+<input name=othercity size=15 style="DISPLAY: none"> </font></b></font>
+      </td>
+<td align=left height="102" width="87"><b><font face=Garamond color="#008000">Date of Birth&nbsp; </font>
+</b>
+</td>
+      <td align=left height="102" width="220"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      <select name=DOBDay>
+      <option selected value=0>Day</option>
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+      <option value="26">26</option>
+      <option value="27">27</option>
+      <option value="28">28</option>
+      <option value="29">29</option>
+      <option value="30">30</option>
+      <option value=31>31</option>
+      </select> </font><font face="Garamond" size="7">
+      <select name=DOBMonth>
+      <option selected value=0>Month</option>
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      
+      <option value=12>12</option>
+      </select>
+      <input maxlength=4 name=DOBYear  size=5 
+       value=Year>
+      <sup>*</sup>&nbsp; </font></b></font> </td>
+</tr>
+<tr> 
+<td align=left height="96" width="97" style="border-style: none"><b>
+<font face=Garamond color="#008000">State&nbsp; </font>
+</b>
+</td>
+      <td align=left height="96" width="275"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      <select name=state>
+<option selected value="">(Select one)</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+      <option value=DELHI>Delhi</option>
+      
+      <option value="West Bengal">West Bengal</option>
+      
+      <option value=Kerala>Kerala</option>
+
+      <option value="Goa">Goa</option>
+
+      </select>
+      <sup>*</sup> </font></b></font> 
+</td>
+<td align=left height="96" width="87" valign="top"><b>
+<font face=Garamond color="#008000"> Email&nbsp;</font></b><p>&nbsp;</p>
+<p><font color="#008000"><b><font face="Garamond">Alt. Email</font></b></font></td>
+      <td align=left width="220" height="96"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      &nbsp; 
+      <input  maxlength=30 name=email size=17>
+<sup>*</sup>&nbsp; </font></b></font>
+      <p><font color="#008000"><b><font face="Garamond">&nbsp; 
+      <input  maxlength=30 name=altemail 
+      size=16></font><font face="Garamond" size="7"> </font></b></font>
+      </td>
+</tr>
+<tr> 
+<td align=left height="54" width="97" style="border-style: none"><b>
+<font face=Garamond color="#008000">Country &nbsp; </font></b>
+</td>
+      <td align=left height="54" width="275"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      <select name=country>
+<option selected value=INDIA>India </option>
+<!--Providing the names of countries in variable, country.-->
+      </select>
+<sup>*</sup>&nbsp; Pincode&nbsp; 
+      <input  maxlength=8 name=pincode size=10></font><font face="Garamond" size="7">
+      <sup>*</sup> </font></b></font> 
+</td>
+<td align=left height="54" width="87"><b>
+<font face= Garamond color="#008000">Occupation&nbsp; </font></b>
+</td>
+      <td align=left height="54" width="220"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      <select name=occupation size=1>
+<option selected value="">(Select Occupation)</option>
+<option value="Self Employed">Self Employed</option>
+<option value="Govt. Employee">Govt. Employee</option>
+<option value=CEO/MD/Director>CEO/ MD/ Director</option>
+<option value="GM/Middle Management">GM/ Middle Management</option>
+<option value="Lower management/trainee"> Lower management/ trainee</option>
+      <option value=Clerk>Clerk</option>
+<option value="Private Sector Employment">Private Sector Employment</option>
+      <option value=Retired>Retired</option>
+<option value=Housewife>Housewife </option>
+      <option value=Student>Student</option>
+      </select>
+      <sup>*</sup> </font></b></font> 
+</td>
+ </tr>
+ <tr> 
+<td align=left noWrap height="36" width="97" style="border-style: none"><b>
+<font face=Garamond color="#008000"> Login Name&nbsp; </font></b>
+</td>
+      <td align=left height="36" width="275"> 
+<font color="#008000"><b><font face="Garamond"> 
+<input  maxlength=20 name=loginname size="20"> <sup>*</sup> </font></b></font>
+      </td>
+<td align=left noWrap height="36" width="87"><b>
+<font face=Garamond color="#008000">Income Group </font></b>
+</td>
+      <td align=left height="36" width="220"> 
+      <font color="#008000"><b><font face="Garamond"> 
+      <select name=incomegroup>
+<option selected value=-1>(Select One)</option>
+      <option value=1>&lt; 1,00,000</option>
+<option value=2>1,00,001 - 3,00,000</option>
+<option value=4>3,00,001 - 5,00,000</option>
+<option value=5>5,00,001 - 10,00,000</option>
+      <option value=6>&gt; 10,00,000</option>
+      </select>
+      <sup>*</sup> </font></b></font> 
+</td>
+</tr>
+<tr> 
+<td align=left noWrap height="23" width="97" style="border-style: none"><b>
+<font face= "Garamond" color="#008000">Password </font></b>
+</td>
+      <td align=left height="23" width="275"> 
+<input type="password" maxlength=20 name=password size="20"> <sup>*</sup>
+      </td>
+<td align=left noWrap height="23" width="17"><font face= arial,verdana,sans-serief,helvetica 
+      size=2>&nbsp;</font>
+</td>
+      <td align=left height="23" width="87">&nbsp; 
+</td>
+</tr>
+<tr> 
+<td align=left colspan=5 height="19" width="720" style="border-style: none"> &nbsp;</td>
+</tr>
+<tr> 
+<td align=left colspan=5 height="29" width="720" style="border-style: none">
+<p align="center"><b><font color=#c0003b face=Garamond>(Fields marked with * are mandatory.)</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         
+<input name=Submit type=button value= Submit onClick="func_sub()" class=bu style="color: #800080; font-style: italic; font-weight: bold; border-style: outset; border-width: 3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<input name=Reset type=reset value=Reset class=bu style="color: #800080; font-style: italic; font-weight: bold; border-style: outset; border-width: 3">
+      </td>
+</tr>
+</tbody> 
+</table>
+  </center>
+</div>
+</form>
+</td>
+  </tr>
+  </tbody> 
+</table>
+<hr color=#c0003b size=1>
+<table border=0 cellpadding=0 cellspacing=0 width="100%" style="border-left-style: none; border-right-style: none; border-top-style: none; border-bottom: 1.5pt solid black; background-color: silver" fpstyle="9,011111100">
+<tbody> 
+<tr> 
+<td align=left valign=center height="35" style="font-weight: bold; color: white; border-left-style: none; border-right-style: none; border-top-style: none; border-bottom: 1.5pt solid black; background-color: maroon"> 
+<p align=center><font face="Arial" size="1" color="#808000"> |</font><font face="Garamond"><font color="#808000">
+</font><b> <a href="home.htm"><font color="#808000">HOME</font></a><font color="#808000"> 
+&nbsp;| </font> <a href= "mailto:info@Share Business Portal"><font color="#808000">Contact us
+</font> </a><font color="#808000">&nbsp;| </font> <a href=privacy.htm> 
+<font color="#808000">Privacy Policy</font></a><font color="#808000">&nbsp;|
+</font> <a  
+href="http://www.sebi.gov.in/"><font color="#808000">SEBI</font></a><font color="#808000"> &nbsp;|
+</font> <a href= "http://www.nse-india.com/"><font color="#808000">NSE</font></a><font color="#808000"> | <br>
+</font><font color="#FFFFFF">Share Business Portal - Online trading; e-broking in India
+</font></b> </font></p>
+</td>
+</tr>
+</tbody> 
+</table>
+</body>
+</html>

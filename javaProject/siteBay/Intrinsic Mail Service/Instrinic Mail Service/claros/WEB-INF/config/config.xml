@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<claros-config>
+	<!-- Common parameters -->
+	<common-params>
+		<charset>iso-8859-9</charset>
+		<server-timezone>Europe/Istanbul</server-timezone>
+	</common-params>
+	
+	<!-- Quota Management (default quota in MB's) Disabled in version 1.x -->
+	<quota-management>
+		<quota-enabled>yes</quota-enabled>
+		<default-quota>2</default-quota>
+	</quota-management>
+	
+	<!-- Pop3 and Smtp Servers Configuration -->
+	<servers>
+		<server>
+			<shortname>localhost</shortname>
+			<fetch-server>localhost</fetch-server>
+			<fetch-server-port>110</fetch-server-port>
+			<fetch-protocol>pop3</fetch-protocol>
+			<smtp-server>localhost</smtp-server>
+			<smtp-server-port>25</smtp-server-port>
+			<!-- 
+				if smtp server requires username/password authentication to relay, change the 
+				following value to true. 
+			-->
+			<smtp-authenticated>false</smtp-authenticated>
+		</server>
+	</servers>
+
+	<!-- 
+		Database configuration. If you 
+			1. Don't want to deal with database setup procedures.
+			2. Have plenty of RAM on your server (1Gb plus with enough JVM heap size recommended)
+			3. Have little number of users
+			4. are just testing the software.
+		you do not need to change the following db settings. Claros is bundled with a free
+		db server. You can have a look at it at http://www.hsqldb.org. If you intend to use
+		Claros In Touch on a production system, please consider using MySQL(not Hsqldb).
+		MySQL and Hsqldb JDBC drivers are already provided. If you want to use another database 
+		engine, please modify a sample SQL file(send it to me), a database JDBC driver should also be 
+		placed in the WEB-INF/lib folder. Consult your vendor if you don't know what it is.
+      -->
+	<db-config>
+		<db>
+			<id>file</id><!-- do not change this id. Master DB id must be "file" -->
+			<database>jdbc:hsqldb:file:%dbpath%/application</database>
+			<driver>org.hsqldb.jdbcDriver</driver>
+			<login>sa</login>
+			<password></password>
+		</db>
+		<!--
+		<db>
+			<id>file</id>
+			<database>jdbc:mysql://localhost:3306/claros</database>
+			<driver>com.mysql.jdbc.Driver</driver>
+			<login>root</login>
+			<password>password</password>
+		</db>
+		-->
+		<!--
+		<db>
+			<id>mem</id>
+			<database>jdbc:hsqldb:mem:memory</database>
+			<driver>org.hsqldb.jdbcDriver</driver>
+			<login>sa</login>
+			<password></password>
+		</db>
+		-->
+	</db-config>
+	
+	<!-- 
+		Exception handling mechanism. If an exception is thrown
+		with a key, claros base system gets the error message 
+		from the resources defined below. Valid values are FILE, 
+		and DB. 
+		
+		If resource-type :
+		is FILE <resource-path>node also must be defined
+		is DB TODO!!!!!!!!!!
+      -->
+	<error-handling>
+		<resource-type>FILE</resource-type>
+		<resource-path>%respath%/error.properties</resource-path>
+	</error-handling>
+</claros-config>

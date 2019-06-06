@@ -1,0 +1,11 @@
+<form>
+<SELECT NAME="TABLE">
+<option value=a> abc </option>
+<option value=b> abc </option>
+<option value=c> abc </option>
+</SELECT>
+<INPUT TYPE="submit" name=submit value=submit>
+</form>
+</body>
+</html>
+</select>

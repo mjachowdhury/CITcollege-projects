@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InstantiationServlet</servlet-name>
+    <servlet-class>com.dts.em.utility.InstantiationServlet</servlet-class>
+    
+    <init-param>
+       <param-name>config</param-name>
+       <param-value>/WEB-INF/config/system.properties</param-value>
+    </init-param>
+    
+    <load-on-startup>0</load-on-startup>
+    
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>InstantiationServlet</servlet-name>
+    <url-pattern>/instantiationservlet</url-pattern>
+  </servlet-mapping>
+  <!-- Supported Export Modes of ExportController  -->
+	<servlet>
+		<servlet-name>ExportPDF</servlet-name>
+		<servlet-class>com.dts.core.export.ExportPDF</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ExportTXT</servlet-name>
+		<servlet-class>com.dts.core.export.ExportTXT</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ExportXLS</servlet-name>
+		<servlet-class>com.dts.core.export.ExportXLS</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ExportPDF</servlet-name>
+		<url-pattern>/ExportPDF</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportTXT</servlet-name>
+		<url-pattern>/ExportTXT</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportXLS</servlet-name>
+		<url-pattern>/ExportXLS</url-pattern>
+	</servlet-mapping>
+	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,120 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/3/2012 6:33:27 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   PurchaseProductsDAO.java
+
+package com.dts.dae.dao;
+
+import com.dts.core.dao.AbstractDataAccessObject;
+import com.dts.core.util.DateWrapper;
+import com.dts.dae.model.PurchaseProductsBean;
+import java.sql.*;
+import java.util.Date;
+
+public class PurchaseProductsDAO extends AbstractDataAccessObject
+{
+
+    public PurchaseProductsDAO()
+    {
+        getConnection();
+    }
+
+    public String getUniqueCartId()
+    {
+        String sUniqueCartId = "";
+        int iMaxCount = 0;
+        try
+        {
+            Statement st = con.createStatement();
+            ResultSet resultSet = st.executeQuery("select count(*) from shoppingcart");
+            if(resultSet.next())
+                iMaxCount = Integer.parseInt(resultSet.getString(1));
+            sUniqueCartId = (new StringBuilder("cart_")).append(iMaxCount + 1).toString();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            flag = false;
+            try
+            {
+                con.rollback();
+            }
+            catch(SQLException se)
+            {
+                se.printStackTrace();
+            }
+        }
+        return sUniqueCartId;
+    }
+
+    public boolean addtoCart(PurchaseProductsBean ppbean)
+    {
+        Date pdate = new Date();
+        String custname = ppbean.getCustomername();
+        String prodname = ppbean.getProductname();
+        String quantity = ppbean.getQuantity();
+        String purchaseddate = DateWrapper.parseDate(pdate);
+        String cartid = getUniqueCartId();
+        try
+        {
+            PreparedStatement pst = null;
+            int i = 0;
+            pst = con.prepareStatement("insert into shoppingcart values(?,?,?,?,?,?)");
+            pst.setString(6, cartid);
+            pst.setString(1, custname);
+            pst.setString(2, prodname);
+            pst.setString(3, quantity);
+            pst.setString(4, purchaseddate);
+            pst.setString(5, "No");
+            i = pst.executeUpdate();
+            if(i == 1)
+            {
+                flag = true;
+                con.commit();
+            } else
+            {
+                flag = false;
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            flag = false;
+            try
+            {
+                con.rollback();
+            }
+            catch(SQLException se)
+            {
+                se.printStackTrace();
+            }
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return flag;
+    }
+
+    private boolean flag;
+}

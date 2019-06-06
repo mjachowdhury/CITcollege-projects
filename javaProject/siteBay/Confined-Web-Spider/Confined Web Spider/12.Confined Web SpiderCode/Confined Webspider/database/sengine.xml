@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><topics>
+    <flash>
+      <url description="Macromedia Action Script Tutorial world">http://www.macromedia.com</url>
+      <url description="Action Script Tool Box">http://www.actionscript-toolbox.com</url>
+      <url description="Tutorial Outpost">http://www.tutorialoutpost.com</url>
+      <url description="Secret Plus For Flash Web Menus">http://www.secretplus.com</url>
+      <url description="Action Script Tutorials With Samples and Examples using different objects">http://www.actionscript.org/tutorials.shtml</url>
+      <url description="Flashiness">http://www.flashiness.com</url>
+      <url description="Flash Kit Collection of Examples">http://www.flashkit.com</url>
+      <url description="Google Approach">
+	  http://www.google.com/search?q=Flash MX Action Script Tutorials</url>
+    <url description="samsung&#10;">ghkishore9</url><url description="netscape enterprose server">http://www.actiuoscript.org</url><url description="sdjflk">har@ya.co.m</url><url description="verynice">www.flash.com</url></flash>
+    <scripting>
+      <url description="Javascript On Internet Absolutely Free Large No.of Examples">http://javascript.internet.com</url>
+      <url description="Javascript Objects -x">http://www.js-x.com</url>
+      <url description="Dynamic Drive with Different Categories of Javascript Examples">http://www.dynamicdrive.com</url>
+      <url description="Javascript Pie Menus Exclusive For Internet Explorer">http://www.piemenu.com/JavaScriptPieMenus.html</url>
+      <url description="Exclusive for Internet Explorer and web development trust Microsoft MSDN Library">http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/methods/showmodaldialog.asp</url>
+      <url description="VML-Vector markup language Information Center">http://www.garybeene.com/vml/vml-sum.htm</url>
+      <url description="Javascript Made Easy with Tangible Source Code">http://www.jsmadeeasy.com</url>
+      <url description="Netscape Gecko Examples for Javascript Connection">http://www.geckonnection.com</url>
+      <url description="Inside DHTML using Javascript Animations">http://www.insidedhtml.com/constsets/menus/menubar.asp</url>
+      <url description="W3c Schools Examples for XML Jscript,javascript,Starting from basics">http://www.w3cschools.com</url>
+      <url description="Mozilla and Gecko Animations">http://www.mozilla.org/docs/dom/samples</url>
+      <url description="Mozilla Documentation for Javascript">http://www.mozilla.org</url>
+      <url description="Javascript HTML Editor">http://www.devguru.com/features/tutorials/wysiwyg/wysiwyg4.html</url>
+      <url description="Kevinroth HTML Editor">http://www.kevinroth.com/rte/multi.htm</url>
+    </scripting>
+    <asp>
+      <url description="Asp Developers Terminal">http://www.developeriq.com/asptutorials/examples.php3</url>
+      <url description="ASP Emporium">http://www.aspemporium.com/aspemporium/index.asp</url>
+      <url description="asp 101">http://www.asp101.com</url>
+      <url description="Actionjackson's ASP Active Server Pages">http://www.actionjackson.com/asp/examples.asp</url>
+    <url description="demo on jaxp using asp">http://www.asp.net</url><url description="nekkanti srnivas">http://sathya.com</url></asp>
+    <java2ee>
+      <url description="Java Books From Sun Microsystems and Commensurate Source code Index Terminal">http://java.sun.com/docs/books/tutorial/index.html</url>
+      <url description="Java Swings Examples From Sun">http://java.sun.com/docs/books/tutorial/uiswing/index.html</url>
+      <url description="Regular Expressions With Struts">http://java.sun.com/docs/books/tutorial/extra/regex/pattern.html</url>
+      <url description="Java Home Page">http://java.sun.com</url>
+    <url description="SAMS Teach Yourself EJB in21 Days">www.samspublishing.com</url><url description="java and web services">http://java.sun.com</url><url description="official sun site">www.sun.com</url><url description="for cheking code">www.gotocode.com</url></java2ee>
+    <itparks>
+      <url description="Info Park Kochi Kerala">http://www.infoparkkochi.com</url>
+      <url description="Chennai Tidel Park For Software Companies">http://www.tidelpark.com</url>
+      <url description="Bangalore It.com 2004">http://www.bangaloreit.com</url>
+      <url description="Business World India">http://businessworldindia.com</url>
+      <url description="Express Computer Online">http://www.expressindia.com</url>
+    </itparks>
+    <companies>
+      <url description="Tata Consultancy Services [TCS]">http://www.tcs.com</url>
+      <url description="Careers at Wipro Applying Thought">&gt;http://careers.wipro.com</url>
+      <url description="Wipro Applying Thought">http://www.wipro.com</url>
+      <url description="Visual Soft">http://www.visualsoft-tech.com</url>
+      <url description="Satyam Computers">http://www.satyam.com</url>
+      <url description="GE Captial">http://careers.gecapitalindia.com</url>
+      <url description="Careers at Infosys">http://www.infosys.com/careers</url>
+    </companies>
+    <banking>
+      <url description="Oriental Bank Of Commerce">http://www.obcindia.com</url>
+      <url description="Ing Vysya The New Face Of Money">http://www.ingvysyabank.com</url>
+      <url description="Uti Bank Solutions for a Life Time">http://www.utibank.com</url>
+      <url description="Life Insurance Corporation Of India">http://www.licinida.com</url>
+      <url description="Kotak Securities">http://www.kotak.com</url>
+      <url description="Bharat Overseas Bank">http://www.bharatoverseasbank.com</url>
+    </banking>
+    <shipping>
+      <url description="Bharat Ship Yard Shipping Transportation">http://www.bharatshipyard.com</url>
+      <url description="Ministry Area of Surface Transport">http://www.shipyard.com</url>
+    </shipping>
+    <cars>
+      <url description="Maruthi Udyog">http://www.maruthiudyog.com</url>
+      <url description="Hyundai Naruthi">http://hyundai.co.in</url>
+      <url description="General Motors">http://gm.co.in</url>
+      <url description="Corrolla India">http://corrollaindia.com</url>
+      <url description="Skoda Auto Templates">http://skoda-auto.co.in</url>
+      <url description="Tata Motors">http://www.tatamotors.com</url>
+      <url description="Toyota Bharat Camry India">http://www.toyotabharat.com</url>
+    </cars>
+    <space>
+      <url description="Space Search Programmes">http://www.space.com</url>
+      <url description="Newyork Space Search Center">http://www.nasa.com</url>
+    </space>
+    <youth>
+      <url description="Rebelle World">http://www.rebelleworld.com</url>
+      <url description="!5 To 25">http://www.15to25.com</url>
+      <url description="Youth World">http://www.youth.com</url>
+    </youth>
+    <quiz>
+      <url description="Exclusive Online Quiz">http://quizmaster.com</url>
+    </quiz>
+    <games>
+      <url description="Mind Space Games">http://mindspace.com</url>
+      <url description="Microsoft Games">http://microsoft.com/games</url>
+      <url description="Moon me">http://wwww.moonme.com</url>
+      <url description="Gun Games">http://www.gungames.com</url>
+      <url description="Games Domain">http://www.gamesdomain.com</url>
+    </games>
+    <aducation>
+      <url description="Avert Complete Health Tips">http://www.avert.org</url>
+      <url description="Seicus">http://www.seicus.org</url>
+    </aducation>
+    <adventures> 
+      <url description="Games To Play">http://www.games2play.com</url>
+      <url description="Free Web Games">http://www.free-web-games.com</url>
+      <url description="Jurassic Unicity">http://www.jurassic-unicity.com</url>
+      <url description="viki Mouse">http://www.vikimouse.com</url>
+    </adventures>
+    <greetings>
+      <url description="Beautiful wall Papers">http://www.beautifulwallpapers.com</url>
+      <url description="Blue Mountain">http://www.bluemountain.com</url>
+      <url description="Hallmark">http://www.hallmark.com</url>
+      <url description="123 Greetings">http://www.123greetings.com</url>
+    </greetings>
+    <resume>
+      <url description="A and a resume">http://www.aandaresume.com</url>
+      <url description="Resume dotcom">http://www.resumedotcom.com</url>
+      <url description="Resume Helper">http://www.resume-helper.com</url>
+      <url description="Cashmap Resume Templates">http://www.cashmap.com</url>
+      <url description="Online Resume Tips">http://www.online-resume-tips.com</url>
+    </resume>
+    <flight>
+      <url description="Air Crafts">http://www.aircrafts.cz</url>
+      <url description="Micro Wings">http://www.microwings.com</url>
+      <url description="Jet Airways">http://www.jetairways.com</url>
+    </flight>
+    <jobs>
+      <url description="India Part Time Jobs">http://www.indianparttimejobs.com</url>
+      <url description="Jobs Ahead">http://www.jobsahead.com</url>
+      <url description="Times Jobs">http://www.timesjobs.com</url>
+      <url description="CIOL Jobs">http://www.cioljobs.com</url>
+      <url description="Naukri.com">http://www.naukri.com</url>
+
+    </jobs>
+<bhaskar><url description="About Bhaskar &#10;my ph : 9848887776&#10;mail : kvbr15@yahoo.com">www.kvbr15.com</url></bhaskar><icici><url description="hkdsk">shfkdhk</url></icici><mailing><url description="yahoo web services and yahoo messenger and yahoo greetings etc..,">http://www.yahoomail.com</url><url description="rediff mobile rediff mail box rediff crocket rediff compose etc..">http://www.redifmail.com</url></mailing></topics>

@@ -1,0 +1,56 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/23/2009 10:32:50 AM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   Database.java
+
+package joseph;
+
+import java.sql.*;
+
+public class Database
+{
+
+    public Database()
+        throws Exception
+    {
+        Con = null;
+        st = null;
+        rs = null;
+        Class.forName("com.mysql.jdbc.Driver");
+        Con = DriverManager.getConnection("jdbc:mysql://localhost:3306/visa", "root", "root");
+        st = Con.createStatement();
+    }
+
+    public ResultSet getResultSet(String s)
+        throws Exception
+    {
+        rs = st.executeQuery(s);
+        return rs;
+    }
+
+    public int setResultSet(String s)
+        throws Exception
+    {
+        int i = st.executeUpdate(s);
+        return i;
+    }
+
+    public void closeResultSet()
+        throws Exception
+    {
+        rs.close();
+        st.close();
+        Con.close();
+    }
+
+    public void closeSetResultSet()
+        throws Exception
+    {
+        st.close();
+        Con.close();
+    }
+
+    private Connection Con;
+    private Statement st;
+    private ResultSet rs;
+}

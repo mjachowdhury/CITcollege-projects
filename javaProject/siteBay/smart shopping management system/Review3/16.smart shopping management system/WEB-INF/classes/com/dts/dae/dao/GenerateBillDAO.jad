@@ -1,0 +1,236 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/3/2012 6:27:05 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   GenerateBillDAO.java
+
+package com.dts.dae.dao;
+
+import com.dts.core.dao.AbstractDataAccessObject;
+import com.dts.core.util.*;
+import com.dts.dae.model.GenerateBillBean;
+import java.io.PrintStream;
+import java.sql.*;
+import java.util.Date;
+
+public class GenerateBillDAO extends AbstractDataAccessObject
+{
+
+    public GenerateBillDAO()
+    {
+        getConnection();
+    }
+
+    public CoreHash generateBill(GenerateBillBean gbb)
+    {
+        CoreHash ch = new CoreHash();
+        ch.clear();
+        String unique = "";
+        Date todaydate = new Date();
+        String date = DateWrapper.parseDate(todaydate);
+        String custname = gbb.getCustomername();
+        try
+        {
+            Statement st = con.createStatement();
+            for(ResultSet rs = st.executeQuery((new StringBuilder("select pl.productname,pl.price,sc.quantity from productlist pl,shoppingcart sc where pl.status='Y' and pl.productname=sc.prodname and sc.purchasedate='")).append(date).append("' and sc.paid_status='No' and sc.custname='").append(custname).append("'").toString()); rs.next(); ch.put((new StringBuilder()).append(unique).toString(), gbb))
+            {
+                unique = rs.getString(1);
+                gbb = new GenerateBillBean();
+                gbb.setProductname(unique);
+                gbb.setPrice(rs.getString(2));
+                gbb.setQuantity(rs.getString(3));
+            }
+
+        }
+        catch(SQLException sqlex)
+        {
+            LoggerManager.writeLogSevere(sqlex);
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ch;
+    }
+
+    public boolean insertProductsBought(GenerateBillBean gbb)
+    {
+        Date date = new Date();
+        String boughtdate = DateWrapper.parseDate(date);
+        String custname = gbb.getCustomername();
+        String grandtotal = gbb.getGrandtotal();
+        try
+        {
+            PreparedStatement pst = null;
+            int i = 0;
+            pst = con.prepareStatement("insert into productsbought values(?,?,?)");
+            pst.setString(1, custname);
+            pst.setString(2, grandtotal);
+            pst.setString(3, boughtdate);
+            i = pst.executeUpdate();
+            if(i == 1)
+            {
+                flag = true;
+                updatePaidStatus(gbb);
+            } else
+            {
+                flag = false;
+            }
+        }
+        catch(SQLException ex)
+        {
+            ex.printStackTrace();
+            flag = false;
+            try
+            {
+                con.rollback();
+            }
+            catch(SQLException sex)
+            {
+                sex.printStackTrace();
+                LoggerManager.writeLogSevere(ex);
+            }
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception ex)
+        {
+            LoggerManager.writeLogSevere(ex);
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception ex)
+        {
+            LoggerManager.writeLogSevere(ex);
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception ex)
+        {
+            LoggerManager.writeLogSevere(ex);
+        }
+        return flag;
+    }
+
+    private boolean updatePaidStatus(GenerateBillBean gbb)
+    {
+        String purchasedate = DateWrapper.parseDate(new Date());
+        String custname = gbb.getCustomername();
+        try
+        {
+            PreparedStatement pst = con.prepareStatement((new StringBuilder("UPDATE shoppingcart SET paid_status='Yes' WHERE custname='")).append(custname).append("' and purchasedate='").append(purchasedate).append("'").toString());
+            int i = pst.executeUpdate();
+            if(i != 0)
+                flag1 = true;
+            else
+                flag1 = false;
+        }
+        catch(SQLException ex)
+        {
+            ex.printStackTrace();
+            LoggerManager.writeLogSevere(ex);
+            flag1 = false;
+            try
+            {
+                con.rollback();
+            }
+            catch(SQLException se)
+            {
+                LoggerManager.writeLogSevere(se);
+            }
+        }
+        catch(Exception e)
+        {
+            LoggerManager.writeLogSevere(e);
+            flag1 = false;
+            try
+            {
+                con.rollback();
+            }
+            catch(SQLException se)
+            {
+                LoggerManager.writeLogSevere(se);
+            }
+        }
+        return flag1;
+    }
+
+    public CoreHash getDailyReport(GenerateBillBean gbb)
+    {
+        CoreHash ch = new CoreHash();
+        ch.clear();
+        int unique = 0;
+        String date = gbb.getDate();
+        System.out.println((new StringBuilder("************************** date:")).append(date).toString());
+        try
+        {
+            Statement st = con.createStatement();
+            String query = (new StringBuilder("select custname,grandtotal from productsbought where boughtdate='")).append(date).append("'").toString();
+            for(ResultSet rs = st.executeQuery(query); rs.next(); ch.put((new StringBuilder()).append(unique).toString(), gbb))
+            {
+                unique++;
+                gbb = new GenerateBillBean();
+                gbb.setCustomername(rs.getString(1));
+                gbb.setGrandtotal(rs.getString(2));
+            }
+
+        }
+        catch(SQLException sqlex)
+        {
+            LoggerManager.writeLogSevere(sqlex);
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        try
+        {
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ch;
+    }
+
+    private boolean flag;
+    private boolean flag1;
+}

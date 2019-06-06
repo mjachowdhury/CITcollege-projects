@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources>
+	</data-sources>
+
+	<form-beans>
+		<form-bean name="EventFormBean" type="org.claros.groupware.calendar.models.EventFormBean">
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions>
+	</global-exceptions> 
+
+	<global-forwards>
+		<forward name="/error/generalErr.do" path="/error/generalErr.do"  contextRelative="true">
+		</forward>
+		<forward name="/profiling/loginStart.do" path="/profiling/loginStart.do" contextRelative="true">
+		</forward>
+		<forward name="/webmail/mailbox.do" path="/webmail/mailbox.do" contextRelative="true">
+		</forward>
+		<forward name="/preferences/prefEntry.do" path="/preferences/prefEntry.do" contextRelative="true">
+		</forward>
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/listDaily" type="org.claros.groupware.calendar.actions.ListDailyAction">
+			<forward name="/list_daily.jsp" path="/list_daily.jsp">
+			</forward>
+		</action>
+		<action path="/listWeekly" type="org.claros.groupware.calendar.actions.ListWeeklyAction">
+			<forward name="/list_weekly.jsp" path="/list_weekly.jsp">
+			</forward>
+		</action>
+		<action path="/listMonthly" type="org.claros.groupware.calendar.actions.ListMonthlyAction">
+			<forward name="/list_monthly.jsp" path="/list_monthly.jsp">
+			</forward>
+		</action>
+		<action path="/newEvent" type="org.claros.groupware.calendar.actions.NewEventAction">
+			<forward name="/event.jsp" path="/event.jsp">
+			</forward>
+		</action>
+		<action path="/showEvent" type="org.claros.groupware.calendar.actions.ShowEventAction">
+			<forward name="/event.jsp" path="/event.jsp">
+			</forward>
+		</action>
+		<action path="/eventActions" type="org.claros.groupware.calendar.actions.EventActionsAction" name="EventFormBean" scope="request">
+			<forward name="/deleteEvent.do" path="/deleteEvent.do">
+			</forward>
+			<forward name="/saveEvent.do" path="/saveEvent.do">
+			</forward>
+		</action>
+		<action path="/saveEvent" type="org.claros.groupware.calendar.actions.SaveEventAction">
+			<forward name="/save_result.jsp" path="/save_result.jsp">
+			</forward>  
+		</action>
+		<action path="/deleteEvent" type="org.claros.groupware.calendar.actions.DeleteEventAction">
+			<forward name="/listMonthly.do" path="/listMonthly.do">
+			</forward>
+			<forward name="/listWeekly.do" path="/listWeekly.do">
+			</forward>
+			<forward name="/listDaily.do" path="/listDaily.do">
+			</forward>
+		</action>
+	</action-mappings>
+
+</struts-config>

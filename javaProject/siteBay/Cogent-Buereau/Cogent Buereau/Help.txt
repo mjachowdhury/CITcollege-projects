@@ -1,0 +1,17 @@
+DataBase : Oracle 9i
+
+create user distcol identified by distcol;
+grant dba to distcol;
+conn distcol/distcol
+select * from tab;
+
+Note:-
+------
+in this project we are using JdbcIV driver,
+
+GlobalDataBaseName is 'orcl'. if we want to change this we have to change the logic in nearly 100 above files.
+
+and it is having lot of errors.
+
+
+its fully hardcoded project.

@@ -1,0 +1,17 @@
+12/02/07 10:04:55 INFO  mailstore: JamesMailStore init...
+12/02/07 10:04:55 INFO  mailstore: Registering Repository instance of class org.apache.james.mailrepository.AvalonMailRepository to handle file protocol requests for repositories of type MAIL
+12/02/07 10:04:55 INFO  mailstore: Registering Repository instance of class org.apache.james.mailrepository.AvalonSpoolRepository to handle file protocol requests for repositories of type SPOOL
+12/02/07 10:04:55 INFO  mailstore: Registering Repository instance of class org.apache.james.mailrepository.JDBCMailRepository to handle db protocol requests for repositories of type MAIL
+12/02/07 10:04:55 INFO  mailstore: Registering Repository instance of class org.apache.james.mailrepository.JDBCSpoolRepository to handle db protocol requests for repositories of type SPOOL
+12/02/07 10:04:55 INFO  mailstore: Registering Repository instance of class org.apache.james.mailrepository.JDBCMailRepository to handle dbfile protocol requests for repositories of type MAIL
+12/02/07 10:04:55 INFO  mailstore: Registering Repository instance of class org.apache.james.mailrepository.JDBCSpoolRepository to handle dbfile protocol requests for repositories of type SPOOL
+12/02/07 10:04:56 INFO  mailstore: added repository: file://var/mail/spool/SPOOL->org.apache.james.mailrepository.AvalonSpoolRepository
+12/02/07 10:04:56 INFO  mailstore: SpoolRepository inboundSpool opened: 23473608
+12/02/07 10:04:56 INFO  mailstore: James MailStore ...init
+12/02/07 10:04:56 INFO  mailstore: added repository: file://var/mail/inboxes/MAIL->org.apache.james.mailrepository.AvalonMailRepository
+12/02/07 10:04:57 INFO  mailstore: added repository: file://var/mail/error/MAIL->org.apache.james.mailrepository.AvalonMailRepository
+12/02/07 10:04:57 INFO  mailstore: added repository: file://var/mail/outgoing/SPOOL->org.apache.james.mailrepository.AvalonSpoolRepository
+12/02/07 10:04:57 INFO  mailstore: added repository: file://var/mail/spam/MAIL->org.apache.james.mailrepository.AvalonMailRepository
+12/02/07 10:26:07 INFO  mailstore: added repository: file://var/mail/inboxes/nagendra/MAIL->org.apache.james.mailrepository.AvalonMailRepository
+12/02/07 10:27:20 INFO  mailstore: added repository: file://var/mail/inboxes/yoganandh/MAIL->org.apache.james.mailrepository.AvalonMailRepository
+12/02/07 10:57:14 INFO  mailstore: added repository: file://var/mail/inboxes/sitaram/MAIL->org.apache.james.mailrepository.AvalonMailRepository

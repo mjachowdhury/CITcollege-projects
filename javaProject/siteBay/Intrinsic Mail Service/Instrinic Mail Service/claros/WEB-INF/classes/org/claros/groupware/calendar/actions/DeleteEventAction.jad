@@ -1,0 +1,46 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 11/28/2008 4:28:41 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   DeleteEventAction.java
+
+package org.claros.groupware.calendar.actions;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.struts.action.*;
+import org.claros.commons.exception.NoPermissionException;
+import org.claros.commons.models.AuthProfile;
+import org.claros.groupware.calendar.controllers.CalendarDBController;
+import org.claros.groupware.calendar.models.CalendarItem;
+import org.claros.groupware.calendar.models.EventFormBean;
+import org.claros.groupware.common.actions.BaseClarosAction;
+import org.claros.groupware.common.actions.BaseLoggedAction;
+
+public class DeleteEventAction extends BaseLoggedAction
+{
+
+    public DeleteEventAction()
+    {
+    }
+
+    public ActionForward myExecute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response)
+        throws Exception
+    {
+        AuthProfile auth = getAuthProfile(request);
+        EventFormBean bean = (EventFormBean)getVariable(request, "EventFormBean");
+        Long eventId = new Long(bean.getId());
+        CalendarItem item = CalendarDBController.getEventById(auth, eventId);
+        if(!item.getUser().equals(auth.getUsername()))
+            throw new NoPermissionException();
+        CalendarDBController.deleteEvent(auth, eventId);
+        String calTab = (String)getVariable(request, "calendarTab");
+        if(calTab == null || calTab.equals("day"))
+            return mapping.findForward("/listDaily.do");
+        if(calTab.equals("week"))
+            return mapping.findForward("/listWeekly.do");
+        if(calTab.equals("month"))
+            return mapping.findForward("/listMonthly.do");
+        else
+            return mapping.findForward("/listDaily.do");
+    }
+}

@@ -1,0 +1,13 @@
+package lotteryResult;
+
+public class LotteryResultMain {
+
+	public static void main(String[] args) {
+		//creating object instantiating 
+		LotteryResult thisWeekResult = new LotteryResult();
+		
+		System.out.println("Welcome to the national lottery program.");
+
+	}
+
+}

@@ -1,0 +1,10 @@
+16/01/07 10:19:15 INFO  pop3server: POP3 Service uses default thread group.
+16/01/07 10:19:15 INFO  pop3server: POP3 Service is running on: inetsolv
+16/01/07 10:19:15 INFO  pop3server: POP3 Service handler hello name is: inetsolv
+16/01/07 10:19:15 INFO  pop3server: POP3 Service handler connection timeout is: 120000
+16/01/07 10:19:15 INFO  pop3server: The idle timeout will be reset every 20480 bytes.
+16/01/07 10:19:15 INFO  pop3server: POP3 Service started plain:110
+16/01/07 10:25:30 INFO  pop3server: Connection from localhost (127.0.0.1) 
+16/01/07 10:25:31 INFO  pop3server: Connection for root from localhost (127.0.0.1) closed.
+16/01/07 10:25:39 INFO  pop3server: Connection from localhost (127.0.0.1) 
+16/01/07 10:25:41 INFO  pop3server: Connection for admin from localhost (127.0.0.1) closed.

@@ -1,0 +1,28 @@
+INFO    2009-09-27 10:56:04.578 [Phoenix ] (): Logger started
+WARN    2009-09-27 10:56:04.734 [Phoenix ] (): Phoenix was not started by the daemon thus it will not be possible to restart the JVM via the Management interface.
+INFO    2009-09-27 10:56:05.031 [Phoenix.] (): Installing Sar located at file:/E:/TOTAL JAVA2010/Intrinsic Mail Service/james-2.1.3/james-2.1.3/apps/james.sar.
+WARN    2009-09-27 10:56:05.296 [Phoenix.] (): The file SAR-INF/lib/mm.mysql.LICENCE can not be extracted from the Sar "file:/E:/TOTAL JAVA2010/Intrinsic Mail Service/james-2.1.3/james-2.1.3/apps/james.sar" into directory E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\apps\james\SAR-INF\lib\mm.mysql.LICENCE because there is a file in the way.
+WARN    2009-09-27 10:56:05.296 [Phoenix.] (): The file conf/sqlResources.xml can not be extracted from the Sar "file:/E:/TOTAL JAVA2010/Intrinsic Mail Service/james-2.1.3/james-2.1.3/apps/james.sar" into directory E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\apps\james\conf\sqlResources.xml because there is a file in the way.
+WARN    2009-09-27 10:56:05.296 [Phoenix.] (): The file SAR-INF/config.xml can not be extracted from the Sar "file:/E:/TOTAL JAVA2010/Intrinsic Mail Service/james-2.1.3/james-2.1.3/apps/james.sar" into directory E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\apps\james\SAR-INF\config.xml because there is a file in the way.
+WARN    2009-09-27 10:56:05.296 [Phoenix.] (): The file SAR-INF/assembly.xml can not be extracted from the Sar "file:/E:/TOTAL JAVA2010/Intrinsic Mail Service/james-2.1.3/james-2.1.3/apps/james.sar" into directory E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\apps\james\SAR-INF\assembly.xml because there is a file in the way.
+WARN    2009-09-27 10:56:05.296 [Phoenix.] (): The file SAR-INF/environment.xml can not be extracted from the Sar "file:/E:/TOTAL JAVA2010/Intrinsic Mail Service/james-2.1.3/james-2.1.3/apps/james.sar" into directory E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\apps\james\SAR-INF\environment.xml because there is a file in the way.
+INFO    2009-09-27 10:56:05.453 [Phoenix.] (): No policy specified in server.xml, giving full permissions to ServerApplication.
+INFO    2009-09-27 10:56:05.718 [Phoenix.] (): Verifying that the name specified for Blocks and BlockListeners are valid.
+INFO    2009-09-27 10:56:05.718 [Phoenix.] (): Verifying that the name specified for Blocks and BlockListeners are unique.
+INFO    2009-09-27 10:56:05.718 [Phoenix.] (): Verifying that the specified Dependencies are valid according to BlockInfo.
+INFO    2009-09-27 10:56:05.718 [Phoenix.] (): Verifying that the dependencies of Blocks are valid with respect to other Blocks.
+INFO    2009-09-27 10:56:05.718 [Phoenix.] (): Verifying that there are no circular dependencies between Blocks.
+INFO    2009-09-27 10:56:05.718 [Phoenix.] (): Verifying that the specified Blocks have valid types.
+INFO    2009-09-27 10:56:05.765 [Phoenix.] (): Verifying that the specified BlockListeners have valid types.
+INFO    2009-09-27 10:56:05.953 [Phoenix.] (): 17 Blocks to process for phase "startup". Order of processing = [dnsserver, objectstorage, database-connections, mailstore, users-store, thread-manager, connections, sockets, scheduler, James, spoolmanager, remotemanager, pop3server, smtpserver, nntp-repository, nntpserver, fetchpop].
+INFO    2009-09-27 10:56:58.609 [Phoenix.] (): 17 Blocks to process for phase "shutdown". Order of processing = [spoolmanager, remotemanager, pop3server, smtpserver, fetchpop, James, dnsserver, nntpserver, nntp-repository, mailstore, users-store, objectstorage, connections, sockets, scheduler, database-connections, thread-manager].
+WARN    2009-09-27 10:56:58.750 [Phoenix.] (): Error deleting Work Directory "E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\work\james-1254029165046". (Reason: File E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\work\james-1254029165046\SAR-INF\lib\mm.mysql-2.0.14.jar unable to be deleted.)
+java.io.IOException: File E:\TOTAL JAVA2010\Intrinsic Mail Service\james-2.1.3\james-2.1.3\work\james-1254029165046\SAR-INF\lib\mm.mysql-2.0.14.jar unable to be deleted.
+	at org.apache.avalon.excalibur.io.FileUtil.forceDelete(FileUtil.java:638)
+	at org.apache.avalon.excalibur.io.FileUtil.cleanDirectory(FileUtil.java:806)
+	at org.apache.avalon.excalibur.io.FileUtil.deleteDirectory(FileUtil.java:762)
+	at org.apache.avalon.excalibur.io.FileUtil.forceDelete(FileUtil.java:630)
+	at org.apache.avalon.excalibur.io.FileUtil.cleanDirectory(FileUtil.java:806)
+	at org.apache.avalon.excalibur.io.FileUtil.deleteDirectory(FileUtil.java:762)
+	at org.apache.avalon.excalibur.io.FileUtil.forceDelete(FileUtil.java:630)
+INFO    2009-09-27 10:56:58.781 [Phoenix ] (): Shutting down because there are not any applications running.

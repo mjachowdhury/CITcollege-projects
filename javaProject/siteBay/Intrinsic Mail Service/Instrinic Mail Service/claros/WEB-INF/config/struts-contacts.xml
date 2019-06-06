@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<data-sources>
+	</data-sources>
+
+	<form-beans>
+		<form-bean name="ListContactsFormBean" type="org.claros.groupware.contacts.models.ListContactsFormBean">
+		</form-bean>
+		<form-bean name="ContactFormBean" type="org.claros.groupware.contacts.models.ContactFormBean">
+		</form-bean>
+		<form-bean name="SearchContactFormBean" type="org.claros.groupware.contacts.models.SearchContactFormBean">
+		</form-bean>
+		<form-bean name="ImportContactFormBean" type="org.claros.groupware.contacts.models.ImportContactFormBean">
+		</form-bean>
+		<form-bean name="ListGroupsFormBean" type="org.claros.groupware.contacts.models.ListGroupsFormBean">
+		</form-bean>
+		<form-bean name="GroupFormBean" type="org.claros.groupware.contacts.models.GroupFormBean">
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions> 
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="/error/generalErr.do" path="/error/generalErr.do"  contextRelative="true">
+		</forward>
+		<forward name="/profiling/loginStart.do" path="/profiling/loginStart.do" contextRelative="true">
+		</forward>
+		<forward name="/webmail/mailbox.do" path="/webmail/mailbox.do" contextRelative="true">
+		</forward>
+		<forward name="/preferences/prefEntry.do" path="/preferences/prefEntry.do" contextRelative="true">
+		</forward>
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/listContacts" type="org.claros.groupware.contacts.actions.ListContactsAction">
+			<forward name="/list_contacts.jsp" path="/list_contacts.jsp">
+			</forward>
+		</action>
+		<action path="/deleteContact" type="org.claros.groupware.contacts.actions.DeleteContactAction" name="ListContactsFormBean" scope="request">
+			<forward name="/listContacts.do" path="/listContacts.do">
+			</forward>
+		</action>
+		<action path="/newContact" type="org.claros.groupware.contacts.actions.NewContactAction">
+			<forward name="/contact.jsp" path="/contact.jsp">
+			</forward>
+		</action>
+		<action path="/saveContact" type="org.claros.groupware.contacts.actions.SaveContactAction" name="ContactFormBean" scope="request">
+			<forward name="/save_result.jsp" path="/save_result.jsp">
+			</forward>
+		</action> 
+		<action path="/showContact" type="org.claros.groupware.contacts.actions.ShowContactAction">
+			<forward name="/contact.jsp" path="/contact.jsp">
+			</forward>
+		</action> 
+		<action path="/searchContact" type="org.claros.groupware.contacts.actions.SearchContactAction" name="SearchContactFormBean" scope="request">
+			<forward name="/list_contacts.jsp" path="/list_contacts.jsp">
+			</forward>
+		</action>
+		<action path="/importEntry" type="org.claros.groupware.contacts.actions.ImportEntryAction">
+			<forward name="/import.jsp" path="/import.jsp">
+			</forward>
+		</action>
+		<action path="/importEnd" type="org.claros.groupware.contacts.actions.ImportEndAction" name="ImportContactFormBean" scope="request">
+			<forward name="/import_result.jsp" path="/import_result.jsp">
+			</forward>
+		</action>
+		<action path="/listGroups" type="org.claros.groupware.contacts.actions.ListGroupsAction">
+			<forward name="/list_groups.jsp" path="/list_groups.jsp">
+			</forward>
+		</action>
+		<action path="/newGroup" type="org.claros.groupware.contacts.actions.NewGroupAction">
+			<forward name="/group.jsp" path="/group.jsp">
+			</forward>
+		</action>
+		<action path="/showGroup" type="org.claros.groupware.contacts.actions.ShowGroupAction">
+			<forward name="/group.jsp" path="/group.jsp">
+			</forward>
+		</action>
+		<action path="/saveGroup" type="org.claros.groupware.contacts.actions.SaveGroupAction" name="GroupFormBean" scope="request">
+			<forward name="/group_result.jsp" path="/group_result.jsp">
+			</forward>
+		</action>
+		<action path="/deleteGroup" type="org.claros.groupware.contacts.actions.DeleteGroupAction" name="ListGroupsFormBean" scope="request">
+			<forward name="/listGroups.do" path="/listGroups.do">
+			</forward>
+		</action> 
+	</action-mappings>
+</struts-config>

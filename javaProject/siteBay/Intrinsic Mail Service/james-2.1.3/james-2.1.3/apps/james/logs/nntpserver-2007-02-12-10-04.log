@@ -1,0 +1,5 @@
+12/02/07 10:04:57 INFO  nntpserver: NNTP Service uses default thread group.
+12/02/07 10:04:57 INFO  nntpserver: NNTP Service is running on: inetsolv
+12/02/07 10:04:57 INFO  nntpserver: NNTP Service handler hello name is: inetsolv
+12/02/07 10:04:57 INFO  nntpserver: NNTP Service handler connection timeout is: 120000
+12/02/07 10:04:57 INFO  nntpserver: NNTP Service started plain:119

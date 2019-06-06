@@ -1,0 +1,35 @@
+.dashedtable {
+/*	border: 1px double #CCCCCC; */
+}
+
+.contacttextarea {
+	height: 40px;
+	width: 545px;
+}
+.contactstatus {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: inset;
+	border-right-style: inset;
+	border-bottom-style: inset;
+	border-left-style: inset;
+}
+.contact_title_table {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: outset;
+	border-right-style: outset;
+	border-bottom-style: outset;
+	border-left-style: outset;
+}
+
+.contact_title_table_text {
+	font-size: 22px;
+/*	filter: Gray, DropShadow(Color=#999999, OffX=2, OffY=2, Positive=100); */
+	color: #666666;
+	font-family: "Times New Roman", Times, serif;/*	font-weight: bold; */
+}

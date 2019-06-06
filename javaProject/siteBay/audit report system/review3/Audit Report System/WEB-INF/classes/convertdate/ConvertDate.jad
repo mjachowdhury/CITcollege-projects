@@ -1,0 +1,77 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/3/2012 4:36:23 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   ConvertDate.java
+
+package convertdate;
+
+
+public class ConvertDate
+{
+
+    public ConvertDate()
+    {
+    }
+
+    public String DateConvert(String s)
+    {
+        String s1 = s.substring(0, s.indexOf("-"));
+        int i = s.indexOf("-");
+        s = s.substring(i + 1, s.length());
+        int j = Integer.parseInt(s.substring(0, s.indexOf("-")));
+        String s2 = s.substring(s.indexOf("-") + 1, s.length());
+        String s3 = "";
+        switch(j)
+        {
+        case 1: // '\001'
+            s3 = "Jan";
+            break;
+
+        case 2: // '\002'
+            s3 = "Feb";
+            break;
+
+        case 3: // '\003'
+            s3 = "Mar";
+            break;
+
+        case 4: // '\004'
+            s3 = "Apr";
+            break;
+
+        case 5: // '\005'
+            s3 = "May";
+            break;
+
+        case 6: // '\006'
+            s3 = "Jun";
+            break;
+
+        case 7: // '\007'
+            s3 = "Jul";
+            break;
+
+        case 8: // '\b'
+            s3 = "Aug";
+            break;
+
+        case 9: // '\t'
+            s3 = "Sep";
+            break;
+
+        case 10: // '\n'
+            s3 = "Oct";
+            break;
+
+        case 11: // '\013'
+            s3 = "Nov";
+            break;
+
+        case 12: // '\f'
+            s3 = "Dec";
+            break;
+        }
+        s = (new StringBuilder()).append(s1).append("-").append(s3).append("-").append(s2).toString();
+        return s;
+    }
+}

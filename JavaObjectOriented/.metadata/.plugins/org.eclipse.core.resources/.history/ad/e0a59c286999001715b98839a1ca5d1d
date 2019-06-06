@@ -1,0 +1,13 @@
+package vehicle;
+
+public class Bike extends Vehicle {
+	
+	private boolean fourStroke = true;
+	
+	public Bike(String name, String color, String model, String complany, String engine, boolean fourStroke){
+		super(name, color, model, complany, engine);
+		this.fourStroke = fourStroke;
+		
+	}
+
+}

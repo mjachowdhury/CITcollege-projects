@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<data-sources>
+	</data-sources>
+
+	<form-beans> 
+		<form-bean name="MailboxFormBean" type="org.claros.groupware.webmail.models.MailboxFormBean">
+		</form-bean>
+		<form-bean name="ComposeFormBean" type="org.claros.groupware.webmail.models.ComposeFormBean">
+		</form-bean>
+		<form-bean name="AttachmentFormBean" type="org.claros.groupware.webmail.models.AttachmentFormBean">
+		</form-bean>
+		<form-bean name="ListFoldersFormBean" type="org.claros.groupware.webmail.models.ListFoldersFormBean">
+		</form-bean>
+		<form-bean name="FolderFormBean" type="org.claros.groupware.webmail.models.FolderFormBean">
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions>
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="/error/generalErr.do" path="/error/generalErr.do"  contextRelative="true">
+		</forward>
+		<forward name="/profiling/loginStart.do" path="/profiling/loginStart.do" contextRelative="true">
+		</forward>
+		<forward name="/mailbox.do" path="/mailbox.do">
+		</forward>
+		<forward name="/preferences/prefEntry.do" path="/preferences/prefEntry.do" contextRelative="true">
+		</forward>
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/mailbox" type="org.claros.groupware.webmail.actions.MailboxAction">
+			<forward name="mailbox.jsp" path="/mailbox.jsp">
+			</forward>
+		</action>
+		<action path="/deleteMsgs" type="org.claros.groupware.webmail.actions.DeleteMsgsAction" name="MailboxFormBean" scope="request">
+		</action>
+		<action path="/readMail" type="org.claros.groupware.webmail.actions.ReadMailAction">
+			<forward name="/read_message.jsp" path="/read_message.jsp">
+			</forward>
+		</action>
+		<action path="/showPart" type="org.claros.groupware.webmail.actions.ShowPartAction">
+			<forward name="/show_body.jsp" path="/show_body.jsp">
+			</forward>
+			<forward name="/webmail/showPart.cl" path="/webmail/showPart.cl" contextRelative="true">
+			</forward> 
+		</action>
+		<action path="/composeEntry" type="org.claros.groupware.webmail.actions.ComposeEntryAction">
+			<forward name="/compose.jsp" path="/compose.jsp">
+			</forward>
+		</action>
+		<action path="/composeAction" type="org.claros.groupware.webmail.actions.ComposeActionAction" name="ComposeFormBean" scope="session">
+			<forward name="/composeEnd.do" path="/composeEnd.do" contextRelative="false">
+			</forward>
+			<forward name="/attachStart.do" path="/attachStart.do" contextRelative="false">
+			</forward>
+		</action>
+		<action path="/composeEnd" type="org.claros.groupware.webmail.actions.ComposeEndAction">
+			<forward name="/compose_result.jsp" path="/compose_result.jsp">
+			</forward> 
+		</action>
+		<action path="/attachStart" type="org.claros.groupware.webmail.actions.AttachStartAction">
+			<forward name="/attachments.jsp" path="/attachments.jsp">
+			</forward>
+		</action>
+		<action path="/attachUpload" type="org.claros.groupware.webmail.actions.AttachUploadAction" name="AttachmentFormBean" scope="request">
+			<forward name="/attachStart.do" path="/attachStart.do">
+			</forward>
+		</action>
+		<action path="/attachDelete" type="org.claros.groupware.webmail.actions.AttachDeleteAction">
+			<forward name="/attachStart.do" path="/attachStart.do">
+			</forward>
+		</action>
+		<action path="/emailNote" type="org.claros.groupware.webmail.actions.EmailNoteAction">
+			<forward name="/compose.jsp" path="/compose.jsp">
+			</forward>
+		</action>
+		<action path="/mailboxActions" type="org.claros.groupware.webmail.actions.MailboxActionsAction" name="MailboxFormBean" scope="request">
+			<forward name="/deleteMsgs.do" path="/deleteMsgs.do">
+			</forward>
+			<forward name="/moveMsgs.do" path="/moveMsgs.do">
+			</forward>
+		</action>
+		<action path="/moveMsgs" type="org.claros.groupware.webmail.actions.MoveMsgsAction" name="MailboxFormBean" scope="request">
+			<forward name="/mailbox.do" path="/mailbox.do">
+			</forward>
+		</action>
+		<action path="/foldersEntry" type="org.claros.groupware.webmail.actions.FoldersEntryAction">
+			<forward name="/list_folders.jsp" path="/list_folders.jsp">
+			</forward>
+		</action>
+		<action path="/deleteFolder" type="org.claros.groupware.webmail.actions.DeleteFolderAction" name="ListFoldersFormBean" scope="request">
+			<forward name="/foldersEntry.do" path="/foldersEntry.do">
+			</forward>
+		</action>
+		<action path="/newFolder" type="org.claros.groupware.webmail.actions.NewFolderAction">
+			<forward name="/folder.jsp" path="/folder.jsp">
+			</forward>
+		</action>
+		<action path="/showFolder" type="org.claros.groupware.webmail.actions.ShowFolderAction">
+			<forward name="/folder.jsp" path="/folder.jsp">
+			</forward>
+		</action>
+		<action path="/saveFolder" type="org.claros.groupware.webmail.actions.SaveFolderAction" name="FolderFormBean" scope="request">
+			<forward name="/foldersEntry.do" path="/foldersEntry.do">
+			</forward>
+		</action>
+		<action path="/emptyFolder" type="org.claros.groupware.webmail.actions.EmptyFolderAction">
+			<forward name="/foldersEntry.do" path="/foldersEntry.do">
+			</forward>
+		</action>
+		<action path="/checkNewMail" type="org.claros.groupware.webmail.actions.CheckNewMailAction">
+			<forward name="/checker.jsp" path="/checker.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+</struts-config>

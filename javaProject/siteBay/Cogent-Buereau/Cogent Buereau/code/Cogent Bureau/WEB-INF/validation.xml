@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+<!--
+     This is a minimal Validator form file with a couple of examples.
+-->
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+    <formset>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+
+         <form name="BirthCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="fname" depends="required">
+                    <arg0 key="Father Name"/>
+             </field>
+      <field property="mname" depends="required">
+                    <arg0 key="Mother Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="dob" depends="required">
+                    <arg0 key="Dob"/>
+             </field>
+    <field property="sex" depends="required">
+                    <arg0 key="sex"/>
+             </field>
+  <field property="caste" depends="required">
+                    <arg0 key="caste"/>
+             </field>
+   <field property="bplace" depends="required">
+                    <arg0 key="Bplace"/>
+             </field>
+    <field property="drname" depends="required">
+                    <arg0 key="DrName"/>
+             </field>
+    <field property="foccup" depends="required">
+                    <arg0 key="Foccup"/>
+             </field>
+     <field property="hname" depends="required">
+                    <arg0 key="Hname"/>
+             </field>
+</form>
+
+    <form name="DeathCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="fname" depends="required">
+                    <arg0 key="Father Name"/>
+             </field>
+      <field property="mname" depends="required">
+                    <arg0 key="Mother Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="dod" depends="required">
+                    <arg0 key="Dod"/>
+             </field>
+    <field property="sex" depends="required">
+                    <arg0 key="sex"/>
+             </field>
+  <field property="caste" depends="required">
+                    <arg0 key="caste"/>
+             </field>
+   <field property="dplace" depends="required">
+                    <arg0 key="Bplace"/>
+             </field>
+    <field property="drname" depends="required">
+                    <arg0 key="DrName"/>
+             </field>
+     <field property="rdeath" depends="required">
+                    <arg0 key="RDeath"/>
+             </field>
+    <field property="occup" depends="required">
+                    <arg0 key="Foccup"/>
+             </field>
+     <field property="hname" depends="required">
+                    <arg0 key="Hname"/>
+             </field>
+     <field property="dob" depends="required">
+                    <arg0 key="Dob"/>
+             </field>
+</form>
+
+ <form name="WidowCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="hname" depends="required">
+                    <arg0 key="Husband Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="dod" depends="required">
+                    <arg0 key="Dod"/>
+             </field>
+    <field property="dcid" depends="required">
+                    <arg0 key="Dcid"/>
+             </field>
+    <field property="dplace" depends="required">
+                    <arg0 key="Bplace"/>
+             </field>
+    <field property="drname" depends="required">
+                    <arg0 key="DrName"/>
+             </field>
+     <field property="rdeath" depends="required">
+                    <arg0 key="RDeath"/>
+             </field>
+    <field property="occup" depends="required">
+                    <arg0 key="Hoccup"/>
+             </field>
+     <field property="hosname" depends="required">
+                    <arg0 key="Hname"/>
+             </field>
+   </form>
+
+  <form name="IncomeCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="fname" depends="required">
+                    <arg0 key="Father Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="dob" depends="required">
+                    <arg0 key="Dob"/>
+             </field>
+    <field property="qual" depends="required">
+                    <arg0 key="Dcid"/>
+             </field>
+    <field property="occup" depends="required">
+                    <arg0 key="Hoccup"/>
+             </field>
+     <field property="income" depends="required">
+                    <arg0 key="income"/>
+             </field>
+     <field property="purpose" depends="required">
+                    <arg0 key="purpose"/>
+             </field>
+   </form>
+ 
+   <form name="DomicileCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="fname" depends="required">
+                    <arg0 key="Father Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="caste" depends="required">
+                    <arg0 key="caste"/>
+             </field>
+    <field property="lsince" depends="required">
+                    <arg0 key="Lsince"/>
+             </field>
+    <field property="occup" depends="required">
+                    <arg0 key="Hoccup"/>
+             </field>
+     <field property="dob" depends="required">
+                    <arg0 key="Dob"/>
+             </field>
+     <field property="purpose" depends="required">
+                    <arg0 key="purpose"/>
+             </field>
+   </form>
+
+   <form name="ResidentialCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="fname" depends="required">
+                    <arg0 key="Father Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="caste" depends="required">
+                    <arg0 key="caste"/>
+             </field>
+    <field property="lsince" depends="required">
+                    <arg0 key="Lsince"/>
+             </field>
+    <field property="occup" depends="required">
+                    <arg0 key="Hoccup"/>
+             </field>
+     <field property="dob" depends="required">
+                    <arg0 key="Dob"/>
+             </field>
+     <field property="purpose" depends="required">
+                    <arg0 key="purpose"/>
+             </field>
+    <field property="reason" depends="required">
+                    <arg0 key="Reason"/>
+             </field>
+   </form>
+
+   <form name="MinorityCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="fname" depends="required">
+                    <arg0 key="Father Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="sex" depends="required">
+                    <arg0 key="Sex"/>
+             </field>
+    <field property="religion" depends="required">
+                    <arg0 key="Religion"/>
+             </field>
+    <field property="occup" depends="required">
+                    <arg0 key="occup"/>
+             </field>
+   <field property="income" depends="required">
+                    <arg0 key="income"/>
+             </field>
+     <field property="dob" depends="required">
+                    <arg0 key="Dob"/>
+             </field>
+     <field property="purpose" depends="required">
+                    <arg0 key="purpose"/>
+             </field>
+   </form>
+
+   <form name="CasteCertificate">
+       <field property="first" depends="required">
+                    <arg0 key="First Name"/>
+             </field>
+     <field property="last" depends="required">
+                    <arg0 key="Last Name"/>
+             </field>
+    <field property="fname" depends="required">
+                    <arg0 key="Father Name"/>
+             </field>
+    <field property="resadd" depends="required">
+                    <arg0 key="Residential Address"/>
+             </field>
+  <field property="peradd" depends="required">
+                    <arg0 key="Perminent Address"/>
+             </field>
+   <field property="sex" depends="required">
+                    <arg0 key="Sex"/>
+             </field>
+      <field property="caste" depends="required">
+                    <arg0 key="Caste"/>
+             </field>
+    <field property="religion" depends="required">
+                    <arg0 key="Religion"/>
+             </field>
+    <field property="occup" depends="required">
+                    <arg0 key="occup"/>
+             </field>
+   <field property="income" depends="required">
+                    <arg0 key="income"/>
+             </field>
+     <field property="dob" depends="required">
+                    <arg0 key="Dob"/>
+             </field>
+     <field property="purpose" depends="required">
+                    <arg0 key="purpose"/>
+             </field>
+   </form>
+
+     <form name="LoginForm">
+       <field property="uname" depends="required">
+                    <arg0 key="User Name"/>
+             </field>
+     <field property="pwd" depends="required">
+                    <arg0 key="Password"/>
+             </field>
+     </form>
+   </formset>
+
+    <!-- An example formset for another locale -->
+    <formset language="fr">
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^[0-9a-zA-Z]*$</constant-value>
+        </constant>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+   </formset>
+
+</form-validation>

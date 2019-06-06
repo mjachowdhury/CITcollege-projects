@@ -1,0 +1,20 @@
+@import url("sitil.css");
+A:link {
+	COLOR: #333333;
+	text-decoration: none;
+}
+A:visited {
+	COLOR: #666666
+}
+A:active {
+	COLOR: #aaaaaa; BORDER-BOTTOM: 1px solid
+}
+A:hover {
+	COLOR: #000000;
+	BORDER-BOTTOM: 1px solid;
+	text-decoration: none;
+}
+A {
+	TEXT-DECORATION: none;
+	color: #333333;
+}

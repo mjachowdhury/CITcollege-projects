@@ -1,0 +1,19 @@
+12/02/07 10:04:57 INFO  remotemanager: Remote Manager Service uses default thread group.
+12/02/07 10:04:57 INFO  remotemanager: Remote Manager Service is running on: inetsolv
+12/02/07 10:04:57 INFO  remotemanager: Remote Manager Service handler hello name is: inetsolv
+12/02/07 10:04:57 INFO  remotemanager: Remote Manager Service handler connection timeout is: 60000
+12/02/07 10:04:57 INFO  remotemanager: Remote Manager Service started plain:4555
+12/02/07 10:10:15 INFO  remotemanager: Access from localhost(127.0.0.1)
+12/02/07 10:10:28 INFO  remotemanager: Login for root successful
+12/02/07 10:13:01 INFO  remotemanager: User chandu deleted
+12/02/07 10:13:12 INFO  remotemanager: User one deleted
+12/02/07 10:13:17 INFO  remotemanager: User siri deleted
+12/02/07 10:13:44 INFO  remotemanager: User sitaram deleted
+12/02/07 10:13:54 INFO  remotemanager: User swmay deleted
+12/02/07 10:14:07 INFO  remotemanager: User venkat doesn't exist
+12/02/07 10:14:16 INFO  remotemanager: User venkat doesn't exist
+12/02/07 10:14:26 INFO  remotemanager: User two deleted
+12/02/07 10:15:43 INFO  remotemanager: User nagendra added
+12/02/07 10:15:57 INFO  remotemanager: User sitaram added
+12/02/07 10:16:17 INFO  remotemanager: User yoganandh added
+12/02/07 10:16:25 INFO  remotemanager: Logout for root.

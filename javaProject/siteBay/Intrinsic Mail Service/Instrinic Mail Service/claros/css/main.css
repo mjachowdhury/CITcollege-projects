@@ -1,0 +1,37 @@
+@import url("navbar.css");
+@import url("sitil.css");
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #404040;
+}
+body {
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(../images/bg.gif);
+	background-repeat: repeat-y;
+}
+a:link {
+	color: #0066CC;
+	text-decoration: none;
+}
+a:visited {
+	color: #0066CC;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF6600;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FF0000;
+	text-decoration: none;
+}
+.redbold {
+	color: #FF0000;
+	font-weight: bold;
+}

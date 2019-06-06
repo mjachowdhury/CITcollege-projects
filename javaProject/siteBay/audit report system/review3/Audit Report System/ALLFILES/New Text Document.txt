@@ -1,0 +1,66 @@
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import java.sql.*;
+
+public class EventDesc extends HttpServlet
+{
+	public void service(HttpServletRequest req,HttpServletResponse  rsp)throws ServletException,IOException
+	{
+	ServletOutputStream sos = rsp.getOutputStream();
+	try{
+	Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+	Connection con = DriverManager.getConnection("Jdbc:Odbc:JDSN","scott","tiger");
+	
+	String reqtype=req.getParameter("TYPE");
+if(reqtype.equalsIgnoreCase("INSERT"))
+		{
+PreparedStatement pst = con.prepareStatement("INSERT INTO Event_Desc values(?,?,?)");
+pst.setInt(1,Integer.parseInt(req.getParameter("TEvtId")));
+pst.setString(2,req.getParameter("TEvtDesc"));
+pst.setInt(3,Integer.parseInt(req.getParameter("TExecId")));
+
+pst.execute();
+con.commit();
+sos.println("Record Inserted");
+System.out.println("Record Inserted");
+}//if	
+else if(reqtype.equalsIgnoreCase("DELETE"))
+		{
+PreparedStatement pst = con.prepareStatement("DELETE From Event_Desc where evtid=?");
+pst.setInt(1,Integer.parseInt(req.getParameter("TEvtId")));
+pst.execute();
+con.commit();
+sos.println("Record Deleted");
+System.out.println("Record Deleted");
+}//if
+else if(reqtype.equalsIgnoreCase("MODIFY"))
+		{
+PreparedStatement pst = con.prepareStatement("Update Event_Desc set EVTID=?,EVTDESC=?,Exec_ID=? 
+                                               where EVTID=?");          
+
+pst.setString(1,Integer.parseInt(req.getParameter("TEvtId")));
+pst.setString(2,req.getParameter("TEvtDesc"));
+pst.setString(3,req.getParameter("TExecId"));
+
+
+pst.execute();
+con.commit();
+sos.println("Record Updated");
+System.out.println("Record Updated");
+}//if	
+
+
+	}catch(Exception ex){
+	sos.println(ex.toString());
+	System.out.println(ex.toString());
+	}
+
+	
+	}//service
+}
+
+
+
+
+

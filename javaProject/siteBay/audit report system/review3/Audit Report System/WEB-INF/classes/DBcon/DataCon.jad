@@ -1,0 +1,40 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/3/2012 4:36:08 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   DataCon.java
+
+package DBcon;
+
+import java.io.PrintStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Properties;
+import javax.servlet.ServletContext;
+
+public class DataCon
+{
+
+    public DataCon()
+    {
+    }
+
+    public Connection getConnection(ServletContext servletcontext)
+    {
+        Connection connection = null;
+        try
+        {
+            String s = "/WEB-INF/classes/DBInfo.properties";
+            java.io.InputStream inputstream = servletcontext.getResourceAsStream(s);
+            Properties properties = new Properties();
+            properties.load(inputstream);
+            Class.forName(properties.getProperty("driver"));
+            connection = DriverManager.getConnection(properties.getProperty("url"), properties.getProperty("user"), properties.getProperty("pass"));
+        }
+        catch(Exception exception)
+        {
+            exception.printStackTrace();
+            System.out.println(exception.toString());
+        }
+        return connection;
+    }
+}

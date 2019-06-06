@@ -1,0 +1,53 @@
+29/01/07 16:22:35 INFO  objectstorage: Registering Repository org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository
+29/01/07 16:22:35 INFO  objectstorage:    for file,OBJECT,SYNCHRONOUS
+29/01/07 16:22:35 INFO  objectstorage:    for file,OBJECT,ASYNCHRONOUS
+29/01/07 16:22:35 INFO  objectstorage:    for file,OBJECT,CACHE
+29/01/07 16:22:35 INFO  objectstorage: Registering Repository org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository
+29/01/07 16:22:35 INFO  objectstorage:    for file,STREAM,SYNCHRONOUS
+29/01/07 16:22:35 INFO  objectstorage:    for file,STREAM,ASYNCHRONOUS
+29/01/07 16:22:35 INFO  objectstorage:    for file,STREAM,CACHE
+29/01/07 16:22:36 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository Store
+29/01/07 16:22:36 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\spool
+29/01/07 16:22:36 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository created for file://var/mail/spool/
+29/01/07 16:22:36 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:22:36 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\spool
+29/01/07 16:22:36 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/mail/spool/
+29/01/07 16:22:36 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:22:36 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\users
+29/01/07 16:22:36 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/users//
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\inboxes
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository created for file://var/mail/inboxes/
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\inboxes
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/mail/inboxes/
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\error
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository created for file://var/mail/error/
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\error
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/mail/error/
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\outgoing
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository created for file://var/mail/outgoing/
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\outgoing
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/mail/outgoing/
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\spam
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository created for file://var/mail/spam/
+29/01/07 16:22:37 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:22:37 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\spam
+29/01/07 16:22:37 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/mail/spam/
+29/01/07 16:47:10 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository Store
+29/01/07 16:47:10 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\inboxes\one
+29/01/07 16:47:10 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository created for file://var/mail/inboxes/one/
+29/01/07 16:47:10 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:47:10 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\inboxes\one
+29/01/07 16:47:10 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/mail/inboxes/one/
+29/01/07 16:48:58 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository Store
+29/01/07 16:48:58 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\inboxes\two
+29/01/07 16:48:58 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Stream_Repository created for file://var/mail/inboxes/two/
+29/01/07 16:48:58 INFO  objectstorage.repository: Init org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository Store
+29/01/07 16:48:58 INFO  objectstorage.repository: org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository opened in C:\james-2.1.3\james-2.1.3\apps\james\var\mail\inboxes\two
+29/01/07 16:48:58 INFO  objectstorage: New instance of org.apache.james.mailrepository.filepair.File_Persistent_Object_Repository created for file://var/mail/inboxes/two/

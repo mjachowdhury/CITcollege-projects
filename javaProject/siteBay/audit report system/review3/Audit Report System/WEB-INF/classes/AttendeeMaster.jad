@@ -1,0 +1,81 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 12/5/2012 10:42:17 AM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   AttendeeMaster.java
+
+import DBcon.DataCon;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+
+public class AttendeeMaster extends HttpServlet
+{
+
+    public AttendeeMaster()
+    {
+    }
+
+    public void service(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
+        throws ServletException, IOException
+    {
+        String s = "";
+        Connection connection = null;
+        try
+        {
+            connection = (new DataCon()).getConnection(getServletContext());
+            boolean flag = false;
+            String s1 = httpservletrequest.getParameter("TYPE");
+            if(s1.equalsIgnoreCase("INSERT"))
+            {
+                PreparedStatement preparedstatement = connection.prepareStatement("INSERT INTO Attendee_Master values(?,?,?,?,?,?)");
+                preparedstatement.setString(1, httpservletrequest.getParameter("TName"));
+                preparedstatement.setString(2, httpservletrequest.getParameter("TDesg"));
+                preparedstatement.setInt(3, Integer.parseInt(httpservletrequest.getParameter("TMeetingId")));
+                preparedstatement.setString(4, httpservletrequest.getParameter("TAddress"));
+                preparedstatement.setString(5, httpservletrequest.getParameter("TPhno"));
+                preparedstatement.setString(6, httpservletrequest.getParameter("TMailId"));
+                preparedstatement.execute();
+                connection.commit();
+                System.out.println("Record Inserted");
+                s = "/inssuc1.jsp";
+            } else
+            if(s1.equalsIgnoreCase("DELETE"))
+            {
+                PreparedStatement preparedstatement1 = connection.prepareStatement("DELETE From Attendee_Master where MeetingId=?");
+                preparedstatement1.setInt(1, Integer.parseInt(httpservletrequest.getParameter("TMeetingId")));
+                preparedstatement1.execute();
+                connection.commit();
+                System.out.println("Record Deleted");
+                s = "/delsuc1.jsp";
+            } else
+            if(s1.equalsIgnoreCase("MODIFY"))
+            {
+                PreparedStatement preparedstatement2 = connection.prepareStatement("update Attendee_Master set NAME=?,DESG=?,ADDRESS=?,PHNO=?,MAILID=? where MEETINGID=?");
+                preparedstatement2.setString(1, httpservletrequest.getParameter("TName"));
+                preparedstatement2.setString(2, httpservletrequest.getParameter("TDesg"));
+                preparedstatement2.setString(3, httpservletrequest.getParameter("TAddress"));
+                preparedstatement2.setString(4, httpservletrequest.getParameter("TPhno"));
+                preparedstatement2.setString(5, httpservletrequest.getParameter("TMailId"));
+                preparedstatement2.setInt(6, Integer.parseInt(httpservletrequest.getParameter("TMeetingId")));
+                preparedstatement2.execute();
+                connection.commit();
+                System.out.println("Record Updated");
+                s = "/Updsuc1.jsp";
+            }
+        }
+        catch(Exception exception)
+        {
+            System.out.println(exception.toString());
+            if(connection == null)
+                s = "/Netfail1.jsp";
+            else
+                s = "/opefail1.jsp";
+        }
+        RequestDispatcher requestdispatcher = httpservletrequest.getRequestDispatcher(s);
+        requestdispatcher.forward(httpservletrequest, httpservletresponse);
+    }
+}
