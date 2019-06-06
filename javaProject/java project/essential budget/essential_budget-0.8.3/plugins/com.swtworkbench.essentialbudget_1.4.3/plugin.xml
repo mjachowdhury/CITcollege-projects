@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="com.swtworkbench.essentialbudget"
+   name="Essentialbudget Plug-in"
+   version="1.4.3"
+   provider-name="SWTWORKBENCH"
+   class="com.swtworkbench.essentialbudget.EssentialbudgetPlugin">
+
+   <runtime>
+      <library name="essentialbudget.jar"/>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="com.swtworkbench.bus"/>
+      <import plugin="com.swtworkbench.ed"/>
+      <import plugin="com.swtworkbench.rcplite"/>
+      <import plugin="com.swtworkbench.swtutils"/>
+   </requires>
+
+</plugin>

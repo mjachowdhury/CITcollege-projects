@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="org.apache.jakarta.oro"
+   name="Apache Jakarta Oro Plug-in"
+   version="1.4.3"
+   provider-name="Apache">
+
+   <runtime>
+      <library name="oro.jar">
+         <export name="*"/>
+      </library>
+      <library name="jakarta-oro-2.0.7.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+</plugin>

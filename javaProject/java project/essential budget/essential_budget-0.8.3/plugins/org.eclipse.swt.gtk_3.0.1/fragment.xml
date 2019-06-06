@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<fragment
+   id="org.eclipse.swt.gtk"
+   name="%fragmentName"
+   version="3.0.1"
+   provider-name="Eclipse.org"
+   plugin-id="org.eclipse.swt"
+   plugin-version="3.0.1">
+
+   <runtime>
+      <library name="ws/gtk/swt-pi.jar">
+         <export name="*"/>
+         <packages prefixes="org.eclipse.swt.internal.gtk"/>
+      </library>
+      <library name="ws/gtk/swt-mozilla.jar">
+         <export name="*"/>
+         <packages prefixes="org.eclipse.swt.internal.mozilla"/>
+      </library>
+   </runtime>
+
+
+</fragment>

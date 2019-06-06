@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="com.swtworkbench.bus"
+   name="Bus Plug-in"
+   version="1.4.3"
+   provider-name="SWTWORKBENCH">
+
+   <runtime>
+      <library name="bus.jar"/>
+   </runtime>
+
+   <requires>
+      <import plugin="com.swtworkbench.swtutils"/>
+      <import plugin="org.junit"/>
+      <import plugin="util.concurrent"/>
+   </requires>
+
+</plugin>

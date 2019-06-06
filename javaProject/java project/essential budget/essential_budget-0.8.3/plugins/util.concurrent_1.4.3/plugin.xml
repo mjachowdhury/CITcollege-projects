@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="util.concurrent"
+   name="Concurrent Plug-in"
+   version="1.4.3"
+   provider-name="">
+
+   <runtime>
+      <library name="concurrent.jar"/>
+   </runtime>
+
+</plugin>

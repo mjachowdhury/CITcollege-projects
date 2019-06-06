@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+       "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+   <data-sources >
+   <data-source type="oracle.jdbc.pool.OracleConnectionPoolDataSource">
+   <set-property property="URL" value="jdbc:oracle:thin:@nit19:1521:server"/>
+   <set-property property="user" value="scott"/>
+   <set-property  property="password" value="tiger"/>
+   </data-source>
+   </data-sources>
+   
+  <form-beans>
+  </form-beans>
+  
+  <action-mappings>
+  </action-mappings>
+  
+  <controller processorClass=""/>
+  </struts-config>

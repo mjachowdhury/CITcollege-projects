@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+    <x:children>
+        <composite x:style="BORDER"><!--bodyHolder-->
+            <layoutData x:class="gridData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+            <layout x:class="gridLayout" numColumns="2" makeColumnsEqualWidth="false" marginHeight="0" marginWidth="0"/>
+            <x:children>
+                <composite x:style="BORDER"><!--body-->
+                	<layout x:class="gridLayout" numColumns="1" makeColumnsEqualWidth="false" marginHeight="0" marginWidth="0"/>
+                	<layoutData x:class="gridData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+                	<x:children>
+                		<composite x:style="BORDER"><!--headerHolder-->
+		                	<layoutData x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL"/>
+                			<layout x:class="fillLayout"/>
+                			<x:children>
+                				<label text="This is the header"/>
+                			</x:children>
+                		</composite>
+                		<label x:style="SEPARATOR | HORIZONTAL">
+		                	<layoutData x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL"/>
+                		</label>
+                		<canvas x:style="BORDER"><!--MRO-->
+                			<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true"/>
+                		</canvas>
+                	</x:children>
+                </composite>
+                <composite x:style="BORDER"> <!--Vertical SliderHolder-->
+                	<layoutData x:class="gridData" grabExcessVerticalSpace="true" verticalAlignment="GridData.FILL"/>
+                	<layout x:class="fillLayout"/>
+                	<x:children>
+                		<slider x:style="VERTICAL"/>
+                	</x:children>
+                </composite>
+                <composite x:style="BORDER"> <!--Horizontal SliderHolder-->
+                	<layoutData x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL"/>
+                	<layout x:class="fillLayout"/>
+                	<x:children>
+                		<slider x:style="HORIZONTAL"/>
+                	</x:children>
+                </composite>
+            </x:children>
+        </composite>
+    </x:children>
+</xswt>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+    <x:children>
+        <composite x:id="contents">
+            <layoutData x:class="gridData" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+            <layout x:class="gridLayout" numColumns="4" marginHeight="0" marginWidth="0"/>
+            <x:children>
+            	<label x:style="CENTER" text="Budget Summary">
+		            <layoutData x:class="gridData" horizontalSpan="4" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+            	</label>
+            	<label x:style="CENTER">
+		            <layoutData x:class="gridData" horizontalSpan="4" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+            	</label>
+            	<label/>
+            	<label x:style="RIGHT" text="Budget">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" text="Actual">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" text="Difference">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	
+            	<label text="YTD Inflow"/>
+            	<label x:style="RIGHT" x:id="ytdInflowBudget">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="ytdInflowActual">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="ytdInflowDifference">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+
+            	<label text="YTD Outflow"/>
+            	<label x:style="RIGHT" x:id="ytdOutflowBudget">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="ytdOutflowActual">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="ytdOutflowDifference">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+
+            	<label text="YTD Difference"/>
+            	<label x:style="RIGHT" x:id="ytdDifferenceBudget">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="ytdDifferenceActual">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="ytdDifferenceDifference">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+
+            	<label x:style="SEPARATOR|HORIZONTAL">
+		            <layoutData x:class="gridData" horizontalSpan="4" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+            	</label>
+
+            	<label text="Total Inflow"/>
+            	<label x:style="RIGHT" x:id="totalInflowBudget">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="totalInflowActual">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="totalInflowDifference">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+
+            	<label text="Total Outflow"/>
+            	<label x:style="RIGHT" x:id="totalOutflowBudget">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="totalOutflowActual">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="totalOutflowDifference">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+
+            	<label text="Total Difference"/>
+            	<label x:style="RIGHT" x:id="totalDifferenceBudget">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="totalDifferenceActual">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            	<label x:style="RIGHT" x:id="totalDifferenceDifference">
+		            <layoutData x:class="gridData" widthHint="75"/>
+            	</label>
+            </x:children>
+        </composite>
+    </x:children>
+</xswt>

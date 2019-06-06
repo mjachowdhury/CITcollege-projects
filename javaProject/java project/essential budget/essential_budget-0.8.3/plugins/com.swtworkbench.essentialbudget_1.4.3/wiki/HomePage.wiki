@@ -1,0 +1,10 @@
+This is the HomePage for Essential Budget's local wiki.  Here, we keep track of various resources related to the Essential Budget project that are of interest only to the developers.
+
+Other resources here include:
+
+   * NextVersionPlan - Project planning document.
+   * ToDo - Our current project to-do list.
+   * DesignDoc - Design document.
+   * Essential Budget's online wiki: http://essentialbudget.sourceforge.net
+   
+   

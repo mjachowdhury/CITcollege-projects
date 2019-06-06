@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+       "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+   <data-sources>
+   <data-source type="oracle.jdbc.pool.OracleConnectionPoolDataSource">
+   <set-property property="URL" 
+   value="jdbc:oracle:thin:@localhost:1521:server"/>
+   <set-property property="user" value="eticketing"/>
+   <set-property  property="password" value="eticketing"/>
+   </data-source>
+   </data-sources>
+  
+   
+   <form-beans >
+            
+      <form-bean name="adminloginBean" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="pass" type="java.lang.String" />
+         <form-property name="name" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="loginBean" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="pass" type="java.lang.String" />
+         <form-property name="name" type="java.lang.String" />
+      </form-bean>
+      
+      <form-bean name="agentloginBean" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="pass" type="java.lang.String" />
+         <form-property name="name" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="agentReg" type="eticket.AgentRegistrationForm" />
+      <form-bean name="UserRegBean" type="eticket.UserRegistrationBean" />
+      <form-bean name="busForm" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="btype" type="java.lang.Integer" />
+         <form-property name="bname" type="java.lang.String" />
+         <form-property name="busno" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="addbustypeform" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="capacity" type="java.lang.Integer" />
+         <form-property name="tname" type="java.lang.String" />
+         <form-property name="desc" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="tripform" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="startpoint" type="java.lang.Integer" />
+         <form-property name="endpoint" type="java.lang.Integer" />
+         <form-property name="starttime" type="java.lang.String" />
+         <form-property name="endtime" type="java.lang.String" />
+         <form-property name="bno" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="locform" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="lname" type="java.lang.String" />
+         <form-property name="laddress" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="Offer" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="startdate" type="java.lang.String" />
+         <form-property name="applfor" type="java.lang.String" />
+         <form-property name="descr" type="java.lang.String" />
+         <form-property name="enddate" type="java.lang.String" />
+         <form-property name="offername" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="triphaltform" type="org.apache.struts.action.DynaActionForm">
+         <form-property name="lid" type="java.lang.Integer" />
+         <form-property name="trid" type="java.lang.Integer" />
+      </form-bean>
+      <form-bean name="adminform" type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="acity" type="java.lang.String" />
+         <form-property name="aaddress2" type="java.lang.String" />
+         <form-property name="astate" type="java.lang.String" />
+         <form-property name="aemail" type="java.lang.String" />
+         <form-property name="pass" type="java.lang.String" />
+         <form-property name="username" type="java.lang.String" />
+         <form-property name="alname" type="java.lang.String" />
+         <form-property name="aphno" type="java.lang.String" />
+         <form-property name="aaddress1" type="java.lang.String" />
+         <form-property name="afname" type="java.lang.String" />
+      </form-bean>
+      <form-bean name="sf" type="eticket.SendMailBean"/>
+      <form-bean name="ub" type="eticket.UserBean"/>
+      <form-bean name="ab" type="eticket.AgentBean"/>
+      <form-bean name="sdform" type="eticket.SrcDesForm" />
+      <form-bean name="busformtemp" type="eticket.BusFormTemp" />
+      <form-bean name="bform" type="eticket.BookForm" />
+      <form-bean name="hi" type="eticket.BookticketBean"/>
+   </form-beans>
+
+   <global-exceptions />
+   <global-forwards />
+   <action-mappings >
+       <action
+         attribute="ab"
+         name="ab"
+         path="/newpassA"
+         validate="false"
+         scope="session"
+         type="eticket.NewPassActionA">
+         <forward name="suc" path="/newpasssucA1.jsp" />
+	 	 <forward name="fail" path="/newpassfailA1.jsp" />
+	 	 </action>
+	
+     <action
+         attribute="ub"
+         name="ub"
+         path="/newpassC"
+         validate="false"
+         scope="session"
+         type="eticket.NewPassActionC">
+         <forward name="suc" path="/newpasssucC1.jsp" />
+	 	 <forward name="fail" path="/newpassfailC1.jsp" />
+	 	 </action>
+	 
+     <action
+         attribute="sf"
+         name="sf"
+         path="/delMail"
+         validate="false"
+         scope="session"
+         type="eticket.DelMailAction">
+         <forward name="suc" path="/sucadm.jsp" />
+	 	 </action>
+	 <action
+         attribute="sf"
+         name="sf"
+         path="/delMailc"
+         validate="false"
+         scope="session"
+         type="eticket.DelMailActionC">
+         <forward name="suc" path="/sucCdm.jsp" />
+	 	 </action>
+	 
+     
+     <action
+         attribute="sf"
+         name="sf"
+         path="/delMaila"
+         validate="false"
+         scope="session"
+         type="eticket.DelMailActionA">
+         <forward name="suc" path="/sucagdm.jsp" />
+	 	 </action>
+	  <action
+         attribute="sf"
+         name="sf"
+         path="/sub"
+         validate="false"
+         scope="session"
+         type="eticket.SubMesAction">
+         <forward name="suc" path="/viewdesc1.jsp" />
+	 	 </action>
+    
+     <action
+         attribute="sf"
+         name="sf"
+         path="/ViewMailC"
+         validate="false"
+         scope="session"
+         type="eticket.ViewMailActionC">
+         <forward name="suc" path="/viewCm.jsp" />
+	 
+	 </action>
+    
+     <action
+         attribute="sf"
+         name="sf"
+         path="/ViewMaila"
+         validate="false"
+         scope="session"
+         type="eticket.ViewMailActionA">
+         <forward name="suc" path="/viewagentm.jsp" />
+	  
+	 </action>
+	 
+     <action
+         attribute="sf"
+         name="sf"
+         path="/viewMail"
+         validate="false"
+         scope="session"
+         type="eticket.ViewMailAction">
+         <forward name="suc" path="/viewam.jsp" />
+	 
+	 </action>
+    
+     <action
+         attribute="sf"
+         name="sf"
+         path="/senda"
+         validate="false"
+         scope="session"
+         type="eticket.SendActionA">
+         <forward name="suc" path="/maila.jsp" />
+	  
+	 </action>
+     <action
+         attribute="sf"
+         name="sf"
+         path="/sendMaila"
+         validate="false"
+         scope="session"
+         type="eticket.SendMailActionA">
+         <forward name="suc" path="/sucagentm.jsp" />
+	  
+	 </action>
+	 
+     
+     <action
+         attribute="ub"
+         name="ub"
+         path="/viewCus"
+         validate="false"
+         scope="session"
+         type="eticket.ViewCusAction">
+         <forward name="suc" path="/viewcus.jsp" />
+	 	 
+	 </action>
+     
+     <action
+         attribute="sf"
+         name="sf"
+         input="/Mail1.jsp"
+         path="/sendMail"
+         validate="false"
+         scope="session"
+         type="eticket.SendMailAction">
+         <forward name="suc" path="/sucam.jsp" />
+	 
+	 
+	 </action>
+     
+      <action
+         attribute="adminloginBean"
+         input="/Adminlogin.jsp"
+         name="adminloginBean"
+         validate="false"
+         path="/Adminlogin"
+         scope="session"
+         type="eticket.AdminLoginAction">
+         <forward name="success" path="/AdminIndex.jsp" />
+	 <forward name="relog" path="/Adminlogin.jsp" />
+         <forward name="fail" path="/home.jsp" />
+      </action>
+      <action
+         attribute="agentloginBean"
+         input="/AgentLogin.jsp"
+         name="agentloginBean"
+         validate="false"
+         path="/Agentlogin"
+         scope="session"
+         type="eticket.AgentLoginAction">
+         <forward name="success" path="/AgentIndex.jsp" />
+         <forward name="relog" path="/AgentLogin.jsp" />
+         <forward name="fail" path="/home.jsp" />
+      </action>
+      <action
+         attribute="agentreg"
+         input="/AgentRegistration.jsp"
+         name="agentReg"
+         path="/AgentReg"
+         validate="false"
+         scope="session"
+         type="eticket.AgentRegistrationAction">
+         <forward name="success" path="/Information.jsp" />
+         <forward name="fail" path="/AgentRegistration.jsp" />
+      </action>
+      <action
+         attribute="agentreg"
+         input="/addadmin.jsp"
+         name="adminform"
+         path="/AddAdmin"
+         validate="false"
+         scope="session"
+         type="eticket.AddAdminAction">
+         <forward name="success" path="/addadminconf.jsp" />
+         <forward name="fail" path="/addadmin.jsp" />
+      </action>
+     
+    
+    
+    
+      <action
+         attribute="UserRegBean"
+         name="UserRegBean"
+         path="/UserReg"
+         validate="false"
+         scope="session"
+         input="/userreg.jsp"
+         type="eticket.UserRegistrationAction" >
+         <forward name="success" path="/Userlogin.jsp"/>
+         <forward name="fail" path="/UserRegistration.jsp"/>
+         </action>
+      <action
+         attribute="busForm"
+         name="busForm"
+         path="/Addbus"
+         validate="false"
+         scope="session"
+         input="/addbus.jsp"
+         type="eticket.AddBusAction" >
+         <forward name="success" path="/GetLocation.do"/>
+         <forward name="fail" path="/addbus1.jsp"/>
+         </action>
+      <action
+         attribute="busForm"
+         name="busForm"
+         path="/Getbus"
+         scope="session"
+         type="eticket.GetBusAction"
+         validate="false">
+         <forward name="success" path="/UpdateBus.jsp" />
+         <forward name="fail" path="/viewbus.jsp" />
+      </action>
+      <action
+         attribute="busForm"
+         name="busForm"
+         path="/Updatebus"
+         scope="session"
+         validate="false"
+         input="/UpdateBus.jsp"
+         type="eticket.UpdateBusAction">
+         <forward name="success" path="/Busupdateconf.jsp" />
+         <forward name="fail" path="/UpdateBus.jsp" />
+      </action>
+      <action path="/ViewBus" type="eticket.ViewBusAction"
+      scope="session">
+         <forward name="success" path="/viewbus.jsp" />
+         <forward name="fail" path="/Index.jsp" />
+      </action>
+      <action path="/ViewBusC" type="eticket.ViewBusAction"
+      scope="session">
+         <forward name="success" path="/viewbusC.jsp" />
+         <forward name="fail" path="/Menuc.jsp" />
+      </action>
+     
+      <action path="/DeleteBus" type="eticket.DeleteBusAction" scope="session">
+         <forward name="success" path="/DeleteBusConf.jsp" />
+         <forward name="fail" path="/viewbus.jsp" />
+      </action>
+      <action path="/PendingAgent" type="eticket.ViewPendingAgentAction" scope="session">
+         <forward name="success" path="/ViewPendingAgent.jsp" />
+         <forward name="fail" path="/Index.jsp" />
+      </action>
+      <action path="/Userlogin" type="eticket.UserLoginAction" scope="session"
+      name="loginBean" attribute="loginBean" input="/Userlogin1.jsp" validate="false">
+         <forward name="success" path="/Userservices.jsp" />
+         <forward name="fail" path="/Userlogin.jsp" />
+      </action>
+      <action path="/Accept" type="eticket.AcceptAgentAction" scope="session">
+         <forward name="success" path="/AcceptAgentConf.jsp" />
+         <forward name="fail" path="/ViewPendingAgent.jsp" />
+      </action>
+      <action path="/Reject" type="eticket.RejectAction" scope="session">
+         <forward name="success" path="/RejectAgentConf.jsp" />
+         <forward name="fail" path="/ViewPendingAgent.jsp" />
+      </action>
+      <action path="/GetBusType" type="eticket.GetBusTypeAction">
+         <forward name="success" path="/addbus1.jsp" />
+         <forward name="fail" path="/Index.jsp" />
+      </action>
+      <action
+         attribute="addbustypeform"
+         name="addbustypeform"
+         path="/AddBusType"
+         scope="session"
+         validate="false"
+         input="/addbustype1.jsp"
+         type="eticket.AddBusTypeAction" >
+         <forward name="success" path="/GetBusType.do" />
+         <forward name="fail" path="/addbustype.jsp" />
+         </action>
+      <action path="/GetLocation" type="eticket.GetLocationAction">
+         <forward name="success" path="/tripdetails.jsp" />
+         <forward name="fail" path="/addbus1.jsp" />
+      </action>
+      <action path="/addNewTrip" type="eticket.AddNewTripAction">
+         <forward name="success" path="/GetLocation.do" />
+      </action>
+      <action
+         attribute="tripform"
+         name="tripform"
+         path="/AddTrip"
+         validate="false"
+         input="/tripdetails1.jsp"
+         scope="session"
+         type="eticket.AddTripAction">
+         <forward name="success" path="/GetTripDetails.do" />
+         <forward name="fail" path="/tripdetails.jsp" />
+      </action>
+      <action
+         attribute="locform"
+         name="locform"
+         path="/AddLocation"
+         validate="false"
+         scope="request"
+         type="eticket.AddLocationAction">
+         <forward name="success" path="/tripdetails.jsp" />
+         <forward name="fail" path="/addlocation.jsp" />
+      </action>
+      <action path="/GetTripDetails" type="eticket.GetTripDetailsAction" scope="session">
+         <forward name="success" path="/triphalts.jsp" />
+         <forward name="fail" path="/tripdetails.jsp" />
+      </action>
+      <action path="/Logout" type="eticket.LogoutAction" scope="session">
+       <forward name="success" path="/Logout.jsp"/>
+       </action>
+      <action path="/ViewPermanentAgent" type="eticket.ViewPermanentAgentAction">
+         <forward name="success" path="/ViewPermanentAgent.jsp" />
+         <forward name="fail" path="/Index.jsp" />
+      </action>
+      <action path="/send" 
+      name="sf"
+      validate="false"
+      input="/Mail.jsp"
+      type="eticket.SendAction">
+         <forward name="suc" path="/Mail.jsp" />
+      </action>
+      <action
+         attribute="Offer"
+         name="Offer"
+         path="/AddOfferA"
+         input="/offer_form.jsp"
+         scope="session"
+         type="eticket.AddOfferAction">
+         <forward name="success" path="/insertofferconfa.jsp" />
+         <forward name="fail" path="/offer_forma.jsp" />
+      </action>
+      
+      <action
+         attribute="Offer"
+         name="Offer"
+         path="/AddOffer"
+         input="/offer_form.jsp"
+         scope="session"
+         validate="false"
+         type="eticket.AddOfferAction">
+         <forward name="success" path="/insertofferconf.jsp" />
+         <forward name="fail" path="/offer_form.jsp" />
+      </action>
+      <action path="/GetOffer" type="eticket.GetOfferAction">
+         <forward name="success" path="/ViewOfferDetails.jsp" />
+         <forward name="fail" path="/offer_form.jsp" />
+      </action>
+      <action path="/GetOfferA" type="eticket.GetOfferAction">
+         <forward name="success" path="/ViewOfferDetailsa.jsp" />
+         <forward name="fail" path="/offer_forma.jsp" />
+      </action>
+      
+      <action path="/GetOfferC" type="eticket.GetOfferAction">
+         <forward name="success" path="/ViewOfferC1.jsp" />
+         <forward name="fail" path="/offer_form.jsp" />
+      </action>
+      
+      <action path="/GetTrip" type="eticket.GetTripAction" scope="session">
+         <forward name="success" path="/tripdetails.jsp" />
+         <forward name="fail" path="/Index.jsp" />
+      </action>
+      <action path="/DeleteOffer" validate="false" type="eticket.DeleteOfferAction" scope="session">
+         <forward name="success" path="/deleteofferconf.jsp" />
+         <forward name="fail" path="/ViewOfferDetails.jsp" />
+      </action>
+      <action
+         attribute="Offer"
+         name="Offer"
+         path="/UpdateOffer"
+         scope="request"
+         validate="false"
+         type="eticket.UpdateOfferAction">
+         <forward name="success" path="/updateconf.jsp" />
+         <forward name="fail" path="/updatefail.jsp" />
+      </action>
+      <action
+         attribute="Offer"
+         name="Offer"
+         path="/UpdateOfferA"
+         scope="request"
+         validate="false"
+         type="eticket.UpdateOfferAction">
+         <forward name="success" path="/updateconfa.jsp" />
+         <forward name="fail" path="/updatefail.jsp" />
+      </action>
+      
+      <action
+         attribute="Offer"
+         name="Offer"
+         path="/GetModifyOffer"
+         scope="request"
+         validate="false"
+         type="eticket.GetModifyOfferAction">
+         <forward name="success" path="/updateoffer.jsp" />
+         <forward name="fail" path="/ViewOfferDetails.jsp" />
+      </action>
+      <action
+         attribute="Offer"
+         name="Offer"
+         path="/GetModifyOfferA"
+         scope="request"
+         validate="false"
+         type="eticket.GetModifyOfferAction">
+         <forward name="success" path="/updateoffera.jsp" />
+         <forward name="fail" path="/ViewOfferDetailsa.jsp" />
+      </action>
+      
+      <action
+         attribute="triphaltform"
+         name="triphaltform"
+         path="/AddTripHalt"
+         validate="false"
+         scope="session"
+         input="/triphalts.jsp"
+         type="eticket.AddTripHaltAction">
+         <forward name="success" path="/businsertconf.jsp" />
+         <forward name="fail" path="/triphalts.jsp" />
+      </action>
+      <action path="/ViewBusType" validate="false" type="eticket.ViewBusTypeAction">
+         <forward name="success" path="/viewbustype.jsp" />
+         <forward name="fail" path="/viewbus.jsp" />
+      </action>
+      <action path="/ViewTrip"  validate="false" type="eticket.ViewTripAction">
+         <forward name="success" path="/viewtripdetails.jsp" />
+         <forward name="fail" path="/viewbustype.jsp" />
+      </action>
+      <action path="/ViewHalts" validate="false" type="eticket.ViewHaltsAction">
+         <forward name="success" path="/viewtriphalts.jsp" />
+         <forward name="fail" path="/viewtripdetails.jsp" />
+      </action>
+      <action path="/ViewHaltsC"  validate="false" type="eticket.ViewHaltsAction">
+         <forward name="success" path="/viewhaltsc.jsp" />
+         <forward name="fail" path="/viewtripdetails.jsp" />
+      </action>
+      
+      <action 
+      attribute="tripform1" 
+      name="tripform" 
+      path="/EditTrip" 
+      validate="false"
+      type="eticket.EditTripAction"
+       scope="request">
+         <forward name="success" path="/edittripdetails.jsp" />
+         <forward name="fail" path="/viewtripdetails.jsp" />
+      </action>
+      <action
+         attribute="tripform1"
+         name="tripform"
+         path="/UpdateTrip"
+         validate="false"
+         input="/edittripdetails.jsp"
+         scope="session"
+         type="eticket.UpdateTripAction">
+         <forward name="success" path="/updatetripconf.jsp" />
+         <forward name="fail" path="/edittripdetails.jsp" />
+      </action>
+      <action path="/ViewLocation" validate="false" type="eticket.ViewLocationAction">
+         <forward name="success" path="/viewlocationdetails.jsp" />
+         <forward name="fail" path="/edittripdetails.jsp" />
+      </action>
+      <action path="/DeleteTrip" validate="false" type="eticket.DeleteTripAction">
+         <forward name="success" path="/tripdeleteconf.jsp" />
+         <forward name="fail" path="/viewtripdetails.jsp" />
+      </action>
+      <action 
+      path="/AllBusType" 
+      validate="false"  
+      type="eticket.AllBusTypeAction">
+         <forward name="success" path="/allbustypes.jsp" />
+         <forward name="fail" path="/Index.jsp" />
+      </action>
+      <action
+         attribute="adminform"
+         name="adminform"
+         path="/AddAdmin"
+         scope="session"
+         input="/addadmin.jsp"
+         validate="false"
+         type="eticket.AddAdminAction">
+         <forward name="success" path="/addadminconf.jsp" />
+         <forward name="fail" path="/addadmin.jsp" />
+      </action>
+      <action path="/ViewAdmin" validate="false" type="eticket.ViewAdminAction">
+         <forward name="success" path="/viewadmin.jsp" />
+         <forward name="fail" path="/Index.jsp" />
+      </action>
+      <action
+         attribute="addbustypeform1"
+         name="addbustypeform"
+         path="/UpdateBusType"
+         validate="false"
+         input="/updatebustype.jsp"
+         scope="session"
+         type="eticket.UpdateBusTypeAction">
+         <forward name="success" path="/updatetypeconf.jsp" />
+         <forward name="fail" path="/updatebustype.jsp" />
+      </action>
+      <action name="addbustypeform" validate="false" attribute="addbustypeform1" path="/BusType" type="eticket.BusTypeAction">
+         <forward name="success" path="/updatebustype.jsp" />
+         
+      </action>
+      <action path="/DeleteType" validate="false" type="eticket.DeleteTypeAction">
+         <forward name="success" path="/deletetypeconf.jsp" />
+         <forward name="fail" path="/viewbustype.jsp" />
+      </action>
+      <action name="agentReg" 
+       attribute="arf" path="/ModifyAgent" validate="false" type="eticket.ModifyAgentAction" scope="session">
+         <forward name="success" path="/modifyperagent.jsp" />
+         <forward name="fail" path="/permanentagentdetails.jsp" />
+      </action>
+      <action
+         attribute="arf"
+         name="agentReg"
+         path="/UpdateAgent"
+         scope="session"
+         validate="false"
+         type="eticket.UpdateAgentAction">
+         <forward name="success" path="/updateagentconf.jsp" />
+         <forward name="fail" path="/modifyperagent.jsp" />
+      </action>
+      <action path="/DeleteAgent" validate="false" type="eticket.DeleteAgentAction">
+         <forward name="success" path="/deleteagentconf.jsp" />
+         <forward name="fail" path="/permanentagentdetails.jsp" />
+      </action>
+      <action 
+      path="/sendMcag"
+      validate="false" 
+      type="eticket.SendActionCAg">
+         <forward name="suc" path="/mailCag.jsp" />
+      </action>
+      <action
+         attribute="sf"
+         name="sf"
+         path="/sendmailCAG"
+         scope="request" validate="false"
+         type="eticket.sendMailActionCAg">
+         <forward name="suc" path="/sucCag.jsp" />
+      </action>
+      <action path="/sendMcad" validate="false" type="eticket.SendActionCAd">
+         <forward name="suc" path="/mailCad.jsp" />
+      </action>
+      <action
+         attribute="sf"
+         name="sf"
+         path="/sendMailCAd"
+         scope="request" validate="false" 
+         type="eticket.SendMailActionCAd">
+         <forward name="suc" path="/sucmad.jsp" />
+      </action>
+      
+      <action 		
+      attribute="sdform"
+      name="sdform"     
+      path="/srcdesc"  validate="false"
+      scope="session"
+      type="eticket.SrcDesAction">
+         <forward name="suc" path="/srcdes1.jsp" />
+      </action>
+      <action 		
+      attribute="sdform"
+      name="sdform"     
+      path="/srcdescC"  validate="false"
+      scope="session"
+      type="eticket.SrcDesAction">
+         <forward name="suc" path="/srcdesC1.jsp" />
+      </action>
+     
+      <action path="/ChangeHalt" validate="false" type="eticket.ChangeHaltAction">
+         <forward name="suc" path="/sch.jsp" />
+      </action>
+      <action
+         attribute="BusBean"
+         name="BusBean"
+         path="/ViewTimings"
+         scope="request" validate="false"
+         type="eticket.ViewTimingAction">
+         <forward name="suc" path="/viewtimings.jsp" />
+      </action>
+      <action path="/viewbusdes" validate="false" attribute="sdform"
+      name="sdform" type="eticket.ViewBusDesAction" scope="session" input="srcdes.jsp">
+         <forward name="suc" path="/viewbusdes.jsp" />
+      </action>
+      <action path="/viewbusdesC" validate="false" attribute="sdform"
+      name="sdform" type="eticket.ViewBusDesAction" scope="session" input="srcdes.jsp">
+         <forward name="suc" path="/viewbusdesC.jsp" />
+      </action>
+     
+      <action
+         attribute="bform"
+         name="bform"
+         path="/bookAg"
+         scope="session"
+         validate="false"
+         type="eticket.BookAction">
+         <forward name="suc" path="/bookticket1.jsp" />
+        
+      </action>
+      
+      
+      
+      
+       <action
+         attribute="bform"
+         name="bform"
+         path="/bookC"
+         scope="session"
+         validate="false"
+         type="eticket.BookAction">
+         <forward name="suc" path="/bookticketC1.jsp" />
+      </action>
+      <action
+         attribute="bform"
+         name="bform"
+         path="/bookC1"
+         scope="session"
+         validate="false"
+         type="eticket.BookAction1">
+         <forward name="suc" path="/bookticketsucC.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+         </action>
+      <action
+      
+      attribute="bform"
+         name="bform"
+         path="/card"
+         scope="session"
+         validate="false"
+         type="eticket.CardAction">
+         <forward name="true" path="/bookticketsuc.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+         
+         </action>
+         
+         
+         
+              <action
+         attribute="bform"
+         name="bform"
+         path="/bookAg1"
+         scope="session"
+         validate="false"
+         type="eticket.BookAction1">
+         <forward name="suc" path="/bookticketsuc.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+      </action>
+      
+      
+      
+      
+      <action
+         attribute="bform"
+         name="bform"
+         path="/block"
+         scope="session"
+         validate="false"
+         type="eticket.BlockAction">
+         <forward name="suc" path="/blockticket.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+      </action>
+       <action
+         attribute="bform"
+         name="bform"
+         path="/blockC"
+         scope="session"
+         validate="false"
+         type="eticket.BlockAction">
+         <forward name="suc" path="/blockticketC.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+      </action>
+       <action
+         attribute="bform"
+         name="bform"
+         path="/block1"
+         scope="session"
+         validate="false"
+         type="eticket.BlockAction1">
+         <forward name="suc" path="/blockticket2.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+      </action>
+      <action
+         attribute="bform"
+         name="bform"
+         path="/blockC1"
+         scope="session"
+         validate="false"
+         type="eticket.BlockAction1">
+         <forward name="suc" path="/blockticketC2.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+      </action>
+       <action
+         attribute="bform"
+         name="bform"
+         path="/deltick"
+         scope="session"
+         validate="false"
+         type="eticket.DelTickAction">
+         <forward name="suc" path="/delticket.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+      </action>
+       <action
+         attribute="bform"
+         name="bform"
+         path="/deltickC"
+         scope="session"
+         validate="false"
+         type="eticket.DelTickAction">
+         <forward name="suc" path="/delticketC.jsp" />
+         <forward name="fail" path="/bookticketfail.jsp" />
+      </action>
+      
+      
+      
+	</action-mappings>
+<!--<controller processorClass="eticket.AdminRequestprocessor"/>-->
+      <message-resources parameter="eticket.ApplicationResources" />
+ <!--   <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,
+                                                  /WEB-INF/validation.xml"/>
+      </plug-in>-->
+
+   
+</struts-config>
+

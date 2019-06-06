@@ -1,0 +1,74 @@
+---+ Version 1.5 RC Issues
+--------------------------
+
+   * No known issues at this time...
+   
+
+---+ Version 1.5 Promotion
+--------------------------
+
+
+---++ Documentation
+
+   * Finish tutorials/reference
+
+---++ PR
+
+   * New screen shots on web site(s)
+   * Announce on web site / blog
+   * Newsgroup announcements
+   * SourceForge news announcement
+   * FreshMeat news announcement
+   * Tucows annoucement
+   * Contact Joe Barr/NewsForge
+   * Contact Eclipse Tips editor
+   
+---++ Packaging
+
+   * Build native binary for win32 and Linux
+   * Package EBudget using RPM and DEB for Red Hat Fedora and Debian
+   
+---++ Articles
+
+   * Linux Journal article on native Java compilation and EBudget
+   * JDJ article on Essential Data
+   
+
+---+ Essential Data / Essential Budget Version 2.0 Plan
+-------------------------------------------------------
+
+---++ Theme: End-to-end solution
+
+   * Make a Hibernate back-end for Essential Budget to prove that we support databases
+   * Abstract property setting/getting into a Command pattern interface so we can have automatic middle-tier support
+   * Eclipse support
+      * Make sure ED can be used with VEP
+      * Implement visual class wizard support for RCPLite applications
+   * Build a full Eclipse RCP version of Essential Budget
+   * Investigate using RSWT to remotely publish UIs
+   * Investigate automatically hooking up UIs to data structures (XSWT?)
+
+---++ Theme: Essential Budget maturity
+
+   * Implement budget summary
+   * Move to XStream file format
+   * Migrate Transacations view to MROTable
+      * Detail table refresh problems
+   * Help | Definitions window to explain the terminology
+   * File | Account Setup: Account/category/beginning balance setup wizard; explain how to use MROTable
+   * Online help -- Explain how to use the table control, terminology definitions
+
+
+---++ Bug fixes
+
+   * Cross-platform
+      * Scroll bar limits aren't always set correctly in MROTable
+      * Resizing the MROTable messes up MROTable's idea of the current row
+      * Make sure that Transactions re-sort properly when a date is changed
+         * To be done properly, Essential Data needs new API to allow the developer to specify sort fields/constraints
+   * Linux
+      * When a field's value gets set (for example as a result of a master-detail refresh), the last field to receive a value winds up selected, even though the selection could be in a very different place from the focus.
+
+--------
+
+Back to HomePage.

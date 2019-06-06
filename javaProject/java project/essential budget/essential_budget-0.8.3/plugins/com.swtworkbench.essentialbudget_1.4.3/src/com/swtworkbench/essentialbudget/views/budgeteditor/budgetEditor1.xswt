@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+    <x:children>
+        <composite x:id="contents">
+            <layoutData x:class="gridData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+            <layout x:class="gridLayout" numColumns="3" marginWidth="10" horizontalSpacing="20"/>
+            <x:children>
+            	<!-- Page header -->
+            	<composite>
+            		<layoutData x:class="gridData" horizontalAlignment="GridData.BEGINNING" grabExcessHorizontalSpace="true"/>
+            		<layout x:class="fillLayout"/>
+            		<x:children>
+		            	<button x:id="first" text="|&lt;&lt;"/>
+		            	<button x:id="prev" text="&lt;"/>
+		            	<button x:id="next" text=">"/>
+		            	<button x:id="last" text=">>|"/>
+            		</x:children>
+            	</composite>
+            	<label x:style="CENTER" x:id="categoryName">
+            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" grabExcessHorizontalSpace="true"/>
+            	</label>
+            	<composite>
+            		<layoutData x:class="gridData" horizontalAlignment="GridData.END" grabExcessHorizontalSpace="true"/>
+            		<layout x:class="gridLayout" numColumns="4" horizontalSpacing="0"/>
+            		<x:children>
+		            	<label text="Category "/>
+		            	<label x:id="catNo"/>
+		            	<label text=" of "/>
+		            	<label x:id="catTotal"/>
+            		</x:children>
+            	</composite>
+            	<label x:style="SEPARATOR|HORIZONTAL">
+            		<layoutData x:class="gridData" horizontalSpan="3" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL"/>
+            	</label>
+
+            	<!-- Main Table holder -->
+            	<composite>
+            		<layoutData x:class="gridData" horizontalSpan="3" horizontalAlignment="GridData.CENTER"/>
+		            <layout x:class="gridLayout" numColumns="2" marginWidth="0" marginHeight="0" horizontalSpacing="0"/>
+            		<x:children>
+
+		            	<!-- Scroll bar -->
+		            	<list x:style="BORDER">
+							<layoutData x:class="gridData" verticalAlignment="GridData.FILL"/>
+		            	</list>
+<!--		            	<slider x:style="VERTICAL">
+							<layoutData x:class="gridData" verticalAlignment="GridData.FILL"/>
+		            	</slider>-->
+
+		            	<!-- Main Table -->
+		            	<composite>
+							<layoutData x:class="gridData" grabExcessHorizontalSpace="true" verticalAlignment="GridData.FILL" horizontalAlignment="GridData.FILL"/>
+				            <layout x:class="gridLayout" numColumns="4" marginWidth="10" horizontalSpacing="20"/>
+		            		<x:children>
+		
+		 			          	<!-- "Table" header -->
+		 		            	<label />
+				            	<label text="Budget" x:style="RIGHT">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" widthHint="100"/>
+				            	</label>
+				            	<label text="Actual"  x:style="RIGHT">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" widthHint="100"/>
+				            	</label>
+				            	<label text="Difference"  x:style="RIGHT">
+				            		<layoutData x:class="gridData" widthHint="100"/>
+				            	</label>
+				            	
+				            	<!-- "Table" body -->
+				            	<label x:id="month">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" widthHint="50"/>
+				            	</label>
+				            	<text x:id="budget" x:style="BORDER|RIGHT">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL"/>
+				            	</text>
+				            	<label x:id="actual" x:style="RIGHT">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL"/>
+				            	</label>
+				            	<label x:id="difference" x:style="RIGHT">
+				            		<layoutData x:class="gridData" widthHint="100"/>
+				            	</label>
+				            	
+				            	<!-- "Table" footer -->
+				            	<label x:style="SEPARATOR|HORIZONTAL">
+				            		<layoutData x:class="gridData" horizontalSpan="4" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL"/>
+				            	</label>
+				
+				            	<label text="Total">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" widthHint="50"/>
+				            	</label>
+				            	<label x:style="RIGHT" x:id="totalBudget">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" widthHint="100"/>
+				            	</label>
+				            	<label x:style="RIGHT" x:id="totalActual">
+				            		<layoutData x:class="gridData" horizontalAlignment="GridData.FILL" widthHint="100"/>
+				            	</label>
+				            	<label x:style="RIGHT" x:id="totalDifference">
+				            		<layoutData x:class="gridData" widthHint="100"/>
+				            	</label>
+		            		</x:children>
+		            	</composite>
+		            	
+            		</x:children>
+            	</composite>
+
+            </x:children>
+        </composite>
+    </x:children>
+</xswt>

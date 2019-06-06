@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+    <import xmlns="http://sweet_swt.sf.net/xswt">
+        <package name="java.lang"/>
+        <package name="org.eclipse.swt.widgets"/>
+        <package name="org.eclipse.swt.layout"/>
+    </import>
+    <x:children>
+        <composite>
+            <layoutData x:class="gridData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+            <layout x:class="gridLayout" marginHeight="0" marginWidth="0" numColumns="2" horizontalSpacing="0" verticalSpacing="0"/>
+            <x:children>
+            	<composite>
+		            <layoutData x:class="gridData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+		            <layout x:class="gridLayout" marginHeight="0" marginWidth="0" numColumns="1" horizontalSpacing="0" verticalSpacing="0"/>
+            		<x:children>
+						<table x:id="table" x:style="BORDER" linesVisible="true" headerVisible="true">
+							<layoutData x:class="gridData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" horizontalAlignment="GridData.FILL" verticalAlignment="GridData.FILL"/>
+						</table>
+					</x:children>
+				</composite>
+            	<composite>
+		            <layoutData x:class="gridData" grabExcessVerticalSpace="true" verticalAlignment="GridData.FILL" widthHint="0"/>
+		            <layout x:class="fillLayout"/>
+            		<x:children>
+						<slider x:style="VERTICAL" x:id="verticalSlider"/>
+					</x:children>
+				</composite>
+            	<composite>
+		            <layoutData x:class="gridData" grabExcessHorizontalSpace="true" horizontalAlignment="GridData.FILL" heightHint="0"/>
+		            <layout x:class="fillLayout"/>
+            		<x:children>
+						<slider x:style="HORIZONTAL" x:id="horizontalSlider"/>
+					</x:children>
+				</composite>
+            </x:children>
+        </composite>
+    </x:children>
+</xswt>

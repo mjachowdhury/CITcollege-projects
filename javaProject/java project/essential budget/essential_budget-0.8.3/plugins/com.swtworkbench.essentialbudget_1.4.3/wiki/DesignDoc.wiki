@@ -1,0 +1,12 @@
+Design documents are kept online at:
+
+http://essentialbudget.sourceforge.net/cgi-bin/home?EssentialBudgetHome
+
+or:
+
+EssentialBudget:EssentialBudgetHome
+
+If Essential Budget is in your InterWiki map.
+
+----
+Back to HomePage

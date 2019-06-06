@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="com.swtworkbench.swtutils"
+   name="Swtutils Plug-in"
+   version="1.4.3"
+   provider-name="SWTWORKBENCH">
+
+   <runtime>
+      <library name="swtutils.jar"/>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+   </requires>
+
+</plugin>

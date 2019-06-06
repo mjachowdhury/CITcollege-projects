@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="com.swtworkbench.ed"
+   name="Essential Data Plug-in"
+   version="1.4.3"
+   provider-name="SWTWORKBENCH">
+
+   <runtime>
+      <library name="ed.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.junit"/>
+      <import plugin="org.apache.jakarta.oro"/>
+      <import plugin="com.swtworkbench.bus"/>
+      <import plugin="com.swtworkbench.swtutils"/>
+   </requires>
+
+</plugin>

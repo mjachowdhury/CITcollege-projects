@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="com.swtworkbench.rcplite"
+   name="Rcplite Plug-in"
+   version="1.4.3"
+   provider-name="SWTWORKBENCH">
+
+   <runtime>
+      <library name="rcplite.jar"/>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="com.swtworkbench.swtutils"/>
+      <import plugin="com.swtworkbench.bus"/>
+   </requires>
+
+</plugin>
