@@ -1,0 +1,176 @@
+Answer the following questions for the classschedule database:
+
+Q.1. DISPLAY THE CLASS ROSTER, INCLUDING STUDENT NAME, FOR ALL STUDENTS ENROLLED IN SECTION 2714 OF ISM 4212.
+
+mysql> select Student.student_id,student_name, 
+    ->Section.course_id, 
+    ->Registration.section_no 
+    ->from Student,Section,Registration 
+    ->where Section.section_no=Registration.section_no 
+    ->and Student.student_id=Registration.student_id 
+    ->and Registration.section_no=2714 order by student_name;
++------------+--------------+-----------+------------+
+| student_id | student_name | course_id | section_no |
++------------+--------------+-----------+------------+
+|      54907 | Altvater     | ISM 4212  |       2714 |
+|      38214 | Letersky     | ISM 4212  |       2714 |
++------------+--------------+-----------+------------+
+2 rows in set (0.05 sec)
+
+
+For the adult literacy database, add a tutor report table with the
+following data: tutor_report (match_id, month, hours, lessons) where
+(match_id and month) form a PK and match_id is a FK.
+
+mysql> select*from tutor_report;
++----------+-------+-------+---------+
+| match_id | month | hours | lessons |
++----------+-------+-------+---------+
+|        1 | 6-08  |     8 |       4 |
+|        1 | 7-08  |     4 |       2 |
+|        4 | 6-08  |     8 |       6 |
+|        4 | 7-08  |    10 |       5 |
+|        5 | 6-08  |     4 |       4 |
++----------+-------+-------+---------+
+5 rows in set (0.05 sec)
+
+
+Q.1. LIST ALL ACTIVE STUDENTS IN JUNE BY STUDENT ID. INCLUDE THE NUMBER OF
+HOURS RECEIVED TUTORING AND HOW MANY LESSONS THEY COMPLETED.
+
+mysql> select Student.student_id,Match_History.match_id,tutor_report.match_id,month,hours,lessons from Student,Match_History,tutor_report where Student.student_id=Match_History.student_id and Match_History.match_id=tutor_report.match_id and tutor_report.month='6-08';
++------------+----------+----------+-------+-------+---------+
+| student_id | match_id | match_id | month | hours | lessons |
++------------+----------+----------+-------+-------+---------+
+| 3000       | 1        |        1 | 6-08  |     8 |       4 |
+| 3003       | 4        |        4 | 6-08  |     8 |       6 |
+| 3004       | 5        |        5 | 6-08  |     4 |       4 |
++------------+----------+----------+-------+-------+---------+
+3 rows in set (0.01 sec)
+
+
+---------------------------***********************************-------------------------------
+
+
+Answer the following questions for the stayHome database:
+1. List all videos along with the name of the director.
+2. List all videos along with the name of the director, the names of the actors, and their associated roles.
+3. List the number of videos handled by each staff member.
+
+
+Q.1. LIST ALL VIDEOS ALONG WITH THE NAME OF THE DIRECTOR.
+
+mysql> select catalogNo,Title, Category, v.directorNo, directorName 
+    -> from video v, director d
+    -> where v.directorNo=d.directorNo;
++-----------+--------------------+----------+------------+------------------+
+| catalogNo | Title              | Category | directorNo | directorName     |
++-----------+--------------------+----------+------------+------------------+
+|    207132 | Die Another Day    | Action   | D1001      | Lee Tamahori     |
+|    330553 | Lord of the Rings  | Fantasy  | D4576      | Peter Jackson    |
+|    445624 | Men in Black II    | Action   | D5743      | Barry Sonnenfeld |
+|    634817 | Independence Day   | Sci-Fi   | D3765      | Roland Emmerick  |
+|    781132 | Shrek              | Children | D0078      | Andrew Adamson   |
+|    902355 | Harry Potter       | Children | D7834      | Chris Columbus   |
++-----------+--------------------+----------+------------+------------------+
+6 rows in set (0.00 sec)
+
+
+Q.2. LIST ALL VIDEOS ALONG WITH THE NAME OF THE DIRECTOR, THE NAMES OF THE ACTORS, AND THEIR ASSOCIATED ROLES.
+
+mysql> select v.catalogNo,Title, Category, directorName, actorName, characters 
+    ->from video v, director d, actor a, role r 
+    ->where d.directorNo = v.directorNo 
+    ->and v.catalogNo = r.catalogNo 
+    ->and r.actorNo = a.actorNo;
++-----------+--------------------+----------+------------------+----------------+-----------------+
+| catalogNo | Title              | Category | directorName     | actorName      | characters      |
++-----------+--------------------+----------+------------------+----------------+-----------------+
+|    207132 | Die Another Day    | Action   | Lee Tamahori     | Pierce Brosnan | James Bond      |
+|    330553 | Lord of the Rings  | Fantasy  | Peter Jackson    | Elijah Wood    | Frodo Baggins   |
+|    445624 | Men in Black II    | Action   | Barry Sonnenfeld | Will Smith     | Agent J         |
+|    634817 | Independence Day   | Sci-Fi   | Roland Emmerick  | Will Smith     | Captain Steve H |
+|    781132 | Shrek              | Children | Andrew Adamson   | Mike Myers     | Shrek           |
+|    902355 | Harry Potter       | Children | Chris Columbus   | Elijah Wood    | Harry Potter    |
++-----------+--------------------+----------+------------------+----------------+-----------------+
+6 rows in set (0.00 sec)
+
+Q.3. LIST THE NUMBER OF VIDEOS HANDLED BY EACH STAFF MEMBER.
+
+mysql> select StaffNo,name,position from Staff where branchNo=(select branchNo from branch where Street='City Center Plaza');
++---------+---------------+------------+
+| StaffNo | name          | position   |
++---------+---------------+------------+
+| S0010   | Mary Martinez | Manager    |
+| S3250   | Robert Chin   | Supervisor |
++---------+---------------+------------+
+2 rows in set (0.00 sec)
+
+
+----------------------*******************************----------------------------------------
+
+
+Answer the following questions for the hotelBooking database:
+4. List the number of rooms in each hotel in London.
+5. List the number of rooms in each hotel [Note: No need to use the joining to answer this query].
+6. List the details of all rooms at the Grosvenor Hotel, including the name of the guest staying in the room, if the room is occupied.
+7. List the rooms that are currently unoccupied at the Grosenor Hotel.
+
+
+Q.4. LIST THE NUMBER OF ROOMS IN EACH HOTEL IN LONDON.
+
+mysql> select r.hotel_no, count(room_no)
+    -> from Room r, Hotel h
+    -> where r.hotel_no = h.hotel_no
+    -> and city='London'
+    -> group by r.hotel_no;
+Empty set (3.54 sec)
+
+
+Q.5. LIST THE NUMBER OF ROOMS IN EACH HOTEL [NOTE: NO NEED TO USE THE JOINING TO ANSWER THIS QUERY].
+
+mysql> select hotel_no, count(room_no)
+    -> from Room
+    -> group by hotel_no;
++----------+----------------+
+| hotel_no | count(room_no) |
++----------+----------------+
+| H001     |              3 |
+| H002     |              1 |
+| H003     |              2 |
+| H004     |              1 |
++----------+----------------+
+4 rows in set (0.00 sec)
+
+
+Q.6.LIST THE DETAILS OF ALL ROOMS AT THE GROSVENOR HOTEL, INCLUDING THE NAME OF THE GUEST STAYING IN THE ROOM, IF THE ROOM IS OCCUPIED.
+
+mysql> select r.*from Room r left join
+    -> (select g.guest_name, h.hotel_no, b.room_no
+    -> from Guest g, Booking b, Hotel h
+    -> where g.guest_no = b.guest_no
+    -> and b.hotel_no = h.hotel_no
+    -> and hotel_name = 'Grosvenor'
+    -> and date_from<= current_date and date_to>= current_date) as xxx
+    -> on r.hotel_no = xxx.hotel_no and r.room_no = xxx.room_no;
++---------+----------+---------+-------+
+| room_no | hotel_no | type    | price |
++---------+----------+---------+-------+
+| R001    | H001     | single  |    30 |
+| R101    | H001     | double  |    25 |
+| R104    | H002     | double  |    90 |
+| R110    | H003     | double  |    35 |
+| R210    | H003     | family  |   200 |
+| R302    | H001     | family  |    40 |
+| R907    | H004     | amily   |   200 |
++---------+----------+---------+-------+
+7 rows in set (1.86 sec)
+
+
+Q.7. LIST THE ROOMS THAT ARE CURRENTLY UNOCCUPIED AT THE GROSENOR HOTEL.
+
+mysql> (select*from Booking b, Hotel h,Room r where (date_from<='2012-08-02' and date_to >='2013-01-14') and r.hotel_no = b.hotel_no and r.room_no = b.room_no and r. hotel_no = h.hotel_no and hotel_name = 'Grosvenor');
+Empty set (0.00 sec)
+
+
+

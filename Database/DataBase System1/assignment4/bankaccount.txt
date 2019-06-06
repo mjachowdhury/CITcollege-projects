@@ -1,0 +1,60 @@
+Write SQL questions to answer the following questions based on the BankAccount database.
+1. What is the average balance for each type of account in the bank?
+2. How many debit transactions have been made between Jan 2004 and March 2004?
+3. List all the mails whose size is more than 100000 bytes, the results are sorted by the size of the mails.
+4. List all tricia's mail records and sort her mails by host, and then by user within each host.
+
+Q1. What is the average balance for each type of account in the bank?
+
+mysql> select avg(balance) as Average_balance from Account;
+
++-------------------+
+| Average_balance   |
++-------------------+
+| 321.7280029296875 |
++-------------------+
+1 row in set (0.00 sec)
+
+Q2. How many debit transactions have been made between Jan 2004 and March 2004?
+
+mysql> select count(txn_type_cd) as Debit_transactions from Transactions where TransDate >='2004
++--------------------+
+| Debit_transactions |
++--------------------+
+|                  4 |
++--------------------+
+1 row in set (0.00 sec)
+
+
+Q 3. List all the mails whose size is more than 100000 bytes, the results are sorted by the size of the mails.
+
+mysql> select*from Mail where sizes >'100000' order by sizes desc;
++----------------------+---------+---------+---------+---------+---------+
+| sentDateTime         | Srcuser | Srchost | dstuser | dsthost | sizes   |
++----------------------+---------+---------+---------+---------+---------+
+| 2006-05-14 17:03:01  | tricia  | saturn  | phil    | venus   | 2394482 |
+| 2006-05-15 10:25:52  | gene    | mars    | tricia  | saturn  |  998532 |
+| 2006-05-12 12:48:13  | tricia  | mars    | gene    | venus   |  194925 |
++----------------------+---------+---------+---------+---------+---------+
+3 rows in set (0.00 sec)
+
+Q4. List all tricia's mail records and sort her mails by host, and then by user within each 
+
+mysql> select Srcuser,Srchost,dstuser,dsthost from Mail where Srcuser='tricia' or dstuser='tricia' order by Srcuser,Srchost,dstuser,dsthost;
++---------+---------+---------+---------+
+| Srcuser | Srchost | dstuser | dsthost |
++---------+---------+---------+---------+
+| barb    | saturn  | tricia  | mars    |
+| barb    | saturn  | tricia  | venus   |
+| gene    | mars    | tricia  | saturn  |
+| phil    | mars    | tricia  | saturn  |
+| phil    | mars    | tricia  | saturn  |
+| tricia  | mars    | gene    | venus   |
+| tricia  | saturn  | phil    | venus   |
++---------+---------+---------+---------+
+7 rows in set (0.00 sec)
+
+
+
+
+

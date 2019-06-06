@@ -1,0 +1,123 @@
+For the BankAccount database, write SQL statements to answer the following queries:
+
+1. Find all customers with the last name "Smith"
+2. List all products and customers who have balance between $200 and $500
+3. List all transaction details on the March 2004.
+4. List all the mail records (when it is sent, from who and who is the host) so that the host begins with the letter s.
+5. Find messages sent by barb to tricia
+6. List all the messages with minimum 500 kilobytes size (hint the size in your table is in bytes)
+7. Find messages whose sender is alphabetically starting before letter c and the size of the message is more than 5000 bytes
+8. List different senders and receivers in the mail record
+
+Q1. FIND ALL CUSTOMERS WITH THE LAST NAME "SMITH"
+
+mysql> select lname from Customer where lname like '%Smith%';
++-------+
+| lname |
++-------+
+| Smith |
++-------+
+1 row in set (0.00 sec)
+
+
+Q2. LIST ALL PRODUCTS AND CUSTOMERS WHO HAVE BALANCE BETWEEN $200 AND $500
+
+mysql> select product_cd,cust_id, balance from Account where balance between 200 and 500;
++------------+---------+---------+
+| product_cd | cust_id | balance |
++------------+---------+---------+
+| SAV        |       1 |     250 |
+| MM         |       2 |     500 |
++------------+---------+---------+
+2 rows in set (0.74 sec)
+
+
+Q3. LIST ALL TRANSACTION DETAILS ON THE MARCH 2004.
+
+mysql> select txn_id,TransDate from Transactions where TransDate > '2004-03-01' and TransDate <'2004-03-31';
++--------+------------+
+| txn_id | TransDate  |
++--------+------------+
+|    980 | 2004-03-09 |
+|    981 | 2004-03-25 |
+|    984 | 2004-03-27 |
++--------+------------+
+3 rows in set (1.28 sec)
+
+
+Q4. LIST ALL THE MAIL RECORDS (WHEN IT IS SENT, FROM WHO AND WHO IS THE HOST) SO THAT THE HOST BEGINS WITH THE LETTER S.
+
+mysql> select sentDateTime, Srcuser, Srchost,dsthost from Mail where dsthost like 's%';
++---------------------+---------+---------+---------+
+| sentDateTime        | Srcuser | Srchost | dsthost |
++---------------------+---------+---------+---------+
+| 2006-05-12 15:02:49 | phil    | mars    | saturn  |
+| 2006-05-14 11:52:17 | phil    | mars    | saturn  |
+| 2006-05-15 07:17:48 | gene    | mars    | saturn  |
+| 2006-05-15 10:25:52 | gene    | mars    | saturn  |
+| 2006-05-17 12:49:23 | phil    | mars    | saturn  |
++---------------------+---------+---------+---------+
+5 rows in set (0.01 sec)
+
+Q5. FIND MESSAGES SENT BY BARB TO TRICIA
+
+ mysql> select Srcuser, dstuser from Mail where Srcuser='barb' and dstuser='tricia';
++---------+---------+
+| Srcuser | dstuser |
++---------+---------+
+| barb    | tricia  |
+| barb    | tricia  |
++---------+---------+
+2 rows in set (0.00 sec)
+
+
+Q6.LIST ALL THE MESSAGES WITH MINIMUM 500 KILOBYTES SIZE (HINT THE SIZE IN YOUR TABLE IS IN BYTES)
+
+mysql> select*from Mail where sizes >=500000;
++---------------------+---------+---------+---------+---------+---------+
+| sentDateTime        | Srcuser | Srchost | dstuser | dsthost | sizes   |
++---------------------+---------+---------+---------+---------+---------+
+| 2006-05-14 17:03:01 | tricia  | saturn  | phil    | venus   | 2394482 |
+| 2006-05-15 10:25:52 | gene    | mars    | tricia  | saturn  |  998532 |
++---------------------+---------+---------+---------+---------+---------+
+2 rows in set (0.00 sec)
+ 
+
+Q7.FIND MESSAGES WHOSE SENDER IS ALPHABETICALLY STARTING BEFORE LETTER C AND THE SIZE OF THE MESSAGE IS MORE THAN 5000 BYTES
+
+ mysql> select Srcuser,Sizes from Mail where Srcuser < 'c' and Sizes >5000;
++---------+-------+
+| Srcuser | Sizes |
++---------+-------+
+| barb    | 58274 |
+| barb    | 98151 |
++---------+-------+
+2 rows in set (0.00 sec)
+
+
+Q8.LIST DIFFERENT SENDERS AND RECEIVERS IN THE MAIL RECORD.
+
+mysql> Select distinct Srcuser from Mail;
++---------+
+| Srcuser |
++---------+
+| barb    |
+| tricia  |
+| phil    |
+| ene     |
+| gene    |
++---------+
+5 rows in set (0.16 sec)
+mysql> Select distinct dstuser from Mail;
++---------+
+| dstuser |
++---------+
+| tricia  |
+| gene    |
+| phil    |
+| barb    |
++---------+
+4 rows in set (0.00 sec)
+
+
+

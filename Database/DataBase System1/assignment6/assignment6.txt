@@ -1,0 +1,168 @@
+Consider the hotelbooking and answer the following queries with mysql:
+1. List the price and type of all rooms at the Grosvenor Hotel.
+2. List all guests currently staying at the Grosvenor Hotel.
+
+Q.1. LIST THE PRICE AND TYPE OF ALL ROOMS AT THE GROSVENOR HOTEL.
+
+mysql> select price,type
+    -> from Room
+    -> where hotel_no
+    -> =(select hotel_no from Hotel where hotel_name='Grosvenor');
++-------+---------+
+| price | type    |
++-------+---------+
+|    35 | double  |
+|   200 | family  |
++-------+---------+
+2 rows in set (0.00 sec)
+
+
+mysql> select price,type
+    -> from Hotel,Room
+    -> where hotel_name='Grosvenor';
++-------+---------+
+| price | type    |
++-------+---------+
+|    30 | single  |
+|    25 | double  |
+|    90 | double  |
+|    35 | double  |
+|   200 | family  |
+|    40 | family  |
+|   200 | amily   |
++-------+---------+
+7 rows in set (0.54 sec)
+
+Q.2. LIST ALL GUESTS CURRENTLY STAYING AT THE GROSVENOR HOTEL.
+
+
+mysql> select guest_name 
+    -> from Guest,Hotel
+    -> where(hotel_name='Grosvenor');
++------------+
+| guest_name |
++------------+
+| Mary       |
+| Tom        |
+| John       |
+| Sephenie   |
++------------+
+4 rows in set (0.00 sec)
+
+mysql> select*from Guest where guest_no= (select guest_no from Booking where date_from='2008-08-02' and date_to='2013-01-14' and hotel_no=(select hotel_no from Hotel where hotel_name='Grosvenor'));
+Empty set (0.00 sec)
+
+
+mysql> select*from Guest
+    -> where guest_no=
+    -> (select guest_no from Booking where date_from<=current_date and date_to>=current_date and hotel_no=(select hotel_no from Hotel   	where   hotel_name='Grosvenor'));
+Empty set (0.98 sec)
+
+-------------------------------********************************----------------------------------------
+
+Consider the classSchedule and answer the following queries with mysql:
+
+1.Which students were not enrolled in any courses during Semester I-2008?
+2.Display all courses for which Professor Berndt has been qualified
+
+
+Q.1.WHICH STUDENTS WERE NOT ENROLLED IN ANY COURSES DURING SEMESTER I-2008?
+
+mysql> select student_id,student_name from Student where not exists (select *from Registration where Student.student_id=Registration.student_id and semester='I-2008');
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|      54907 | Altvater     |
+|      70542 | Marra        |
++------------+--------------+
+2 rows in set (0.00 sec)
+
+Q.2.DISPLAY ALL COURSES FOR WHICH PROFESSOR BERNDT HAS BEEN QUALIFIED
+
+mysql> select Course.course_id,course_name 
+    -> from Faculty,Course,Qualified
+    -> where Faculty.faculty_name='Berndt'
+    -> and Faculty.faculty_id=Qualified.faculty_id
+    -> and Course.course_id=Qualified.course_id;
++-----------+-------------+
+| course_id | course_name |
++-----------+-------------+
+| ISM 4212  | Database    |
++-----------+-------------+
+1 row in set (1.88 sec)
+
+
+
+-------------------------******************************------------------------------------
+
+Use the subquery to answer all the queries.
+Answer the following questions for the stayHome database
+
+1. List all staff whose salary is greater than the average salary, and show by how much their salary is greater than the average.
+2. List the videos that are handled by staff who work in the branch at 'city center Plaza'.
+3. Find all staff whose salary is larger than the salary of at least one member of staff at branch B001.
+4. Find all staff whose salary is larger than the salary of every member of staff at branch B001.
+
+
+
+Q.1. LIST ALL STAFF WHOSE SALARY IS GREATER THAN THE AVERAGE SALARY, AND SHOW BY HOW MUCH THEIR SALARY IS GREATER THAN THE AVERAGE.
+
+mysql> select*from Staff where salary>(select avg(salary) from Staff);
++---------+---------------+----------+--------+----------+
+| staffNo | name          | position | salary | branchNo |
++---------+---------------+----------+--------+----------+
+| S0010   | Mary Martinez | Manager  |  50000 | B002     |
+| S1500   | Tom Daniels   | Manager  |  46000 | B001     |
+| S2250   | Sally Stern   | Manager  |  48000 | B004     |
++---------+---------------+----------+--------+----------+
+3 rows in set (0.00 sec)
+
+
+Q.2. LIST THE VIDEOS THAT ARE HANDLED BY STAFF WHO WORK IN THE BRANCH AT 'CITY CENTER PLAZA'.
+
+mysql> select StaffNo,name,position from Staff where branchNo=(select branchNo from branch where Street='City Center Plaza');
++---------+---------------+------------+
+| StaffNo | name          | position   |
++---------+---------------+------------+
+| S0010   | Mary Martinez | Manager    |
+| S3250   | Robert Chin   | Supervisor |
++---------+---------------+------------+
+2 rows in set (0.00 sec)
+
+
+Q3. FIND ALL STAFF WHOSE SALARY IS LARGER THAN THE SALARY OF AT LEAST ONE MEMBER OF STAFF AT BRANCH B001.
+
+mysql> select staffNo,name,position,salary from Staff where salary>some (select salary from Staff where branchNo='B001');
++---------+---------------+------------+--------+
+| staffNo | name          | position   | salary |
++---------+---------------+------------+--------+
+| S0010   | Mary Martinez | Manager    |  50000 |
+| S0415   | Art Peters    | Manager    |  41000 |
+| S1500   | Tom Daniels   | Manager    |  46000 |
+| S2250   | Sally Stern   | Manager    |  48000 |
+| S3250   | Robert Chin   | Supervisor |  32000 |
++---------+---------------+------------+--------+
+5 rows in set (2.38 sec)
+
+
+Q.4. FIND ALL STAFF WHOSE SALARY IS LARGER THAN THE SALARY OF EVERY MEMBER OF STAFF AT BRANCH B001.
+
+mysql> select staffNo,name,position,salary from Staff where salary>all (select salary from Staff where branchNo='B001');
++---------+---------------+----------+--------+
+| staffNo | name          | position | salary |
++---------+---------------+----------+--------+
+| S0010   | Mary Martinez | Manager  |  50000 |
+| S2250   | Sally Stern   | Manager  |  48000 |
++---------+---------------+----------+--------+
+2 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+

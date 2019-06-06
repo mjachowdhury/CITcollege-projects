@@ -1,0 +1,390 @@
+/* Author : Mohammed Jahangir Alom. Student ID : R00144214 Email: mohammed.alom@mycit.ie */
+
+html {
+
+  background: url(../images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #666;
+	display: block;
+}
+
+
+/*---------------- STRUCTURE -----------------*/
+
+#pagewrap {
+	padding: 5px;
+	width: 1050px;
+	margin: 20px auto;
+	 
+}
+#pizzaform{
+	background: white;
+	max-width: 46%;
+	float: left;
+}
+/*
+#pizzaPic {
+	float: right;
+	max-width:450px;
+	max-height:450px;
+	background: lightblue;
+	border: 1px solid blue;   
+    border-radius: 5px;
+
+}*/
+
+/* for pizza pictures*/
+
+fieldset img.checkbox { position: absolute; top: 420px; right: 220px; float:right;}
+
+/*------------------------home page part start-----------------------*/
+
+img.home {
+	display: block;
+	margin: 0 auto;
+}
+
+.paragrap span {
+	color: #5383d3;
+	font-size: 25px;
+}
+
+
+/*fieldset part style*/
+
+fieldset {
+    /* padding: 5px;*/
+    border: 1px solid blue;
+    /*border: none; */
+    border-radius: 5px;
+    padding:20px;
+}
+
+/*This floats the cost amounts to the right*/
+/*
+.cost { 
+  position: absolute;
+  right:650px;
+}
+
+*/
+/*This part for display total price on the page*/
+
+#totalPrice {
+  width: 300px;
+  border: 1px;
+  border-style: solid;
+  border-color: grey;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 3px 4px 3px lightblue;
+  margin-left: 0px;
+  margin-top: 5px;
+  text-align: center;
+  background-color: Salmon;
+}
+
+header {
+	height: 140px;
+	padding: 0 15px;
+	background-color: #7CFC00;
+	color: white;
+	margin-bottom: 5px;
+}
+
+header h1 {
+	float: left;
+	/*font-variant: small-caps;
+	color:  #ffffff;*/
+	color: #5383d3;
+	font: normal 50px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+ 
+h3{
+	text-align:center;
+	color:#D2691E;
+	text-decoration:underline;
+} 
+
+#pagewrap, header, footer {
+	border: solid 1px #ccc;
+}
+/*--------------end header part-----------------------*/
+
+ 
+/*--------------menu part start--------------------------*/
+#container {
+	padding: 25px 15px 0px 15px;
+	background: #67A897;
+}
+
+ul#menu {
+	list-style-type: none;
+	width: 100%;
+	position: relative;
+	height: 27px;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0;
+	padding: 11px 0 0 0;
+}
+
+ul#menu li {
+	display: block;
+	float: left;
+	margin: 0 0 0 4px;
+	height: 27px;
+}
+/*
+ul#menu li.left {
+	margin: 0;
+}
+*/
+ul#menu li a {
+	display: block;
+	float: left;
+	color: #fff;
+	background: #4A6867;
+	line-height: 27px;
+	text-decoration: none;
+	padding: 0 17px 0 18px;
+	height: 27px;
+}
+/*
+ul#menu li a.right {
+	padding-right: 19px;
+}
+*/
+ul#menu li a:hover {
+	background: #2E4560;
+}
+
+ul#menu li a.current {
+	color: #2E4560;
+	background: #fff;
+}
+
+ul#menu li a.current:hover {
+	color: #2E4560;
+	background: #fff;
+}
+/*-------------------end of menu part-----------------------*/
+
+
+
+/*---------------------footer part start----------------------------*/
+
+.footer-part {
+	background-color: black;
+	color: white;
+	clear: both;
+	padding: 0 10px;
+}
+
+.footer-part .footer-left, .footer-part .footer-center, .footer-part .footer-right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-part .footer-left {
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-part h3 {
+	color: #ffffff;
+	font: normal 29px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-part h3 span {
+	color: #5383d3;
+}
+
+/* Footer links */
+
+.footer-part .footer-links {
+	color: #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-part .footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color: inherit;
+	
+}
+
+.footer-part .footer-company-name {
+	color: #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+/* Footer Center */
+
+.footer-part .footer-center {
+	width: 35%;
+}
+
+.footer-part .footer-center i {
+	background-color: #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-part .footer-center i.fa-envelope {
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-part .footer-center p {
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.footer-part .footer-center p span {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.footer-part .footer-center p a {
+	color: #5383d3;
+	text-decoration: none;
+	;
+}
+
+
+/* Footer Right */
+
+.footer-part .footer-right {
+	width: 20%;
+}
+
+.footer-part .footer-company-about {
+	line-height: 20px;
+	color: #92999f;
+	font-size: 11px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-part .footer-company-about span {
+	display: block;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-part .footer-icons {
+	margin-top: 25px;
+}
+
+.footer-part .footer-icons a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color: #33383b;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+/*--------------------end of footer part--------------------------*/
+
+/*Form validation part start*/
+/*
+legend {
+    padding:0 5px;
+    text-align:right;
+}*/
+fieldset > div {
+    margin:10px 0;
+}
+fieldset > legend + div {
+    margin-top:0;
+}
+fieldset > div:last-child {
+    margin-bottom:0;
+}
+label {
+    display:inline-block;
+    width:100px;
+}
+input {
+    width:200px;
+}
+input[type="number"] {
+    width:30px;
+}
+div > input[type="submit"] {
+    background: #ccc;
+    border:1px solid #999;
+    width:auto;
+}
+input:required {
+    background:hsl(180, 50%, 90%);
+    border:1px solid #999;
+}
+input:optional {
+    background:hsl(300, 50%, 90%);
+    border:1px dotted hsl(180, 50%, 90%);
+}
+input:valid,
+input:in-range {
+    background:hsl(120, 50%, 90%);
+    border-color:hsl(120, 50%, 50%);
+}
+
+input:invalid,
+input:out-of-range {
+    border-color:hsl(0, 50%, 50%);
+    background:hsl(0, 50%, 90%);
+}
+.help {
+    display:none;
+    font-size:90%;
+}
+input:focus + .help {
+    display:inline-block;
+}
+/*End of from validation part*/
+
+
+
+
+
+
+ 

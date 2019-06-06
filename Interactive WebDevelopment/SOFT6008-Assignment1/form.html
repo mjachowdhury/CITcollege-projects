@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--Author : Mohammed Jahangir Alom. Student ID : R00144214 Email: mohammed.alom@mycit.ie-->
+<html>
+    <head>
+        <title> Online Shooping Personalize Mug</title>
+        <meta name="description" content="Cork's newest personalized mug shopping">
+        <meta name="keywords" content="mug, cork, personalized, mug color">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src ="calculate.js"></script>
+        <meta charset="utf-8">
+    </head>
+    <body onload = 'hideTotal()'>
+        <!-- This onload= hideTotal() function will hide the total value before select-->
+        <header>
+            <h2> Cork Newest Personalized Mug Supplier Shop</h2>
+            <h4> Configure & Choose Your Mug</h4>
+        </header>
+        <main>
+            <h4>Online Order Form</h4>
+            <form method = "post" action ="http://atlantis.cit.ie/displayvalues.php" id ="mugform">
+                <section id = "part1">
+                    <fieldset>
+                        <!--This part for choosing size of the mug onclick =sumTotal() function will automatically will add the price when select the size frm the radio button-->
+                        <h3>Choose Size Of The Mug</h3>
+                        <input type="radio" name="MugSize" value ="Small - 9.99" id ="Small" onclick="sumTotal()">Small Size <span class ="cost">€ 9.99</span><br/>
+                        <input type="radio" name="MugSize" value ="Medium - 12.99" id ="Medium" onclick="sumTotal()">Medium Size <span class ="cost">€ 12.99</span><br/>
+                        <input type="radio" name="MugSize" value ="Large - 14.99" id ="Large" onclick="sumTotal()">Large Size <span class ="cost">€ 14.99</span><br/>
+                        <input type="radio" name="MugSize" value ="ExtraLarge - 15.99" id ="ExtraLarge" onclick="sumTotal()">Extra Large Size <span class ="cost">€ 15.99</span><br/>
+                    </fieldset>
+                    <br/>
+                    <!--This part for choosing upgrade of the mug onclick= sumTotal() function will automatically will add the price when select the upgrade on radio button-->
+                    <fieldset>
+                        <h3>Choose Upgrade</h3>
+                        <input type="radio" name="Upgrade" value="Transparent base - 3.00" id="TransparentBase" onclick="sumTotal()">Transparent Base <span class="cost">€ 3.00</span><br/>
+                        <input type="radio" name="Upgrade" value="Thermos - 7.00" id="Thermos" onclick="sumTotal()">Thermos <span class="cost">€ 7.00</span><br/>
+                        <input type="radio" name="Upgrade" value="Upload logo - 6.00" id="UploadLogo" onclick="sumTotal()">Upload your logo <span class="cost">€ 6.00</span><br/>
+                        <input type="radio" name="Upgrade" value="Engraved Initials - 2.00" id="EngravedInitials" onclick="sumTotal()">Engraved Initials<span class="cost">€2.00</span><br/>
+                    </fieldset>
+                    <br/>
+                    <!--This part for Adds-On for the mug onclick =sumTotal() function will automatically will add the price when select the Adds-On from the checkBox-->
+                    <fieldset>
+                        <h3>Choose Adds-On</h3>
+                        <input type="checkbox" name="Adds-on-HotPlate" value="Hot Plate - 15.00" id="HotPlate" onclick="sumTotal()">Include Hot plate<span class="cost">€15.00</span><br/>
+                        <input type="checkbox" name="Adds-on-MugLid" value="Mug Lid - 3.00" id="MugLid" onclick="sumTotal()">Include Mug Lid   <span class="cost">€ 3.00</span><br/>
+                        <input type="checkbox" name="Adds-on-MugPullCord" value="Mug Pull-cord - 6.00" id="MugPullCord" onclick="sumTotal()">Include Mug pull-cord  <span class="cost">€ 6.00</span><br/>
+                    </fieldset>
+                    <br/>
+                    <!--This part for choosing supplier offer onclick =sumTotal() function will automatically will add the price when select the offer from the check box-->
+                    <fieldset>
+                        <h3>Supplier Offer</h3>
+                        <input type="checkbox" name="Supplier-Offer-Coffee" value="1Kg Coffee - 15.00" id="Coffee" onclick="sumTotal()">1 Kg Coffee  <span class="cost">€ 15.00</span><br/>
+                        <input type="checkbox" name="Supplier-Offer-Milk" value="Condensed Milk - 3.00" id="Milk" onclick="sumTotal()">Condensed Milk <span class="cost">€ 3.00</span><br/>
+                        <input type="checkbox" name="Supplier-Offer-Tea" value="Tea Beg - 6.00" id="Tea" onclick="sumTotal()">1000 Tea Begs <span class="cost">€ 6.00</span><br/>
+                    </fieldset>
+                    <br/>
+                </section>
+                <!--section ="part1" finish here-->
+                <section id = "part2">
+                    <!--section id ="part2" start here-->
+                    <!--This part for selecting color of the mug and onchange =colorChange() function will work here-->
+                    <fieldset>
+                        <h3>Choose A Colour</h3>
+                        <select id ="colour" onchange="colourChange()" size = 5>
+                            <option value="red_mug">Red</option>
+                            <option value="white_mug">White</option>
+                            <option value="black_mug">Black</option>
+                            <option value="yellow_mug">Yellow</option>
+                            <option value="pink_mug">Pink</option>
+                        </select>
+						<!--source of the images part-->
+                        <!--<img src="" alt="" id="mugColour" width="96" height="96"><br/>--> 
+						<!--source of the images part without source and alt written then no pic and alt part will appear until select the option-->
+                        <img src="images/red_mug.jpg" alt="Mug Colour" id="mugColour" width="96" height="96"><br/> 
+						<!--This id is for total price-->						
+						<div id="totalPrice"></div>
+                    </fieldset>
+                    <br/>
+                    <!--This part for delivery address-->
+                    <fieldset>
+                        <h3>Delivery Address</h3>
+                        <label>Name:</label><br/>
+                        <INPUT TYPE="text" name="PersonName" placeholder="Enter your name"/><br/>
+                        <label>Address:</label><br/>
+                        <input type="text" name="Address" placeholder="Enter your address"/><br/>
+                        <label>Phone Number:</label><br/>
+                        <INPUT TYPE="tel" name="PhoneNumber" placeholder="Enter phone number"/><br/>
+                        <label>Email:</label><br/> 
+                        <INPUT TYPE="email" name="EmailAddress" placeholder="Enter e-mail"/><br/>
+                        <label>Your comment:</label><br/>
+                        <textarea rows="5" cols="30" name ="Comment" placeholder="Any Special Request Here"></textarea>
+                        <br/>
+                        <!--This input type hidden will not show in the wenpage but when submit the order it will show the TotalPrice -->
+                        <input type="hidden" name="TotalPrice" id = "tprice"  />	
+						<input type='submit' id='submit' value='Order Now' onclick=" return submitForm()" /><!--When order now button will be pressed then onclick="submitForm() function will work"-->
+						<input type='reset' id='reset' value='Reset' onclick="this.form.reset();"><!--When reset button will be pressed then onclick="reset() function will work"-->                       
+					</fieldset>
+                </section>
+                <!--End of section id="part2"-->
+            </form>
+            <!--End of from-->
+        </main>
+    </body>
+    <!--End of body-->
+</html>

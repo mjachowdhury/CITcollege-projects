@@ -1,0 +1,17 @@
+Patients Report for Dentist : null
+-----------------------------------------------
+Patient PatientNo =110
+PhoneNo =789456
+Patient InvoiceList =[110]
+Patient Name =null
+pList=null
+Invoice =null
+InvoiceNo =110
+InvoiceAmount =80.0
+Date =2018-03-29
+IsPaid =false
+Invoice_procList =[Extractions]
+Invoice_paymentList=[
+application.Payment No:		100
+application.Payment Amount:	30.0
+application.Payment Date:	2018-03-29]

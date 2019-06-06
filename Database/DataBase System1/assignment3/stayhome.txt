@@ -1,0 +1,81 @@
+For the stayHome database, write SQL statements to answer the following queries:
+1. List the rate for renting videos for 3 days.
+2. List all staff with a salary between $45000 and $50000.
+3. List all videos in the Action or children categories.
+4. List all staff whose first name is 'Sally'.
+5. List the video rentals that have not yet been returned.
+
+Q1.LIST THE RATE FOR RENTING VIDEOS FOR 3 DAYS.
+
+mysql> select catalogNo,Title,Category, dailyRental*3 as 3dayRental from video;
++-----------+--------------------+----------+------------+
+| catalogNo | Title              | Category | 3dayRental |
++-----------+--------------------+----------+------------+
+|    207132 | Die Another Day    | Action   |         15 |
+|    330553 | Lord of the Rings  | Fantasy  |         15 |
+|    445624 | Men in Black II    | Action   |         12 |
+|    634817 | Independence Day   | Sci-Fi   |       13.5 |
+|    781132 | Shrek              | Children |         12 |
+|    902355 | Harry Potter       | Children |       13.5 |
++-----------+--------------------+----------+------------+
+6 rows in set (0.00 sec)
+
+ 
+Q2.LIST ALL STAFF WITH A SALARY BETWEEN $45000 AND $50000.
+
+mysql> select staffNo,name,position,salary from Staff where salary between 45000 and 50000;
++---------+---------------+----------+--------+
+| staffNo | name          | position | salary |
++---------+---------------+----------+--------+
+| S0010   | Mary Martinez | Manager  |  50000 |
+| S1500   | Tom Daniels   | Manager  |  46000 |
+| S2250   | Sally Stern   | Manager  |  48000 |
++---------+---------------+----------+--------+
+3 rows in set (0.00 sec)
+
+
+Q3.LIST ALL VIDEOS IN THE ACTION OR CHILDREN CATEGORIES.
+
+mysql> select Title,Category from video where Category='Action' or Category='Children';
++------------------+----------+
+| Title            | Category |
++------------------+----------+
+| Die Another Day  | Action   |
+| Men in Black II  | Action   |
+| Shrek            | Children |
+| Harry Potter     | Children |
++------------------+----------+
+4 rows in set (0.00 sec)
+
+Q4.LIST ALL STAFF WHOSE FIRST NAME IS 'SALLY'.
+
+mysql> select* from Staff where name like '%Sally%';
++---------+-------------+-----------+--------+----------+
+| staffNo | name        | position  | salary | branchNo |
++---------+-------------+-----------+--------+----------+
+| S0003   | Sally Adams | Assistant |  30000 | B001     |
+| S2250   | Sally Stern | Manager   |  48000 | B004     |
++---------+-------------+-----------+--------+----------+
+2 rows in set (0.00 sec)
+ 
+
+Q5.LIST THE VIDEO RENTALS THAT HAVE NOT YET BEEN RETURNED.
+
+mysql> select videoNo, available from VideoForRent where available ='0';
++---------+-----------+
+| videoNo | available |
++---------+-----------+
+|  178643 | 0         |
++---------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select rentalNo,dateOut,dateReturn,videoNo from RentalAgreement where dateReturn='0000-00-00';
++----------+------------+------------+---------+
+| rentalNo | dateOut    | dateReturn | videoNo |
++----------+------------+------------+---------+
+| R668189  | 2003-02-02 | 0000-00-00 |  178643 |
++----------+------------+------------+---------+
+1 row in set, 2 warnings (0.00 sec)
+
+
+

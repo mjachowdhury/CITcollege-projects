@@ -1,0 +1,302 @@
+mysql> use stay_home;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_stay_home |
++---------------------+
+| RentalAgreement     |
+| Staff               |
+| VideoForRent        |
+| actor               |
+| branch              |
+| director            |
+| members             |
+| registration        |
+| role                |
+| video               |
++---------------------+
+10 rows in set (0.00 sec)
+
+mysql> desc branch;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| branchNo   | varchar(10) | YES  |     | NULL    |       |
+| Street     | char(10)    | YES  |     | NULL    |       |
+| City       | char(15)    | YES  |     | NULL    |       |
+| State      | char(15)    | YES  |     | NULL    |       |
+| zipCode    | char(10)    | YES  |     | NULL    |       |
+| mgrStaffNo | varchar(10) | NO   | PRI | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/branch.txt' into table branch;
+Query OK, 4 rows affected (0.06 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from branch;                                                      +----------+--------------------+----------+-------+---------+------------+
+| branchNo | Street             | City     | State | zipCode | mgrStaffNo |
++----------+--------------------+----------+-------+---------+------------+
+| B002     | City Center Plaza  | Seattle  | WA    | 98122   | S0010      |
+| B003     | 14 - 8th Avenue    | New York | NY    | 10012   | S0415      |
+| B001     | 8 Jefferson Way    | Portland | OR    | 97201   | S1500      |
+| B004     | 16 - 14th Avenue   | Seattle  | WA    | 98128   | S2250      |
++----------+--------------------+----------+-------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> desc Staff;
++----------+------------------+------+-----+---------+-------+
+| Field    | Type             | Null | Key | Default | Extra |
++----------+------------------+------+-----+---------+-------+
+| staffNo  | varchar(10)      | NO   | PRI | NULL    |       |
+| name     | char(15)         | YES  |     | NULL    |       |
+| position | char(15)         | YES  |     | NULL    |       |
+| salary   | int(10) unsigned | NO   |     | NULL    |       |
+| branchNo | varchar(10)      | YES  |     | NULL    |       |
++----------+------------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/staff.txt' into table Staff;
+Query OK, 6 rows affected (0.08 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from Staff;
++---------+---------------+------------+--------+----------+
+| staffNo | name          | position   | salary | branchNo |
++---------+---------------+------------+--------+----------+
+| S0003   | Sally Adams   | Assistant  |  30000 | B001     |
+| S0010   | Mary Martinez | Manager    |  50000 | B002     |
+| S0415   | Art Peters    | Manager    |  41000 | B003     |
+| S1500   | Tom Daniels   | Manager    |  46000 | B001     |
+| S2250   | Sally Stern   | Manager    |  48000 | B004     |
+| S3250   | Robert Chin   | Supervisor |  32000 | B002     |
++---------+---------------+------------+--------+----------+
+6 rows in set (0.00 sec)
+
+mysql> desc video;
++-------------+------------------+------+-----+---------+-------+
+| Field       | Type             | Null | Key | Default | Extra |
++-------------+------------------+------+-----+---------+-------+
+| catalogNo   | int(10) unsigned | NO   | PRI | NULL    |       |
+| Title       | varchar(25)      | YES  |     | NULL    |       |
+| Category    | char(10)         | YES  |     | NULL    |       |
+| dailyRental | float            | YES  |     | NULL    |       |
+| price       | float            | YES  |     | NULL    |       |
+| directorNo  | varchar(10)      | YES  |     | NULL    |       |
++-------------+------------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> select*from video;                                                       +-----------+--------------------+----------+-------------+-------+------------+
+| catalogNo | Title              | Category | dailyRental | price | directorNo |
++-----------+--------------------+----------+-------------+-------+------------+
+|    207132 | Die Another Day    | Action   |           5 | 21.99 | D1001      |
+|    330553 | Lord of the Rings  | Fantasy  |           5 | 31.99 | D4576      |
+|    445624 | Men in Black II    | Action   |           4 | 29.99 | D5743      |
+|    634817 | Independence Day   | Sci-Fi   |         4.5 | 32.99 | D3765      |
+|    781132 | Shrek              | Children |           4 |  18.5 | D0078      |
+|    902355 | Harry Potter       | Children |         4.5 |  14.5 | D7834      |
++-----------+--------------------+----------+-------------+-------+------------+
+6 rows in set (0.00 sec)
+
+mysql> desc director;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| directorNo   | varchar(10) | NO   | PRI | NULL    |       |
+| directorName | char(20)    | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/director.txt' into table director;
+Query OK, 6 rows affected (0.22 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from director;
++------------+------------------+
+| directorNo | directorName     |
++------------+------------------+
+| D0078      | Andrew Adamson   |
+| D1001      | Lee Tamahori     |
+| D3765      | Roland Emmerick  |
+| D4576      | Peter Jackson    |
+| D5743      | Barry Sonnenfeld |
+| D7834      | Chris Columbus   |
++------------+------------------+
+6 rows in set (0.00 sec)
+
+mysql> desc actor;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| actorNo   | varchar(10) | NO   | PRI | NULL    |       |
+| actorName | char(20)    | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/actor.txt' into table actor;
+Query OK, 6 rows affected (0.10 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from actor;
++---------+------------------+
+| actorNo | actorName        |
++---------+------------------+
+| A1002   | Pierce Brosnan   |
+| A2019   | Will Smith       |
+| A3006   | Elijah Wood      |
+| A4343   | Mike Myers       |
+| A7525   | Tommy Lee Jones  |
+| A8401   | Daniel Radcliffe |
++---------+------------------+
+6 rows in set (0.00 sec)
+
+mysql> desc role;
++------------+------------------+------+-----+---------+-------+
+| Field      | Type             | Null | Key | Default | Extra |
++------------+------------------+------+-----+---------+-------+
+| actorNo    | varchar(10)      | NO   | PRI | NULL    |       |
+| catalogNo  | int(10) unsigned | NO   |     | NULL    |       |
+| characters | char(15)         | YES  |     | NULL    |       |
++------------+------------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/role.txt' into table role;
+Query OK, 5 rows affected, 3 warnings (0.11 sec)
+Records: 7  Deleted: 0  Skipped: 2  Warnings: 3
+
+mysql> select*from role;
++---------+-----------+-----------------+
+| actorNo | catalogNo | characters      |
++---------+-----------+-----------------+
+| A1002   |    207132 | James Bond      |
+| A2019   |    634817 | Captain Steve H |
+| A3006   |    330553 | Frodo Baggins   |
+| A4343   |    781132 | Shrek           |
+| A7525   |    445624 | Agent K         |
++---------+-----------+-----------------+
+5 rows in set (0.00 sec)
+
+mysql> desc VideoForRent;
++-----------+----------------------+------+-----+---------+-------+
+| Field     | Type                 | Null | Key | Default | Extra |
++-----------+----------------------+------+-----+---------+-------+
+| videoNo   | smallint(5) unsigned | NO   | PRI | NULL    |       |
+| available | varchar(10)          | YES  |     | NULL    |       |
+| catalogNo | int(10) unsigned     | NO   | MUL | NULL    |       |
+| branchNo  | int(10) unsigned     | NO   |     | NULL    |       |
++-----------+----------------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table VideoForRent modify videoNo mediumint unsigned;
+Query OK, 0 rows affected (2.24 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table VideoForRent modify branchNo varchar (10);
+Query OK, 0 rows affected (2.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc VideoForRent;
++-----------+-----------------------+------+-----+---------+-------+
+| Field     | Type                  | Null | Key | Default | Extra |
++-----------+-----------------------+------+-----+---------+-------+
+| videoNo   | mediumint(8) unsigned | NO   | PRI | NULL    |       |
+| available | varchar(10)           | YES  |     | NULL    |       |
+| catalogNo | int(10) unsigned      | NO   | MUL | NULL    |       |
+| branchNo  | varchar(10)           | YES  |     | NULL    |       |
++-----------+-----------------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/videoforrent.txt' into table VideoForRent;
+Query OK, 4 rows affected (0.10 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from VideoForRent;
++---------+-----------+-----------+----------+
+| videoNo | available | catalogNo | branchNo |
++---------+-----------+-----------+----------+
+|  178643 | N         |    634817 | B001     |
+|  199004 | Y         |    207132 | B001     |
+|  243431 | Y         |    634817 | B002     |
+|  245456 | Y         |    207132 | B002     |
++---------+-----------+-----------+----------+
+4 rows in set (0.00 sec)
+
+mysql> desc members;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| memberNo | varchar(10) | NO   | PRI | NULL    |       |
+| fName    | char(15)    | YES  |     | NULL    |       |
+| lName    | char(15)    | YES  |     | NULL    |       |
+| address  | varchar(50) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/members.txt' into table members;
+Query OK, 4 rows affected (0.10 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from members;                                                     +----------+--------+--------+---------------------------------------+
+| memberNo | fName  | lName  | address                               |
++----------+--------+--------+---------------------------------------+
+| M115656  | Serena | Parker | 22 W. Capital Way, Portland, OR 97201 |
+| M166884  | Art    | Peters | 89 Redmond Rd, Portland, OR 97117     |
+| M250178  | Bob    | Adams  | 57 - 11th Avenue, Seattle, WA 98105   |
+| M284354  | Don    | Nelson | 123 Suffolk Lane, Seattle, WA 98117   |
++----------+--------+--------+---------------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> desc registration;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| branchNo   | varchar(10) | NO   |     | NULL    |       |
+| memberNo   | varchar(10) | NO   | MUL | NULL    |       |
+| staffNo    | varchar(10) | NO   | PRI | NULL    |       |
+| dateJoined | char(20)    | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/registration.txt' into table registration;
+Query OK, 2 rows affected, 2 warnings (0.27 sec)
+Records: 4  Deleted: 0  Skipped: 2  Warnings: 2
+
+mysql> select*from registration;
++----------+----------+---------+------------+
+| branchNo | memberNo | staffNo | dateJoined |
++----------+----------+---------+------------+
+| B001     | M166884  | S0003   | 4-Sep-02   |
+| B002     | M250178  | S3250   | 1-Jul-01   |
++----------+----------+---------+------------+
+2 rows in set (0.00 sec)
+
+mysql> desc rental_agreement;
++------------+-----------------------+------+-----+---------+-------+
+| Field      | Type                  | Null | Key | Default | Extra |
++------------+-----------------------+------+-----+---------+-------+
+| rentalNo   | varchar(10)           | NO   | PRI | NULL    |       |
+| dateOut    | date                  | YES  |     | NULL    |       |
+| dateReturn | date                  | YES  |     | NULL    |       |
+| memberNo   | varchar(10)           | NO   |     | NULL    |       |
+| videoNo    | mediumint(8) unsigned | YES  |     | NULL    |       |
++------------+-----------------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> load data local infile'/home/mohammed/Mysql/Assignment 2/Stay_home/rental_agreement.txt' into table rental_agreement;
+Query OK, 4 rows affected (0.07 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> select*from rental_agreement;                                            +----------+------------+------------+----------+---------+
+| rentalNo | dateOut    | dateReturn | memberNo | videoNo |
++----------+------------+------------+----------+---------+
+| R668189  | 2003-02-02 | 2003-02-08 | M115656  |  178643 |
+| R668256  | 2003-02-05 | 2003-02-07 | M115656  |  199004 |
+| R753461  | 2003-02-04 | 2003-02-06 | M284354  |  245456 |
+| R753462  | 2003-02-04 | 2003-02-06 | M284354  |  243431 |
++----------+------------+------------+----------+---------+
+4 rows in set (0.00 sec)
+

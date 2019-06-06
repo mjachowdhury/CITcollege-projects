@@ -1,0 +1,141 @@
+																	Mohammed Alom
+																	Student No R00144214
+																	Assignment No 2
+																	-------------------
+
+1. Write CREATE TABLE statements to create all the above tables, creating the appropriate primary and foreign keys.  Please Write One Script for your answer. 
+
+Create Table Book
+-----------------
+
+CREATE TABLE Book
+				(ISBN		VARCHAR(10) NOT NULL,
+				title		VARCHAR(25),
+				edition		VARCHAR(15),
+				year  		YEAR,
+PRIMARY KEY (ISBN));
+
+
+Create Table BookCopy
+---------------------
+
+CREATE TABLE BookCopy
+					(copyNo    	VARCHAR(10)	NOT NULL,
+					ISBN		VARCHAR(10),
+					available	ENUM('YES','NO'),
+PRIMARY KEY (copyNo),
+FOREIGN KEY (ISBN) REFERENCES Book(ISBN));
+
+
+Create Table Borrower
+---------------------
+
+CREATE TABLE Borrower
+					(borrowerNo   	VARCHAR(6)	NOT NULL,
+					borrowerName	VARCHAR(20),
+					borrowerAddress	VARCHAR(30),        
+PRIMARY KEY (borrowerNo));
+
+
+Create Table BookLoan
+---------------------
+
+CREATE TABLE BookLoan
+					(copyNo    	VARCHAR(10)	NOT NULL,
+					dateOut		Date,
+					dateDue		Date,
+					borrowerNo 	VARCHAR(6),
+PRIMARY KEY (copyNo,dateOut),
+FOREIGN KEY (borrowerNo) REFERENCES Borrower(borrowerNo));
+ 
+Commit;
+
+
+
+2.Write an INSERT statement for each table to insert 3 records into each table. Please Write One Script for your answer. 
+
+Insert Book Table
+-----------------
+
+INSERT INTO Book VALUES('ISBN001122', 'Learn MySql', '2nd', '2015');
+INSERT INTO Book VALUES('ISBN003344', 'Learn Java', '5th', '2014');
+INSERT INTO Book VALUES('ISBN005566', 'Make Programming Easy', '3rd', '2017');
+ 
+Insert BookCopy Table
+---------------------
+
+INSERT INTO BookCopy VALUES('BCSQL01', 'ISBN001122', 'YES');
+INSERT INTO BookCopy VALUES('BCLJA03', 'ISBN003344', 'YES');
+INSERT INTO BookCopy VALUES('BCMPE01', 'ISBN005566', 'NO');
+
+Insert Borrower Table
+---------------------
+
+INSERT INTO Borrower VALUES('ST0123', 'Mohammed Khan', 'Cork City');
+INSERT INTO Borrower VALUES('ST0456', 'James OBrain', 'Douglas South Side');
+INSERT INTO Borrower VALUES('ST0789', 'Marry Ocallahghan', 'Blackrock');
+
+Insert BookLoan Table
+---------------------
+
+INSERT INTO BookLoan VALUES('BCSQL01', '170306', '170311','ST0123');
+INSERT INTO BookLoan VALUES('BCLJA03', '170115', '170122','ST0456');
+INSERT INTO BookLoan VALUES('BCMPE01', '170223', '170227','ST0789');
+ 
+
+Commit;
+
+
+3. Write a SQL statement to modify a record in each table. Please Write One Script for your answer. 
+
+Table - Book
+____________
+
+Update 	Book
+set		title ='C++'
+where	ISBN = 'ISBN003344';
+
+Table - Book Copy
+_________________
+
+Update	Bookcopy
+set		available = 'YES'
+where	copyNo = 'BCMPE01';
+
+Table BookLoan
+______________
+
+Update	Bookloan
+set		dateDue = '2017-01-25'
+where	copyNo = 'BCLJA03';
+
+Table Borrower
+______________
+
+Update	Borrower
+set		borrowerName = 'Mohammed Alom' borrowerAddress = 'Blarney St'
+where	borrowerNo = 'ST0123';
+
+commit;
+
+4.Write a script to delete all the records from all the tables. Please Write One Script for your answer. 
+
+To delete record from the tabel.
+
+delete from book;
+
+delete from bookcopy;
+
+delete from borrower;
+
+delete from bookloan;
+
+
+
+5. Write a script to show how you would remove all tables. Please Write One Script for your answer. 
+
+To delete all the tabel from the database ---
+
+Drop database library_system;
+
+will delete all the tablr as well as database.

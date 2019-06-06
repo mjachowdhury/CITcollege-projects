@@ -1,0 +1,54 @@
+For the classSchedule database, write SQL statements to answer the following questions:
+
+1. Which students have an ID number that is less than 50000?
+2. What is the name of the faculty member whose ID is 4756?
+3. Which faculty members have qualified to teach a course since 1993? List the faculty ID, course and date of qualification.
+4. What are the courses included in the section table? List each course only once.
+
+Q1. WHICH STUDENTS HAVE AN ID NUMBER THAT IS LESS THAN 50000?
+
+mysql> select student_id, student_name from Student where student_id < 50000;
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|      38214 | Letersky     |
++------------+--------------+
+1 row in set (0.58 sec)
+
+Q2.WHAT IS THE NAME OF THE FACULTY MEMBER WHOSE ID IS 4756?
+
+mysql> select faculty_id, faculty_name from Faculty where faculty_id=4756;
++------------+--------------+
+| faculty_id | faculty_name |
++------------+--------------+
+|       4756 | Collins      |
++------------+--------------+
+1 row in set (1.95 sec)
+
+
+Q3.WHICH FACULTY MEMBERS HAVE QUALIFIED TO TEACH A COURSE SINCE 1993? LIST THE FACULTY ID, COURSE AND DATE OF QUALIFICATION.
+
+mysql> select faculty_id, course_id,date_qualified from Qualified where date_qualified > 1993-01-01;
++------------+-----------+----------------+
+| faculty_id | course_id | date_qualified |
++------------+-----------+----------------+
+|       2210 | ISM 3321  | 1995-09-01     |
+|       2211 | ISM 3211  | 1994-09-01     |
+|       3211 | ISM 3201  | 1996-09-01     |
+|       3467 | ISM 4212  | 1995-09-01     |
++------------+-----------+----------------+
+4 rows in set, 6 warnings (0.01 sec)
+
+Q4.WHAT ARE THE COURSES INCLUDED IN THE SECTION TABLE? LIST EACH COURSE ONLY ONCE.
+
+mysql> select distinct course_id from Section;
++-----------+
+| course_id |
++-----------+
+| ISM 3113  |
+| ISM 4212  |
+| ISM 4930  |
++-----------+
+3 rows in set (0.00 sec)
+
+
