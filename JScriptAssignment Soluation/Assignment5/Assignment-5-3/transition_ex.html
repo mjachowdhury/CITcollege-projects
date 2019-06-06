@@ -1,0 +1,68 @@
+﻿<html>
+  <head>
+    <title>Slideshow</title>	      
+		<script>            
+            var pictures = [];			
+			function load() {
+                getPictures();
+            }
+            
+            function getPictures() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", "pictures.json", true);
+                xmlhttp.onload = function(event) { //XMLHttpRequestProgressEvent object maybe passed
+				  console.log("Data from the file is available now!");
+                  pictures = JSON.parse(xmlhttp.responseText);
+				  changePic(0);
+                };
+                xmlhttp.onerror = function(event) {
+                  alert("An error has occured");
+                }
+                xmlhttp.send();
+				console.log("Getting pictures from the json file... " + xmlhttp.responseText + " :: ");
+            }
+			
+			function changePic(n) {
+			  document.getElementById("image_canvas").getElementsByTagName("img")[0].src = pictures[n % pictures.length];
+			  transition("fadeIn", document.getElementById("image_canvas").getElementsByTagName("img")[0]);
+			  setTimeout(function() {changePic(n+1);}, 5000);
+			}
+				
+			function setOpacity(img, opacity) {
+				img.style.filter       = "alpha(opacity=" + opacity * 100 + ");";
+				img.style.MozOpacity   = opacity;
+				img.style.opacity      = opacity;
+				img.style.KhtmlOpacity = opacity;
+			}
+			
+			var transitions = {
+			  fadeIn : function(img, millis) {
+			    setOpacity(img, 0);
+			    var timerId = setInterval(function() {
+				var curr_opacity = parseFloat(img.style.opacity || 0);
+				console.log(curr_opacity);
+				if (curr_opacity < 1) {
+				    setOpacity(img, curr_opacity + 0.05); 
+				} else {
+				  img.style.display = "block";
+				  clearInterval(timerId);
+				}
+				}, 50);
+			  }
+			};
+			function transition(name, img) {
+			  transitions[name](img, 1000);
+			}
+		</script>
+      
+	
+  </head>
+  <body onload="load();">
+    <h1 id="myHeader">
+      My Pictures
+    </h1>
+		<div id="image_canvas" style="width:750px;height:497px;margin:0 auto 0 auto" dz-test="some value">
+			<img style="height:100%;width:100%"/>
+		</div>
+  </body>
+</html>
